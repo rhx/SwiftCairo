@@ -3,3 +3,6 @@ import CCairo
 import GLib
 import GObject
 
+public extension cairo {
+	public typealias FontType = cairo_font_type_t
+}
