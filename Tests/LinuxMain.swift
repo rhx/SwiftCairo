@@ -1,6 +1,6 @@
 import XCTest
-@testable import SwiftCairoTestSuite
+@testable import CairoTestSuite
 
 XCTMain([
-	 testCase(SwiftCairoTests.allTests),
+	 testCase(CairoTests.allTests),
 ])

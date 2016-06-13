@@ -2,7 +2,7 @@ import XCTest
 import CCairo
 @testable import Cairo
 
-class SwiftCairoTests: XCTestCase {
+class CairoTests: XCTestCase {
 
     func testSurface() {
         let width = 320
@@ -14,8 +14,8 @@ class SwiftCairoTests: XCTestCase {
     }
 
 }
-extension SwiftCairoTests {
-    static var allTests : [(String, (SwiftCairoTests) -> () throws -> Void)] {
+extension CairoTests {
+    static var allTests : [(String, (CairoTests) -> () throws -> Void)] {
         return [
             ("testSurface", testSurface),
         ]
