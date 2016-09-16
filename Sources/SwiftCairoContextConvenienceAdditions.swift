@@ -132,7 +132,7 @@ public extension ContextProtocol {
     ///
     /// The default source pattern is opaque black, (that is, it is equivalent to setSource(red: 0.0, green: 0.0, blue: 0.0)).
     public func setSource(red: Double, green: Double, blue: Double) {
-        
+        cairo_set_source_rgb(ptr, red, green, blue)
     }
 
     /// Sets the source pattern within cr to a translucent color. This color will then be used for any subsequent drawing operation until a new source pattern is set.
@@ -141,7 +141,7 @@ public extension ContextProtocol {
     ///
     /// The default source pattern is opaque black, (that is, it is equivalent to setSource(red: 0.0, green: 0.0, blue: 0.0)).
     public func setSource(red: Double, green: Double, blue: Double, alpha: Double) {
-        
+        cairo_set_source_rgba(ptr, red, green, blue, alpha)
     }
 
     /// Source pattern within cr. This pattern will then be used for any subsequent drawing operation until a new source pattern is set.
