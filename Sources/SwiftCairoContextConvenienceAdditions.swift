@@ -611,15 +611,28 @@ public extension ContextProtocol {
         cairo_glyph_path(ptr, glyphs, Int32(glyphs.count))
     }
 
-    /// Adds closed paths for text to the current path. The generated path if filled, achieves an effect similar to that of showText().
+    /// Adds closed paths for text to the current path.  The generated
+    /// path if filled, achieves an effect similar to that of
+    /// showText().
     ///
-    /// Text conversion and positioning is done similar to showText().
+    /// Text conversion and positioning is done similar to cairo_show_text().
     ///
-    /// Like showText(), after this call the current point is moved to the origin of where the next glyph would be placed in this same progression. That is, the current point will be at the origin of the final glyph offset by its advance values. This allows for chaining multiple calls to to textPath() without having to set current point in between.
+    /// Like showText(), after this call the current point is
+    /// moved to the origin of where the next glyph would be placed in
+    /// this same progression.  That is, the current point will be at
+    /// the origin of the final glyph offset by its advance values.
+    /// This allows for chaining multiple calls to to cairo_text_path()
+    /// without having to set current point in between.
     ///
-    /// Note: The textPath() function call is part of what the cairo designers call the "toy" text API. It is convenient for short demos and simple programs,
-    public func textPath(_ text: String) { cairo_text_path(ptr, text) }
-
+    /// Note: The textPath() function call is part of what the cairo
+    /// designers call the "toy" text API. It is convenient for short demos
+    /// and simple programs, but it is not expected to be adequate for
+    /// serious text-using applications. See cairo_glyph_path() for the
+    /// "real" text path API in cairo.
+    public func textPath(_ text: UnsafePointer<CChar>) {
+        cairo_text_path(ptr, text)
+    }
+    
     /// Relative-coordinate version of cairo_curve_to(). All offsets are relative to the current point. Adds a cubic Bézier spline to the path from the current point to a point offset from the current point by (dx3 , dy3 ), using points offset by (dx1 , dy1 ) and (dx2 , dy2 ) as the control points. After this call the current point will be offset by (dx3 , dy3 ).
     ///
     /// Given a current point of (x, y), cr.relCurveTo(dx1 , dy1 , dx2 , dy2 , dx3 , dy3 ) is logically equivalent to cr.curveTo(x+dx1 , y+dy1 , x+dx2 , y+dy2 , x+dx3 , y+dy3 ).
