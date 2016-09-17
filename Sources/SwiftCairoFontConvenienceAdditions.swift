@@ -99,7 +99,7 @@ public extension ContextProtocol {
     /// If text is drawn without setting the font size, (nor
     /// the font matrix nor setScaledFont()), the default
     /// font size is 10.0.
-    public var size: Double {
+    public var fontSize: Double {
         get {
             let m = fontMatrix
             let size = (m.xx + m.yx + m.xy + m.yy) / 2
