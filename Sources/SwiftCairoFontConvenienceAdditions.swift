@@ -165,8 +165,7 @@ public extension ContextProtocol {
     /// the current scaled font for a #cairo_t.
     ///
     /// Return value: the current scaled font. This object is owned by
-    /// cairo. To keep a reference to it, you must call
-    /// scaledFont.ref().
+    /// cairo.
     ///
     /// This function never returns %NULL. If memory cannot be allocated, a
     /// special "nil" #cairo_scaled_font_t object will be returned on which
@@ -175,9 +174,9 @@ public extension ContextProtocol {
     /// objects it is passed to, (for example, setting
     /// scaledFont with a nil font will trigger an error that
     /// will shutdown the #cairo_t object).
-    public var scaledFont: UnsafeMutablePointer<cairo_scaled_font_t> {
-        get { return cairo_get_scaled_font(ptr) }
-        set { cairo_set_scaled_font(ptr, newValue) }
+    public var scaledFont: ScaledFont {
+        get { return ScaledFont(cairo_get_scaled_font(ptr)) }
+        set { cairo_set_scaled_font(ptr, newValue.ptr) }
     }
 
     /// A drawing operator that generates the shape from a string of UTF-8
