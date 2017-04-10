@@ -7,7 +7,7 @@
 //
 import CCairo
 import GLib
-import GObject
+import GLibObject
 
 public extension ScaledFontProtocol {
     /// Increases the reference count on @scaled_font by one. This prevents

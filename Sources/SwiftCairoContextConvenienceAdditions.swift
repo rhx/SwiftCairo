@@ -6,7 +6,7 @@
 //
 import CCairo
 import GLib
-import GObject
+import GLibObject
 
 public extension ContextRef {
     /// Create a Cairo context from a surface

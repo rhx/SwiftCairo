@@ -25,7 +25,7 @@ gir2swift -p ${GIR_DIR}/GLib-2.0.gir -p ${GIR_DIR}/GObject-2.0.gir "${GIR}" | se
 echo  > Sources/Swift${Mod}.swift "import CGLib"
 echo  > Sources/Swift${Mod}.swift "import CCairo"
 echo >> Sources/Swift${Mod}.swift "import GLib"
-echo >> Sources/Swift${Mod}.swift "import GObject"
+echo >> Sources/Swift${Mod}.swift "import GLibObject"
 echo >> Sources/Swift${Mod}.swift ""
 grep 'public protocol' Sources/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/public typealias _cairo_\1 = \1/' >> Sources/Swift${Mod}.swift
 echo >> Sources/Swift${Mod}.swift ""

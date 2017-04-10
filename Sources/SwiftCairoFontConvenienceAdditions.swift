@@ -7,7 +7,7 @@
 //
 import CCairo
 import GLib
-import GObject
+import GLibObject
 
 public extension cairo_font_slant_t {
     public static var normal: cairo_font_slant_t = CAIRO_FONT_SLANT_NORMAL
