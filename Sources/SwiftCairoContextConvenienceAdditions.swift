@@ -536,13 +536,13 @@ public extension ContextProtocol {
     /// Note: As of cairo version 1.2.4 any call to closePath() will place an explicit MOVE_TO element into the path immediately after the CLOSE_PATH element, (which can be seen in cairo_copy_path() for example). This can simplify path processing in some cases as it may not be necessary to save the "last move_to point" during processing as the MOVE_TO immediately after the CLOSE_PATH will provide that point.
     public func closePath() { cairo_close_path(ptr) }
 
-    /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of increasing angles to end at angle2 . If angle2 is less than angle1 it will be progressively increased by 2*M_PI until it is greater than angle1 .
+    /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of increasing angles to end at angle2 . If angle2 is less than angle1 it will be progressively increased by .pi*2 until it is greater than angle1 .
     ///
     /// If there is a current point, an initial line segment will be added to the path to connect the current point to the beginning of the arc. If this initial line is undesired, it can be avoided by calling cairo_new_sub_path() before calling cairo_arc().
     ///
-    /// Angles are measured in radians. An angle of 0.0 is in the direction of the positive X axis (in user space). An angle of M_PI/2.0 radians (90 degrees) is in the direction of the positive Y axis (in user space). Angles increase in the direction from the positive X axis toward the positive Y axis. So with the default transformation matrix, angles increase in a clockwise direction.
+    /// Angles are measured in radians. An angle of 0.0 is in the direction of the positive X axis (in user space). An angle of .pi/2.0 radians (90 degrees) is in the direction of the positive Y axis (in user space). Angles increase in the direction from the positive X axis toward the positive Y axis. So with the default transformation matrix, angles increase in a clockwise direction.
     ///
-    /// (To convert from degrees to radians, use degrees * (M_PI / 180.).)
+    /// (To convert from degrees to radians, use degrees * (.pi / 180.).)
     ///
     /// This function gives the arc in the direction of increasing angles; see cairo_arc_negative() to get the arc in the direction of decreasing angles.
     ///
@@ -551,16 +551,16 @@ public extension ContextProtocol {
     ///     cr.save();
     ///     cr.translate(x + width / 2., y + height / 2.);
     ///     cr.scale(width / 2., height / 2.);
-    ///     cr.arc(xc: 0, yc: 0, radius: 1, angle1: 0, angle2: 2 * M_PI);
+    ///     cr.arc(xc: 0, yc: 0, radius: 1, angle1: 0, angle2: .pi * 2);
     ///     cr.restore();
-    public func arc(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = 0, angle2: Double = 2*M_PI) {
+    public func arc(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = 0, angle2: Double = .pi*2) {
         cairo_arc(ptr, xc, yc, radius, angle1, angle2)
     }
 
-    /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of decreasing angles to end at angle2 . If angle2 is greater than angle1 it will be progressively decreased by 2*M_PI until it is less than angle1 .
+    /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of decreasing angles to end at angle2 . If angle2 is greater than angle1 it will be progressively decreased by .pi*2 until it is less than angle1 .
     ///
     /// See arc() for more details. This function differs only in the direction of the arc between the two angles.
-    public func arcNegative(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = 2*M_PI, angle2: Double = 0) {
+    public func arcNegative(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = .pi*2, angle2: Double = 0) {
         cairo_arc_negative(ptr, xc, yc, radius, angle1, angle2)
     }
 

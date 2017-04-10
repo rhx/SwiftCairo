@@ -1,5 +1,5 @@
 import XCTest
-@testable import CairoTestSuite
+@testable import CairoTests
 
 XCTMain([
 	 testCase(CairoTests.allTests),
