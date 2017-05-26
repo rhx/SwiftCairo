@@ -9,7 +9,7 @@ module=`echo "${Module}" | tr '[:upper:]' '[:lower:]'`
 mod=`echo "${Mod}" | tr '[:upper:]' '[:lower:]'`
 BUILD_DIR=`pwd`/.build
 export PATH="${BUILD_DIR}/gir2swift/.build/release:${BUILD_DIR}/gir2swift/.build/debug:${PATH}"
-LINKFLAGS=`pkg-config --libs $mod gobject-2.0 gio-unix-2.0 glib-2.0 | tr ' ' '\n' | sed 's/^/-Xlinker /' | tr '\n' ' '`
+LINKFLAGS=`pkg-config --libs $mod gobject-2.0 gio-unix-2.0 glib-2.0 | tr ' ' '\n' | sed -e 's/^/-Xlinker /' -e 's/-Wl,//' | tr '\n' ' '`
 CCFLAGS=`pkg-config --cflags $mod gobject-2.0 gio-unix-2.0 glib-2.0 | tr ' ' '\n' | sed 's/^/-Xcc /' | tr '\n' ' ' `
 TAC="tail -r"
 if which tac >/dev/null ; then
