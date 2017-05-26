@@ -2,3 +2,6 @@
 /.build
 /Packages
 /*.xcodeproj
+Package.pins
+*-*.swift
+Sources/SwiftCairo.swift
