@@ -18,7 +18,7 @@ on macOS, or on Linux you should get something like:
 	Swift version 3.1 (swift-3.1-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
-### GLib 2.46 or higher
+### GLib 2.46 and Cairo 1.14.10 or higher
 
 These Swift wrappers have been tested with glib-2.46, 2.48, and 2.52.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
 

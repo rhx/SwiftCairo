@@ -36,5 +36,5 @@ grep 'public protocol' Sources/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | s
 echo >> Sources/Swift${Mod}.swift ""
 grep '^open class' Sources/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/    public typealias \1 = _cairo_\1/' >> Sources/Swift${Mod}.swift
 echo >> Sources/Swift${Mod}.swift ""
-grep '^public typealias' Sources/${Module}.swift | grep -v FontType | sed 's/^/    /' >> Sources/Swift${Mod}.swift
+grep '^public typealias' Sources/${Module}.swift | sed 's/^/    /' >> Sources/Swift${Mod}.swift
 echo >> Sources/Swift${Mod}.swift "}"
