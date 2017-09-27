@@ -5,5 +5,6 @@ let package = Package(
     dependencies: [
         .Package(url: "https://github.com/rhx/CCairo.git", majorVersion: 1),
         .Package(url: "https://github.com/rhx/SwiftGObject.git", majorVersion: 2),
-    ]
+    ],
+    swiftLanguageVersions: [3, 4]
 )

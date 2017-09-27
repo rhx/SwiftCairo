@@ -9,6 +9,7 @@ import CCairo
 import GLib
 import GLibObject
 
+#if os(Linux) // XXX: needs double-checking (Cairo version issue?)
 public extension cairo_font_slant_t {
     public static var normal: cairo_font_slant_t = CAIRO_FONT_SLANT_NORMAL
     public static var italic: cairo_font_slant_t = CAIRO_FONT_SLANT_ITALIC
@@ -41,6 +42,7 @@ public extension cairo_hint_metrics_t {
     public static var off: cairo_hint_metrics_t = CAIRO_HINT_METRICS_OFF
     public static var on: cairo_hint_metrics_t = CAIRO_HINT_METRICS_ON
 }
+#endif
 
 public extension ContextProtocol {
     /// Note: The selectFontFace() function call is part of what
