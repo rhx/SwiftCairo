@@ -2,6 +2,8 @@ import XCTest
 import CCairo
 @testable import Cairo
 
+let fontSlant: FontSlant = .normal
+
 class CairoTests: XCTestCase {
 
     func testSurface() {
