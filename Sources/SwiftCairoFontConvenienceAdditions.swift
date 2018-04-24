@@ -9,7 +9,7 @@ import CCairo
 import GLib
 import GLibObject
 
-#if os(Linux) // XXX: needs double-checking (Cairo version issue?)
+#if CAIRO_CONSTANTS_MISSING
 public extension cairo_font_slant_t {
     public static var normal: cairo_font_slant_t = CAIRO_FONT_SLANT_NORMAL
     public static var italic: cairo_font_slant_t = CAIRO_FONT_SLANT_ITALIC
