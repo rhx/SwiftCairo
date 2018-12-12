@@ -1,10 +1,18 @@
+// swift-tools-version:4.0
+
 import PackageDescription
 
 let package = Package(
     name: "Cairo",
-    dependencies: [
-        .Package(url: "https://github.com/rhx/CCairo.git", majorVersion: 1),
-        .Package(url: "https://github.com/rhx/SwiftGObject.git", majorVersion: 2),
+    products: [
+        .library(name: "Cairo", targets: ["Cairo"]),
     ],
-    swiftLanguageVersions: [3, 4]
+    dependencies: [
+        .package(url: "https://github.com/rhx/CCairo.git", .branch("master")),
+        .package(url: "https://github.com/rhx/SwiftGObject.git", .branch("master"))
+    ],
+    targets: [
+        .target(name: "Cairo", dependencies: ["GLibObject"]),
+        .testTarget(name: "CairoTests", dependencies: ["Cairo"]),
+    ]
 )
