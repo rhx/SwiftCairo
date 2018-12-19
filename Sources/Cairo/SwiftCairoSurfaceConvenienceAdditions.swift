@@ -3,14 +3,14 @@
 //  SwiftCairo
 //
 //  Created by Rene Hexel on 29/4/17.
-//  Copyright © 2017 Rene Hexel.  All rights reserved.
+//  Copyright © 2017, 2018 Rene Hexel.  All rights reserved.
 //
 import CCairo
 import GLib
 import GLibObject
 
 public extension SurfaceProtocol {
-    public var deviceOffset: (x: Double, y: Double) {
+    var deviceOffset: (x: Double, y: Double) {
         get {
             var x = Double(0)
             var y = Double(0)
@@ -26,7 +26,7 @@ public extension SurfaceProtocol {
     /// - Parameters:
     ///   - x: horizontal offset
     ///   - y: vertical offset
-    public func setDeviceOffset(x: Double = 0, y: Double = 0) {
+    func setDeviceOffset(x: Double = 0, y: Double = 0) {
         cairo_surface_set_device_offset(ptr, x, y)
     }
 
@@ -35,7 +35,7 @@ public extension SurfaceProtocol {
     /// - Parameters:
     ///   - x: horizontal scale
     ///   - y: vertical scale
-    public func setDeviceScale(x: Double = 1, y: Double = 1) {
+    func setDeviceScale(x: Double = 1, y: Double = 1) {
         cairo_surface_set_device_scale(ptr, x, y)
     }
 }
