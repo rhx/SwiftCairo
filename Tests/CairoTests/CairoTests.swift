@@ -8,9 +8,9 @@ class CairoTests: XCTestCase {
         let width = 320
         let height = 240
         let surface = imageSurfaceCreate(format: CAIRO_FORMAT_ARGB32, width: width, height: height)
-        XCTAssertEqual(cairo_image_surface_get_width(surface.ptr), CInt(width))
-        XCTAssertEqual(cairo_image_surface_get_height(surface.ptr), CInt(height))
-        XCTAssertEqual(cairo_image_surface_get_stride(surface.ptr), CInt(width*4))
+        XCTAssertEqual(cairo_image_surface_get_width(surface._ptr), CInt(width))
+        XCTAssertEqual(cairo_image_surface_get_height(surface._ptr), CInt(height))
+        XCTAssertEqual(cairo_image_surface_get_stride(surface._ptr), CInt(width*4))
     }
 
     func testContextAndPath() {

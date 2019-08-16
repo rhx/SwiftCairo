@@ -3,7 +3,7 @@
 //  SwiftCairo
 //
 //  Created by Rene Hexel on 16/9/16.
-//  Copyright © 2017, 2018 Rene Hexel.  All rights reserved.
+//  Copyright © 2017, 2018, 2019 Rene Hexel.  All rights reserved.
 //
 import CCairo
 import GLib
@@ -12,14 +12,14 @@ import GLibObject
 public extension ContextRef {
     /// Create a Cairo context from a surface
     init<S: SurfaceProtocol>(surface: S) {
-        ptr = cairo_create(surface.ptr)
+        ptr = UnsafeMutableRawPointer(cairo_create(surface._ptr))
     }
 }
 
 public extension Context {
     /// Create a Cairo context from a surface
     convenience init<S: SurfaceProtocol>(surface: S) {
-        self.init(cairo_create(surface.ptr))
+        self.init(cairo_create(surface._ptr))
     }
 }
 
@@ -29,22 +29,22 @@ public extension ContextProtocol {
     /// a matching call to unref() is made.
     @discardableResult
     func ref() -> ContextRef {
-        return ContextRef(cairo_reference(ptr))
+        return ContextRef(cairo_reference(_ptr))
     }
 
     /// Decreases the reference count on cr by one.
     /// If the result is zero, then cr and
     /// all associated resources are freed.
     /// See ref().
-    func unref() { cairo_destroy(ptr) }
+    func unref() { cairo_destroy(_ptr) }
     
     /// Cairo context reference count
     var referenceCount: Int {
-        return Int(cairo_get_reference_count(ptr))
+        return Int(cairo_get_reference_count(_ptr))
     }
 
     /// Error status of the context
-    var status: cairo_status_t { return cairo_status(ptr) }
+    var status: cairo_status_t { return cairo_status(_ptr) }
 
     /// Makes a copy of the current state of cr
     /// and saves it on an internal stack of saved states
@@ -60,16 +60,16 @@ public extension ContextProtocol {
     /// of a cairo_t drops to zero in response to a call
     /// to unref(), any saved states will be freed along
     /// with the cairo_t.
-    func save() { cairo_save(ptr) }
+    func save() { cairo_save(_ptr) }
 
     /// Restores cr to the state saved by a preceding call to save() and removes that state from the stack of saved states.
-    func restore() { cairo_restore(ptr) }
+    func restore() { cairo_restore(_ptr) }
 
     /// Gets the target surface for the cairo context as passed to cairo_create().
     ///
     /// This function will always return a valid pointer, but the result can be a "nil" surface if cr is already in an error state, (ie. status != CAIRO_STATUS_SUCCESS). A nil surface is indicated by surface.status != CAIRO_STATUS_SUCCESS.
     var target: SurfaceRef {
-        return SurfaceRef(cairo_get_target(ptr))
+        return SurfaceRef(cairo_get_target(_ptr))
     }
 
     ///    Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to cairo_pop_group() or cairo_pop_group_to_source(). These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
@@ -90,13 +90,13 @@ public extension ContextProtocol {
     ///    cairo_stroke (cr);
     ///    cairo_pop_group_to_source (cr);
     ///    cairo_paint_with_alpha (cr, alpha);
-    func pushGroup() { cairo_push_group(ptr) }
+    func pushGroup() { cairo_push_group(_ptr) }
 
     /// Temporarily redirects drawing to an intermediate surface known as a group. The redirection lasts until the group is completed by a call to cairo_pop_group() or cairo_pop_group_to_source(). These calls provide the result of any drawing to the group as a pattern, (either as an explicit object, or set as the source pattern).
     ///
     /// The group will have a content type of content . The ability to control this content type is the only distinction between this function and cairo_push_group() which you should see for a more detailed description of group rendering.
     func pushGroup(content: Content) {
-        cairo_push_group_with_content(ptr, content)
+        cairo_push_group_with_content(_ptr, content)
     }
 
     /// Terminates the redirection begun by a call to cairo_push_group() or cairo_push_group_with_content() and returns a new pattern containing the results of all drawing operations performed to the group.
@@ -104,7 +104,7 @@ public extension ContextProtocol {
     /// The cairo_pop_group() function calls cairo_restore(), (balancing a call to cairo_save() by the push_group function), so that any changes to the graphics state will not be visible outside the group.
     @discardableResult
     func popGroup() -> PatternRef {
-        return PatternRef(cairo_pop_group(ptr))
+        return PatternRef(cairo_pop_group(_ptr))
     }
 
     /// Terminates the redirection begun by a call to cairo_push_group() or cairo_push_group_with_content() and installs the resulting pattern as the source pattern in the given cairo context.
@@ -117,13 +117,13 @@ public extension ContextProtocol {
     ///
     /// The cairo_pop_group() function calls cairo_restore(), (balancing a call to cairo_save() by the push_group function), so that any changes to the graphics state will not be visible outside the group.
     func popGroupToSource() {
-        cairo_pop_group_to_source(ptr)
+        cairo_pop_group_to_source(_ptr)
     }
 
     /// Returns the current destination surface for the context. This is either the original target surface as passed to cairo_create() or the target surface for the current group as started by the most recent call to cairo_push_group() or cairo_push_group_with_content().
     /// This property will always return a valid pointer, but the result can be a "nil" surface if cr is already in an error state, (ie. cairo_status() != CAIRO_STATUS_SUCCESS). A nil surface is indicated by cairo_surface_status() != CAIRO_STATUS_SUCCESS.
     var groupTarget: SurfaceRef {
-        return SurfaceRef(cairo_get_group_target(ptr))
+        return SurfaceRef(cairo_get_group_target(_ptr))
     }
 
     /// Sets the source pattern within cr to an opaque color. This opaque color will then be used for any subsequent drawing operation until a new source pattern is set.
@@ -133,7 +133,7 @@ public extension ContextProtocol {
     ///
     /// The default source pattern is opaque black, (that is, it is equivalent to setSource(red: 0.0, green: 0.0, blue: 0.0)).
     func setSource(red: Double, green: Double, blue: Double) {
-        cairo_set_source_rgb(ptr, red, green, blue)
+        cairo_set_source_rgb(_ptr, red, green, blue)
     }
 
     /// Sets the source pattern within cr to a translucent color. This color will then be used for any subsequent drawing operation until a new source pattern is set.
@@ -142,7 +142,7 @@ public extension ContextProtocol {
     ///
     /// The default source pattern is opaque black, (that is, it is equivalent to setSource(red: 0.0, green: 0.0, blue: 0.0)).
     func setSource(red: Double, green: Double, blue: Double, alpha: Double) {
-        cairo_set_source_rgba(ptr, red, green, blue, alpha)
+        cairo_set_source_rgba(_ptr, red, green, blue, alpha)
     }
 
     /// Source pattern within cr. This pattern will then be used for any subsequent drawing operation until a new source pattern is set.
@@ -151,16 +151,16 @@ public extension ContextProtocol {
     ///
     /// The default source pattern is a solid pattern that is opaque black, (that is, it is equivalent to cairo_set_source_rgb(cr, 0.0, 0.0, 0.0)).
     var source: PatternRef {
-        get { return PatternRef(cairo_get_source(ptr)) }
-        set { cairo_set_source(ptr, newValue.ptr) }
+        get { return PatternRef(cairo_get_source(_ptr)) }
+        set { cairo_set_source(_ptr, newValue._ptr) }
     }
 
     /// Antialiasing mode of the rasterizer used for drawing shapes. This value is a hint, and a particular backend may or may not support a particular value. At the current time, no backend supports CAIRO_ANTIALIAS_SUBPIXEL when drawing shapes.
     ///
     /// Note that this option does not affect text rendering, instead see cairo_font_options_set_antialias().
     var antiAlias: cairo_antialias_t {
-        get { return cairo_get_antialias(ptr) }
-        set { cairo_set_antialias(ptr, newValue) }
+        get { return cairo_get_antialias(_ptr) }
+        set { cairo_set_antialias(_ptr, newValue) }
     }
 
     /// Sets the dash pattern to be used by cairo_stroke(). A dash pattern is specified by dashes , an array of positive values. Each value provides the length of alternate "on" and "off" portions of the stroke. The offset specifies an offset into the pattern at which the stroke begins.
@@ -178,12 +178,12 @@ public extension ContextProtocol {
     ///  - Parameter dashes:    an array specifying alternate lengths of on and off stroke portions
     ///  - Parameter offset: an offset into the dash pattern at which the stroke should start
     func setDash(_ dashes: [Double], offset: Double = 0.0) {
-        cairo_set_dash(ptr, dashes, Int32(dashes.count), offset)
+        cairo_set_dash(_ptr, dashes, Int32(dashes.count), offset)
     }
 
     /// length of the dash array in cr (0 if dashing is not currently in effect).
     var dashCount: Int {
-        return Int(cairo_get_dash_count(ptr))
+        return Int(cairo_get_dash_count(_ptr))
     }
 
     /// Sets the dash pattern to be used by cairo_stroke(). A dash pattern is specified by dashes , an array of positive values. Each value provides the length of alternate "on" and "off" portions of the stroke. The offset specifies an offset into the pattern at which the stroke begins.
@@ -200,7 +200,7 @@ public extension ContextProtocol {
     var dash: [Double] {
         get {
             var dashes = [Double](repeating: 0, count: dashCount)
-            cairo_get_dash(ptr, &dashes, nil)
+            cairo_get_dash(_ptr, &dashes, nil)
             return dashes
         }
         set { setDash(newValue) }
@@ -210,16 +210,16 @@ public extension ContextProtocol {
     ///
     /// The default fill rule is CAIRO_FILL_RULE_WINDING.
     var fillRule: cairo_fill_rule_t {
-        get { return cairo_get_fill_rule(ptr) }
-        set { cairo_set_fill_rule(ptr, newValue) }
+        get { return cairo_get_fill_rule(_ptr) }
+        set { cairo_set_fill_rule(_ptr, newValue) }
     }
 
     /// Current line cap style within the cairo context. See cairo_line_cap_t for details about how the available line cap styles are drawn.
     ///
     /// As with the other stroke parameters, the current line cap style is examined by cairo_stroke(), cairo_stroke_extents(), and cairo_stroke_to_path(), but does not have any effect during path construction.
     var lineCap: cairo_line_cap_t {
-        get { return cairo_get_line_cap(ptr) }
-        set { cairo_set_line_cap(ptr, newValue) }
+        get { return cairo_get_line_cap(_ptr) }
+        set { cairo_set_line_cap(_ptr, newValue) }
     }
 
     /// Current line join style within the cairo context. See cairo_line_join_t for details about how the available line join styles are drawn.
@@ -228,8 +228,8 @@ public extension ContextProtocol {
     ///
     /// The default line join style is CAIRO_LINE_JOIN_MITER.
     var lineJoin: cairo_line_join_t {
-        get { return cairo_get_line_join(ptr) }
-        set { cairo_set_line_join(ptr, newValue) }
+        get { return cairo_get_line_join(_ptr) }
+        set { cairo_set_line_join(_ptr, newValue) }
     }
 
     /// Current line width within the cairo context. The line width value specifies the diameter of a pen that is circular in user space, (though device-space pen may be an ellipse in general due to scaling/shear/rotation of the CTM).
@@ -240,8 +240,8 @@ public extension ContextProtocol {
     ///
     /// The default line width value is 2.0.
     var lineWidth: Double {
-        get { return cairo_get_line_width(ptr) }
-        set { cairo_set_line_width(ptr, newValue) }
+        get { return cairo_get_line_width(_ptr) }
+        set { cairo_set_line_width(_ptr, newValue) }
     }
 
     /// Current miter limit within the cairo context.
@@ -254,8 +254,8 @@ public extension ContextProtocol {
     ///
     /// A miter limit for a desired angle can be computed as: miter limit = 1/sin(angle/2)
     var miterLimit: Double {
-        get { return cairo_get_miter_limit(ptr) }
-        set { cairo_set_miter_limit(ptr, newValue) }
+        get { return cairo_get_miter_limit(_ptr) }
+        set { cairo_set_miter_limit(_ptr, newValue) }
     }
     
     /// Current mitre limit within the cairo context.
@@ -268,30 +268,30 @@ public extension ContextProtocol {
     ///
     /// A mitre limit for a desired angle can be computed as: mitre limit = 1/sin(angle/2)
     var mitreLimit: Double {
-        get { return cairo_get_miter_limit(ptr) }
-        set { cairo_set_miter_limit(ptr, newValue) }
+        get { return cairo_get_miter_limit(_ptr) }
+        set { cairo_set_miter_limit(_ptr, newValue) }
     }
 
     /// Compositing operator to be used for all drawing operations. See cairo_operator_t for details on the semantics of each available compositing operator.
     ///
     /// The default operator is CAIRO_OPERATOR_OVER.
     var `operator`: cairo_operator_t {
-        get { return cairo_get_operator(ptr) }
-        set { cairo_set_operator(ptr, newValue) }
+        get { return cairo_get_operator(_ptr) }
+        set { cairo_set_operator(_ptr, newValue) }
     }
     
     /// Compositing operator to be used for all drawing operations. See cairo_operator_t for details on the semantics of each available compositing operator.
     ///
     /// The default operator is CAIRO_OPERATOR_OVER.
     var compositingOperator: cairo_operator_t {
-        get { return cairo_get_operator(ptr) }
-        set { cairo_set_operator(ptr, newValue) }
+        get { return cairo_get_operator(_ptr) }
+        set { cairo_set_operator(_ptr, newValue) }
     }
 
     /// Tolerance used when converting paths into trapezoids. Curved segments of the path will be subdivided until the maximum deviation between the original path and the polygonal approximation is less than tolerance. The default value is 0.1. A larger value will give better performance, a smaller value, better appearance. (Reducing the value from the default value of 0.1 is unlikely to improve appearance significantly.) The accuracy of paths within Cairo is limited by the precision of its internal arithmetic, and the prescribed tolerance is restricted to the smallest representable internal value.
     var tolerance: Double {
-        get { return cairo_get_tolerance(ptr) }
-        set { cairo_set_tolerance(ptr, newValue) }
+        get { return cairo_get_tolerance(_ptr) }
+        set { cairo_set_tolerance(_ptr, newValue) }
     }
 
     /// Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by cairo_fill() and according to the current fill rule (see cairo_set_fill_rule()).
@@ -301,7 +301,7 @@ public extension ContextProtocol {
     /// The current clip region affects all drawing operations by effectively masking out any changes to the surface that are outside the current clip region.
     ///
     /// Calling clip() can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling clip() within a save()/restore() pair. The only other means of increasing the size of the clip region is resetClip().
-    func clip() { cairo_clip(ptr) }
+    func clip() { cairo_clip(_ptr) }
 
     /// Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by fill() and according to the current fill rule (see fillRule).
     ///
@@ -310,7 +310,7 @@ public extension ContextProtocol {
     /// The current clip region affects all drawing operations by effectively masking out any changes to the surface that are outside the current clip region.
     ///
     /// Calling clipPreserve() can only make the clip region smaller, never larger. But the current clip is part of the graphics state, so a temporary restriction of the clip region can be achieved by calling clipPreserve() within a save()/restore() pair. The only other means of increasing the size of the clip region is resetClip().
-    func clipPreserve() { cairo_clip_preserve(ptr) }
+    func clipPreserve() { cairo_clip_preserve(_ptr) }
 
     /// Bounding box in user coordinates covering the area inside the current clip.
     var clipExtents: (x1: Double, y1: Double, x2: Double, y2: Double) {
@@ -318,7 +318,7 @@ public extension ContextProtocol {
         var y1: Double = 0.0
         var x2: Double = 0.0
         var y2: Double = 0.0
-        cairo_clip_extents(ptr, &x1, &y1, &x2, &y2)
+        cairo_clip_extents(_ptr, &x1, &y1, &x2, &y2)
         return (x1, y1, x2, y2)
     }
 
@@ -326,17 +326,17 @@ public extension ContextProtocol {
     ///
     /// See clip() and clipPreserve().
     func isInClip(_ x: Double, _ y: Double) -> Bool {
-        return cairo_in_clip(ptr, x, y) != 0
+        return cairo_in_clip(_ptr, x, y) != 0
     }
 
     /// Reset the current clip region to its original, unrestricted state. That is, set the clip region to an infinitely large shape containing the target surface. Equivalently, if infinity is too hard to grasp, one can imagine the clip region being reset to the exact bounds of the target surface.
     ///
     /// Note that code meant to be reusable should not call resetClip() as it will cause results unexpected by higher-level code which calls clip(). Consider using save() and restore() around clip() as a more robust means of temporarily restricting the clip region.
-    func resetClip() { cairo_reset_clip(ptr) }
+    func resetClip() { cairo_reset_clip(_ptr) }
 
     /// Current clip region as a list of rectangles in user coordinates.
     var clipRectangleList: [cairo_rectangle_t]? {
-        guard let list = cairo_copy_clip_rectangle_list(ptr) else { return nil }
+        guard let list = cairo_copy_clip_rectangle_list(_ptr) else { return nil }
         let n = Int(list.pointee.num_rectangles)
         let r = cairo_rectangle_t(x: 0, y: 0, width: 0, height: 0)
         var rects = [cairo_rectangle_t](repeating: r, count: n)
@@ -348,10 +348,10 @@ public extension ContextProtocol {
     }
 
     /// A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). After fill(), the current path will be cleared from the cairo context. See fillRule() and fillPreserve().
-    func fill() { cairo_fill(ptr) }
+    func fill() { cairo_fill(_ptr) }
 
     /// A drawing operator that fills the current path according to the current fill rule, (each sub-path is implicitly closed before being filled). Unlike fill(), fillPreserve() preserves the path within the cairo context.
-    func fillPreserve() { cairo_fill_preserve(ptr) }
+    func fillPreserve() { cairo_fill_preserve(_ptr) }
 
     /// Bounding box in user coordinates covering the area that would be affected, (the "inked" area), by a cairo_fill() operation given the current path and fill parameters. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
     ///
@@ -365,7 +365,7 @@ public extension ContextProtocol {
         var y1: Double = 0.0
         var x2: Double = 0.0
         var y2: Double = 0.0
-        cairo_fill_extents(ptr, &x1, &y1, &x2, &y2)
+        cairo_fill_extents(_ptr, &x1, &y1, &x2, &y2)
         return (x1, y1, x2, y2)
     }
 
@@ -373,11 +373,11 @@ public extension ContextProtocol {
     ///
     /// See fill(), fillRule, and fillPreserve().
     func isInFill(_ x: Double, _ y: Double) -> Bool {
-        return cairo_in_fill(ptr, x, y) != 0
+        return cairo_in_fill(_ptr, x, y) != 0
     }
 
     /// Drawing operator that paints the current source using the alpha channel of pattern as a mask. (Opaque areas of pattern are painted with the source, transparent areas are not painted.)
-    func mask<P: PatternProtocol>(pattern: P) { cairo_mask(ptr, pattern.ptr) }
+    func mask<P: PatternProtocol>(pattern: P) { cairo_mask(_ptr, pattern._ptr) }
 
     /// drawing operator that paints the current source using the alpha channel of surface as a mask. (Opaque areas of surface are painted with the source, transparent areas are not painted.)
     ///
@@ -386,14 +386,14 @@ public extension ContextProtocol {
     ///   - x: X coordinate at which to place the origin of surface
     ///   - y: Y coordinate at which to place the origin of surface
     func mask<S: SurfaceProtocol>(surface: S, x: Double = 0.0, y: Double = 0.0) {
-        cairo_mask_surface(ptr, surface.ptr, x, y)
+        cairo_mask_surface(_ptr, surface._ptr, x, y)
     }
 
     /// Drawing operator that paints the current source everywhere within the current clip region.
-    func paint() { cairo_paint(ptr) }
+    func paint() { cairo_paint(_ptr) }
 
     /// Drawing operator that paints the current source everywhere within the current clip region using a mask of constant alpha value alpha . The effect is similar to paint(), but the drawing is faded out using the alpha value.
-    func paint(alpha: Double) { cairo_paint_with_alpha(ptr, alpha) }
+    func paint(alpha: Double) { cairo_paint_with_alpha(_ptr, alpha) }
 
     /// Drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. After stroke(), the current path will be cleared from the cairo context. See lineWidth, lineJoin, lineCap, dash, setDash(), and strokePreserve().
     ///
@@ -404,12 +404,12 @@ public extension ContextProtocol {
     /// A sub-path created by moveTo() followed by either a closePath() or one or more calls to lineTo() to the same coordinate as the moveTo(). If the cap style is CAIRO_LINE_CAP_ROUND then these sub-paths will be drawn as circular dots. Note that in the case of CAIRO_LINE_CAP_SQUARE a degenerate sub-path will not be drawn at all, (since the correct orientation is indeterminate).
     ///
     /// In no case will a cap style of CAIRO_LINE_CAP_BUTT cause anything to be drawn in the case of either degenerate segments or sub-paths.
-    func stroke() { cairo_stroke(ptr) }
+    func stroke() { cairo_stroke(_ptr) }
 
     /// Drawing operator that strokes the current path according to the current line width, line join, line cap, and dash settings. Unlike cairo_stroke(), cairo_stroke_preserve() preserves the path within the cairo context.
     ///
     /// See lineWidth, lineJoin, lineCap, dash, setDash(), and stroke().
-    func strokePreserve() { cairo_stroke_preserve(ptr) }
+    func strokePreserve() { cairo_stroke_preserve(_ptr) }
 
     /// Computes a bounding box in user coordinates covering the area that would be affected, (the "inked" area), by a cairo_stroke() operation given the current path and stroke parameters. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
     ///
@@ -428,7 +428,7 @@ public extension ContextProtocol {
         var y1: Double = 0.0
         var x2: Double = 0.0
         var y2: Double = 0.0
-        cairo_fill_extents(ptr, &x1, &y1, &x2, &y2)
+        cairo_fill_extents(_ptr, &x1, &y1, &x2, &y2)
         return (x1, y1, x2, y2)
     }
 
@@ -436,25 +436,25 @@ public extension ContextProtocol {
     ///
     /// See stroke(), lineWidth, lineJoin, lineCap, dash, setDash(), and strokePreserve().
     func isInStroke(_ x: Double, _ y: Double) -> Bool {
-        return cairo_in_stroke(ptr, x, y) != 0
+        return cairo_in_stroke(_ptr, x, y) != 0
     }
 
     /// Emits the current page for backends that support multiple pages, but doesn't clear it, so, the contents of the current page will be retained for the next page too. Use showPage() if you want to get an empty page after the emission.
     ///
     /// This is a convenience method that simply calls cairo_surface_copy_page() on cr 's target.
-    func copyPage() { cairo_copy_page(ptr) }
+    func copyPage() { cairo_copy_page(_ptr) }
 
     /// Emits and clears the current page for backends that support multiple pages. Use cairo_copy_page() if you don't want to clear the page.
     ///
     /// This is a convenience function that simply calls cairo_surface_show_page() on cr 's target.
-    func showPage() { cairo_show_page(ptr) }
+    func showPage() { cairo_show_page(_ptr) }
 
     /// Return user data previously attached to cr using the specified key. If no user data has been attached with the given key this function returns NULL.
     ///
     /// - Parameters:
     ///   - key: the address of the cairo_user_data_key_t the user data was attached to
     func userData(key: UnsafePointer<cairo_user_data_key_t>) -> UnsafeMutableRawPointer {
-        return cairo_get_user_data(ptr, key)
+        return cairo_get_user_data(_ptr, key)
     }
 
     /// Attach user data to cr . To remove user data from a surface, call this function with the key that was used to set it and NULL for data .
@@ -465,13 +465,13 @@ public extension ContextProtocol {
     /// - Returns: CAIRO_STATUS_SUCCESS or CAIRO_STATUS_NO_MEMORY if a slot could not be allocated for the user data.
     @discardableResult
     func setUserData(key: UnsafePointer<cairo_user_data_key_t>, value: UnsafeMutableRawPointer, destroy: cairo_destroy_func_t! = nil) -> cairo_status_t {
-        return cairo_set_user_data(ptr, key, value, destroy)
+        return cairo_set_user_data(_ptr, key, value, destroy)
     }
 
     // MARK: - Bezier Paths
 
     /// Clears the current path. After this call there will be no path and no current point.
-    func newPath() { cairo_new_path(ptr) }
+    func newPath() { cairo_new_path(_ptr) }
 
     /// Creates a copy of the current path and returns it to the user as a cairo_path_t. See cairo_path_data_t for hints on how to iterate over the returned data structure.
     ///
@@ -480,7 +480,7 @@ public extension ContextProtocol {
     /// If there is insufficient memory to copy the path. In this case path->status will be set to CAIRO_STATUS_NO_MEMORY.
     /// If cr is already in an error state. In this case path->status will contain the same status that would be returned by cairo_status().
     /// - Returns: The copy of the current path.
-    var path: PathRef { return PathRef(cairo_copy_path(ptr)) }
+    var path: PathRef { return PathRef(cairo_copy_path(_ptr)) }
 
     /// flattened copy of the current path and returns it to the user as a cairo_path_t. See cairo_path_data_t for hints on how to iterate over the returned data structure.
     ///
@@ -491,19 +491,19 @@ public extension ContextProtocol {
     /// If there is insufficient memory to copy the path. In this case path->status will be set to CAIRO_STATUS_NO_MEMORY.
     /// If cr is already in an error state. In this case path->status will contain the same status that would be returned by status().
     var flatPath: PathRef {
-        return PathRef(cairo_copy_path_flat(ptr))
+        return PathRef(cairo_copy_path_flat(_ptr))
     }
 
     /// Append the path onto the current path. The path may be either the return value from one of cairo_copy_path() or cairo_copy_path_flat() or it may be constructed manually. See cairo_path_t for details on how the path data structure should be initialized, and note that path->status must be initialized to CAIRO_STATUS_SUCCESS.
     /// - Parameters:
     ///   - path: Path to be appended
     func append<P: PathProtocol>(path: P) {
-        cairo_append_path(ptr, path.ptr)
+        cairo_append_path(_ptr, path._ptr)
     }
 
     /// Returns whether a current point is defined on the current path. See `currentPoint` for details on the current point.
     var hasCurrentPoint: Bool {
-        return cairo_has_current_point(ptr) != 0
+        return cairo_has_current_point(_ptr) != 0
     }
 
     /// Gets the current point of the current path, which is conceptually the final point reached by the path so far.
@@ -517,7 +517,7 @@ public extension ContextProtocol {
     /// Some functions unset the current path and as a result, current point: cairo_fill(), cairo_stroke().
     var currentPoint: (x: Double, y: Double) {
         var x = 0.0, y = 0.0
-        cairo_get_current_point(ptr, &x, &y)
+        cairo_get_current_point(_ptr, &x, &y)
         return (x, y)
     }
 
@@ -526,7 +526,7 @@ public extension ContextProtocol {
     /// In many cases, this call is not needed since new sub-paths are frequently started with moveTo().
     ///
     /// A call to `newSubPath()` is particularly useful when beginning a new sub-path with one of the arc() calls. This makes things easier as it is no longer necessary to manually compute the arc's initial coordinates for a call to moveTo().
-    func newSubPath() { cairo_new_sub_path(ptr) }
+    func newSubPath() { cairo_new_sub_path(_ptr) }
 
     /// Adds a line segment to the path from the current point to the beginning of the current sub-path, (the most recent point passed to moveTo()), and closes this sub-path. After this call the current point will be at the joined endpoint of the sub-path.
     ///
@@ -535,7 +535,7 @@ public extension ContextProtocol {
     /// If there is no current point before the call to closePath(), this function will have no effect.
     ///
     /// Note: As of cairo version 1.2.4 any call to closePath() will place an explicit MOVE_TO element into the path immediately after the CLOSE_PATH element, (which can be seen in cairo_copy_path() for example). This can simplify path processing in some cases as it may not be necessary to save the "last move_to point" during processing as the MOVE_TO immediately after the CLOSE_PATH will provide that point.
-    func closePath() { cairo_close_path(ptr) }
+    func closePath() { cairo_close_path(_ptr) }
 
     /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of increasing angles to end at angle2 . If angle2 is less than angle1 it will be progressively increased by .pi*2 until it is greater than angle1 .
     ///
@@ -555,14 +555,14 @@ public extension ContextProtocol {
     ///     cr.arc(xc: 0, yc: 0, radius: 1, angle1: 0, angle2: .pi * 2);
     ///     cr.restore();
     func arc(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = 0, angle2: Double = .pi*2) {
-        cairo_arc(ptr, xc, yc, radius, angle1, angle2)
+        cairo_arc(_ptr, xc, yc, radius, angle1, angle2)
     }
 
     /// Adds a circular arc of the given radius to the current path. The arc is centered at (xc , yc ), begins at angle1 and proceeds in the direction of decreasing angles to end at angle2 . If angle2 is greater than angle1 it will be progressively decreased by .pi*2 until it is less than angle1 .
     ///
     /// See arc() for more details. This function differs only in the direction of the arc between the two angles.
     func arcNegative(xc: Double = 0, yc: Double = 0, radius: Double = 1, angle1: Double = .pi*2, angle2: Double = 0) {
-        cairo_arc_negative(ptr, xc, yc, radius, angle1, angle2)
+        cairo_arc_negative(_ptr, xc, yc, radius, angle1, angle2)
     }
 
     /// Adds a cubic Bézier spline to the path from the current point to position (x3 , y3 ) in user-space coordinates, using (x1 , y1 ) and (x2 , y2 ) as the control points. After this call the current point will be (x3 , y3 ).
@@ -575,7 +575,7 @@ public extension ContextProtocol {
     ///   - x3: the X coordinate of the end of the curve
     ///   - y3: the Y coordinate of the end of the curve
     func curveTo(x1: Double, y1: Double, x2: Double, y2: Double, x3: Double, y3: Double) {
-        cairo_curve_to(ptr, x1, y1, x2, y2, x3, y3)
+        cairo_curve_to(_ptr, x1, y1, x2, y2, x3, y3)
     }
 
     /// Adds a line to the path from the current point to position (x , y ) in user-space coordinates. After this call the current point will be (x , y ).
@@ -585,14 +585,14 @@ public extension ContextProtocol {
     /// - Parameters:
     ///   - x: the X coordinate of the end of the new line
     ///   - y: the Y coordinate of the end of the new line
-    func lineTo(_ x: Double, _ y: Double) { cairo_line_to(ptr, x, y) }
+    func lineTo(_ x: Double, _ y: Double) { cairo_line_to(_ptr, x, y) }
 
     /// Begin a new sub-path. After this call the current point will be (x , y ).
     ///
     /// - Parameters:
     ///   - x: the X coordinate of the end of the new position
     ///   - y: the Y coordinate of the end of the new position
-    func moveTo(_ x: Double, _ y: Double) { cairo_move_to(ptr, x, y) }
+    func moveTo(_ x: Double, _ y: Double) { cairo_move_to(_ptr, x, y) }
 
     /// Adds a closed sub-path rectangle of the given size to the current path at position (x , y ) in user-space coordinates.
     ///
@@ -604,12 +604,12 @@ public extension ContextProtocol {
     ///     cr.relLineTo(-width, 0);
     ///     cr.closePath();
     func rectangle(x: Double, y: Double, width: Double, height: Double) {
-        cairo_rectangle(ptr, x, y, width, height)
+        cairo_rectangle(_ptr, x, y, width, height)
     }
 
     /// Adds closed paths for the glyphs to the current path. The generated path if filled, achieves an effect similar to that of showGlyphs().
     func glyphPath(glyphs: [cairo_glyph_t]) {
-        cairo_glyph_path(ptr, glyphs, Int32(glyphs.count))
+        cairo_glyph_path(_ptr, glyphs, Int32(glyphs.count))
     }
 
     /// Adds closed paths for text to the current path.  The generated
@@ -631,7 +631,7 @@ public extension ContextProtocol {
     /// serious text-using applications. See cairo_glyph_path() for the
     /// "real" text path API in cairo.
     func textPath(_ text: UnsafePointer<CChar>) {
-        cairo_text_path(ptr, text)
+        cairo_text_path(_ptr, text)
     }
     
     /// Relative-coordinate version of cairo_curve_to(). All offsets are relative to the current point. Adds a cubic Bézier spline to the path from the current point to a point offset from the current point by (dx3 , dy3 ), using points offset by (dx1 , dy1 ) and (dx2 , dy2 ) as the control points. After this call the current point will be offset by (dx3 , dy3 ).
@@ -647,7 +647,7 @@ public extension ContextProtocol {
     ///   - dx3: the X offset of the end of the curve
     ///   - dy3: the Y offset of the end of the curve
     func relCurveTo(dx1: Double, dy1: Double, dx2: Double, dy2: Double, dx3: Double, dy3: Double) {
-        cairo_rel_curve_to(ptr, dx1, dy1, dx2, dy2, dx3, dy3)
+        cairo_rel_curve_to(_ptr, dx1, dy1, dx2, dy2, dx3, dy3)
     }
 
     /// Relative-coordinate version of lineTo(). Adds a line to the path from the current point to a point that is offset from the current point by (dx , dy ) in user space. After this call the current point will be offset by (dx , dy ).
@@ -660,7 +660,7 @@ public extension ContextProtocol {
     ///   - dx: the X offset of the end of the new line
     ///   - dy: the Y offset of the end of the new line
     func relLineTo(_ dx: Double, _ dy: Double) {
-        cairo_rel_line_to(ptr, dx, dy)
+        cairo_rel_line_to(_ptr, dx, dy)
     }
     
     /// Begin a new sub-path. After this call the current point will offset by (x , y ).
@@ -673,7 +673,7 @@ public extension ContextProtocol {
     ///   - x: the X coordinate of the end of the new position
     ///   - y: the Y coordinate of the end of the new position
     func relMoveTo(_ dx: Double, _ dy: Double) {
-        cairo_rel_move_to(ptr, dx, dy)
+        cairo_rel_move_to(_ptr, dx, dy)
     }
 
     /// Computes a bounding box in user-space coordinates covering the points on the current path. If the current path is empty, returns an empty rectangle ((0,0), (0,0)). Stroke parameters, fill rule, surface dimensions and clipping are not taken into account.
@@ -688,7 +688,7 @@ public extension ContextProtocol {
         var y1: Double = 0.0
         var x2: Double = 0.0
         var y2: Double = 0.0
-        cairo_path_extents(ptr, &x1, &y1, &x2, &y2)
+        cairo_path_extents(_ptr, &x1, &y1, &x2, &y2)
         return (x1, y1, x2, y2)
     }
 }

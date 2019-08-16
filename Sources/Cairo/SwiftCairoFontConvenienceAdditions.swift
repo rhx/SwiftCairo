@@ -3,7 +3,7 @@
 //  Cairo
 //
 //  Created by Rene Hexel on 17/9/16.
-//  Copyright © 2017, 2018 Rene Hexel.  All rights reserved.
+//  Copyright © 2017, 2018, 2019 Rene Hexel.  All rights reserved.
 //
 import CCairo
 import GLib
@@ -89,7 +89,7 @@ public extension ContextProtocol {
     /// This function is equivalent to a call to cairo_toy_font_face_create()
     /// followed by cairo_set_font_face().
     func selectFontFace(_ family: UnsafePointer<CChar>, slant: cairo_font_slant_t, weight: cairo_font_weight_t) {
-        cairo_select_font_face(ptr, family, slant, weight)
+        cairo_select_font_face(_ptr, family, slant, weight)
     }
 
     /// Sets the current font matrix to a scale by a factor of @size, replacing
@@ -107,7 +107,7 @@ public extension ContextProtocol {
             let size = (m.xx + m.yx + m.xy + m.yy) / 2
             return size
         }
-        set { cairo_set_font_size(ptr, newValue) }
+        set { cairo_set_font_size(_ptr, newValue) }
     }
 
     /// The font matrix gives a
@@ -119,12 +119,12 @@ public extension ContextProtocol {
     var fontMatrix: cairo_matrix_t {
         get {
             var m = cairo_matrix_t(xx: 0, yx: 0, xy: 0, yy: 0, x0: 0, y0: 0)
-            cairo_get_font_matrix(ptr, &m)
+            cairo_get_font_matrix(_ptr, &m)
             return m
         }
         set {
             var matrix = newValue
-            cairo_set_font_matrix(ptr, &matrix)
+            cairo_set_font_matrix(_ptr, &matrix)
         }
     }
 
@@ -134,7 +134,7 @@ public extension ContextProtocol {
     /// has a default value (like %CAIRO_ANTIALIAS_DEFAULT), then the value
     /// from the surface is used.
     func setFont(options: UnsafePointer<cairo_font_options_t>) {
-        cairo_set_font_options(ptr, options)
+        cairo_set_font_options(_ptr, options)
     }
 
     /// Retrieves font rendering options set via #cairo_set_font_options.
@@ -144,7 +144,7 @@ public extension ContextProtocol {
     /// - Parameters:
     ///   - options: a #cairo_font_options_t pointer into which to store the retrieved options. All existing values are overwritten
     func getFont(options: UnsafeMutablePointer<cairo_font_options_t>) {
-        cairo_get_font_options(ptr, options)
+        cairo_get_font_options(_ptr, options)
     }
 
     /// Current font face for a #cairo_t.
@@ -160,8 +160,8 @@ public extension ContextProtocol {
     /// cairo_set_font_face() with a nil font will trigger an error that
     /// will shutdown the #cairo_t object).
     var fontFace: UnsafeMutablePointer<cairo_font_face_t> {
-        get { return cairo_get_font_face(ptr) }
-        set { cairo_set_font_face(ptr, newValue) }
+        get { return cairo_get_font_face(_ptr) }
+        set { cairo_set_font_face(_ptr, newValue) }
     }
 
     /// the current scaled font for a #cairo_t.
@@ -177,8 +177,8 @@ public extension ContextProtocol {
     /// scaledFont with a nil font will trigger an error that
     /// will shutdown the #cairo_t object).
     var scaledFont: ScaledFont {
-        get { return ScaledFont(cairo_get_scaled_font(ptr)) }
-        set { cairo_set_scaled_font(ptr, newValue.ptr) }
+        get { return ScaledFont(cairo_get_scaled_font(_ptr)) }
+        set { cairo_set_scaled_font(_ptr, newValue._ptr) }
     }
 
     /// A drawing operator that generates the shape from a string of UTF-8
@@ -203,7 +203,7 @@ public extension ContextProtocol {
     /// serious text-using applications. See cairo_show_glyphs() for the
     /// "real" text display API in cairo.
     func showText(_ text: UnsafePointer<CChar>) {
-        cairo_show_text(ptr, text)
+        cairo_show_text(_ptr, text)
     }
 
     /// This operation has rendering effects similar to showGlyphs()
@@ -227,7 +227,7 @@ public extension ContextProtocol {
     ///
     /// See #cairo_text_cluster_t for constraints on valid clusters.
     func showText(_ text: UnsafePointer<CChar>, length: Int, glyphs: [cairo_glyph_t], clusters: [cairo_text_cluster_t], flags: cairo_text_cluster_flags_t) {
-        cairo_show_text_glyphs(ptr, text, Int32(length), glyphs, Int32(glyphs.count), clusters, Int32(clusters.count), flags)
+        cairo_show_text_glyphs(_ptr, text, Int32(length), glyphs, Int32(glyphs.count), clusters, Int32(clusters.count), flags)
     }
 
     /// Gets the extents for a string of text. The extents describe a
@@ -244,7 +244,7 @@ public extension ContextProtocol {
     /// affect the x_advance and y_advance values.
     func textExtents(_ text: UnsafePointer<CChar>) -> cairo_text_extents_t {
         var e = cairo_text_extents_t(x_bearing: 0, y_bearing: 0, width: 0, height: 0, x_advance: 0, y_advance: 0)
-        cairo_text_extents(ptr, text, &e)
+        cairo_text_extents(_ptr, text, &e)
         return e
     }
 
@@ -259,14 +259,14 @@ public extension ContextProtocol {
     /// rectangle (extents.width and extents.height).
     func glyphExtents(_ glyphs: [cairo_glyph_t]) -> cairo_text_extents_t {
         var e = cairo_text_extents_t(x_bearing: 0, y_bearing: 0, width: 0, height: 0, x_advance: 0, y_advance: 0)
-        cairo_glyph_extents(ptr, glyphs, Int32(glyphs.count), &e)
+        cairo_glyph_extents(_ptr, glyphs, Int32(glyphs.count), &e)
         return e
     }
 
     /// Font extents for the currently selected font
     var fontExtents: cairo_font_extents_t {
         var e = cairo_font_extents_t(ascent: 0, descent: 0, height: 0, max_x_advance: 0, max_y_advance: 0)
-        cairo_font_extents(ptr, &e)
+        cairo_font_extents(_ptr, &e)
         return e
     }
 }
