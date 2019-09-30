@@ -5,7 +5,7 @@
 #
 VER=1.0
 GLIB_VER=2.0
-JAZZY_VER=2.62.0
+JAZZY_VER=1.16.0
 Mod=Cairo
 Module=${Mod}-$VER
 module=`echo "${Module}" | tr '[:upper:]' '[:lower:]'`
