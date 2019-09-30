@@ -1,2056 +1,2056 @@
 {
   "warnings": [
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/CCairo/cairo_bridging.h",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/CCairo/cairo_bridging.h",
       "line": 75,
       "symbol": "_cairo",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 76,
       "symbol": "_cairo.FontType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 85,
       "symbol": "imageSurfaceCreate(format:width:height:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 92,
       "symbol": "Status",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 94,
       "symbol": "Status",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 95,
       "symbol": "Status.success",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 96,
       "symbol": "Status.no_memory",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 97,
       "symbol": "Status.invalid_restore",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 98,
       "symbol": "Status.invalid_pop_group",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 99,
       "symbol": "Status.no_current_point",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 100,
       "symbol": "Status.invalid_matrix",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 101,
       "symbol": "Status.invalid_status",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 102,
       "symbol": "Status.null_pointer",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 103,
       "symbol": "Status.invalid_string",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 104,
       "symbol": "Status.invalid_path_data",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 105,
       "symbol": "Status.read_error",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 106,
       "symbol": "Status.write_error",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 107,
       "symbol": "Status.surface_finished",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 108,
       "symbol": "Status.surface_type_mismatch",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 109,
       "symbol": "Status.pattern_type_mismatch",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 110,
       "symbol": "Status.invalid_content",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 111,
       "symbol": "Status.invalid_format",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 112,
       "symbol": "Status.invalid_visual",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 113,
       "symbol": "Status.file_not_found",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 114,
       "symbol": "Status.invalid_dash",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 115,
       "symbol": "Status.invalid_dsc_comment",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 116,
       "symbol": "Status.invalid_index",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 117,
       "symbol": "Status.clip_not_representable",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 118,
       "symbol": "Status.temp_file_error",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 119,
       "symbol": "Status.invalid_stride",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 120,
       "symbol": "Status.font_type_mismatch",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 121,
       "symbol": "Status.user_font_immutable",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 122,
       "symbol": "Status.user_font_error",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 123,
       "symbol": "Status.negative_count",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 124,
       "symbol": "Status.invalid_clusters",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 125,
       "symbol": "Status.invalid_slant",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 126,
       "symbol": "Status.invalid_weight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 127,
       "symbol": "Status.invalid_size",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 128,
       "symbol": "Status.user_font_not_implemented",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 129,
       "symbol": "Status.device_type_mismatch",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 130,
       "symbol": "Status.device_error",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 131,
       "symbol": "Status.invalid_mesh_construction",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 132,
       "symbol": "Status.device_finished",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 133,
       "symbol": "Status.jbig2_global_missing",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 136,
       "symbol": "Content",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 138,
       "symbol": "Content",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 139,
       "symbol": "Content.color",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 140,
       "symbol": "Content.alpha",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 141,
       "symbol": "Content.color_alpha",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 144,
       "symbol": "Operator",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 146,
       "symbol": "Operator",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 147,
       "symbol": "Operator.clear",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 148,
       "symbol": "Operator.source",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 149,
       "symbol": "Operator.over",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 150,
       "symbol": "Operator.in_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 151,
       "symbol": "Operator.out",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 152,
       "symbol": "Operator.atop",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 153,
       "symbol": "Operator.dest",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 154,
       "symbol": "Operator.dest_over",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 155,
       "symbol": "Operator.dest_in",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 156,
       "symbol": "Operator.dest_out",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 157,
       "symbol": "Operator.dest_atop",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 158,
       "symbol": "Operator.xor",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 159,
       "symbol": "Operator.add",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 160,
       "symbol": "Operator.saturate",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 161,
       "symbol": "Operator.multiply",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 162,
       "symbol": "Operator.screen",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 163,
       "symbol": "Operator.overlay",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 164,
       "symbol": "Operator.darken",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 165,
       "symbol": "Operator.lighten",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 166,
       "symbol": "Operator.color_dodge",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 167,
       "symbol": "Operator.color_burn",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 168,
       "symbol": "Operator.hard_light",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 169,
       "symbol": "Operator.soft_light",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 170,
       "symbol": "Operator.difference",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 171,
       "symbol": "Operator.exclusion",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 172,
       "symbol": "Operator.hsl_hue",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 173,
       "symbol": "Operator.hsl_saturation",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 174,
       "symbol": "Operator.hsl_color",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 175,
       "symbol": "Operator.hsl_luminosity",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 178,
       "symbol": "Antialias",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 180,
       "symbol": "Antialias",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 181,
       "symbol": "Antialias.default_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 182,
       "symbol": "Antialias.none_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 183,
       "symbol": "Antialias.gray",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 184,
       "symbol": "Antialias.subpixel",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 185,
       "symbol": "Antialias.fast",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 186,
       "symbol": "Antialias.good",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 187,
       "symbol": "Antialias.best",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 190,
       "symbol": "FillRule",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 192,
       "symbol": "FillRule",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 193,
       "symbol": "FillRule.winding",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 194,
       "symbol": "FillRule.even_odd",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 197,
       "symbol": "LineCap",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 199,
       "symbol": "LineCap",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 200,
       "symbol": "LineCap.butt",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 201,
       "symbol": "LineCap.round",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 202,
       "symbol": "LineCap.square",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 205,
       "symbol": "LineJoin",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 207,
       "symbol": "LineJoin",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 208,
       "symbol": "LineJoin.miter",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 209,
       "symbol": "LineJoin.round",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 210,
       "symbol": "LineJoin.bevel",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 213,
       "symbol": "TextClusterFlags",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 215,
       "symbol": "TextClusterFlags",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 216,
       "symbol": "TextClusterFlags.backward",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 219,
       "symbol": "FontSlant",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 221,
       "symbol": "FontSlant",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 222,
       "symbol": "FontSlant.normal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 223,
       "symbol": "FontSlant.italic",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 224,
       "symbol": "FontSlant.oblique",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 227,
       "symbol": "FontWeight",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 229,
       "symbol": "FontWeight",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 230,
       "symbol": "FontWeight.normal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 231,
       "symbol": "FontWeight.bold",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 234,
       "symbol": "SubpixelOrder",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 236,
       "symbol": "SubpixelOrder",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 237,
       "symbol": "SubpixelOrder.default_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 238,
       "symbol": "SubpixelOrder.rgb",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 239,
       "symbol": "SubpixelOrder.bgr",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 240,
       "symbol": "SubpixelOrder.vrgb",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 241,
       "symbol": "SubpixelOrder.vbgr",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 244,
       "symbol": "HintStyle",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 246,
       "symbol": "HintStyle",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 247,
       "symbol": "HintStyle.default_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 248,
       "symbol": "HintStyle.none_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 249,
       "symbol": "HintStyle.slight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 250,
       "symbol": "HintStyle.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 251,
       "symbol": "HintStyle.full",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 254,
       "symbol": "HintMetrics",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 256,
       "symbol": "HintMetrics",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 257,
       "symbol": "HintMetrics.default_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 258,
       "symbol": "HintMetrics.off",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 259,
       "symbol": "HintMetrics.on",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 262,
       "symbol": "FontType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 264,
       "symbol": "FontType",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 265,
       "symbol": "FontType.toy",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 266,
       "symbol": "FontType.ft",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 267,
       "symbol": "FontType.win32",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 268,
       "symbol": "FontType.quartz",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 269,
       "symbol": "FontType.user",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 272,
       "symbol": "PathDataType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 274,
       "symbol": "PathDataType",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 275,
       "symbol": "PathDataType.move_to",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 276,
       "symbol": "PathDataType.line_to",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 277,
       "symbol": "PathDataType.curve_to",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 278,
       "symbol": "PathDataType.close_path",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 281,
       "symbol": "DeviceType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 283,
       "symbol": "DeviceType",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 284,
       "symbol": "DeviceType.drm",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 285,
       "symbol": "DeviceType.gl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 286,
       "symbol": "DeviceType.script",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 287,
       "symbol": "DeviceType.xcb",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 288,
       "symbol": "DeviceType.xlib",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 289,
       "symbol": "DeviceType.xml",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 290,
       "symbol": "DeviceType.cogl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 291,
       "symbol": "DeviceType.win32",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 292,
       "symbol": "DeviceType.invalid",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 295,
       "symbol": "SurfaceType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 297,
       "symbol": "SurfaceType",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 298,
       "symbol": "SurfaceType.image",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 299,
       "symbol": "SurfaceType.pdf",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 300,
       "symbol": "SurfaceType.ps",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 301,
       "symbol": "SurfaceType.xlib",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 302,
       "symbol": "SurfaceType.xcb",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 303,
       "symbol": "SurfaceType.glitz",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 304,
       "symbol": "SurfaceType.quartz",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 305,
       "symbol": "SurfaceType.win32",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 306,
       "symbol": "SurfaceType.beos",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 307,
       "symbol": "SurfaceType.directfb",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 308,
       "symbol": "SurfaceType.svg",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 309,
       "symbol": "SurfaceType.os2",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 310,
       "symbol": "SurfaceType.win32_printing",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 311,
       "symbol": "SurfaceType.quartz_image",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 312,
       "symbol": "SurfaceType.script",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 313,
       "symbol": "SurfaceType.qt",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 314,
       "symbol": "SurfaceType.recording",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 315,
       "symbol": "SurfaceType.vg",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 316,
       "symbol": "SurfaceType.gl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 317,
       "symbol": "SurfaceType.drm",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 318,
       "symbol": "SurfaceType.tee",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 319,
       "symbol": "SurfaceType.xml",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 320,
       "symbol": "SurfaceType.skia",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 321,
       "symbol": "SurfaceType.subsurface",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 322,
       "symbol": "SurfaceType.cogl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 325,
       "symbol": "Format",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 327,
       "symbol": "Format",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 328,
       "symbol": "Format.invalid",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 329,
       "symbol": "Format.argb32",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 330,
       "symbol": "Format.rgb24",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 331,
       "symbol": "Format.a8",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 332,
       "symbol": "Format.a1",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 333,
       "symbol": "Format.rgb16_565",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 334,
       "symbol": "Format.rgb30",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 337,
       "symbol": "PatternType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 339,
       "symbol": "PatternType",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 340,
       "symbol": "PatternType.solid",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 341,
       "symbol": "PatternType.surface",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 342,
       "symbol": "PatternType.linear",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 343,
       "symbol": "PatternType.radial",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 344,
       "symbol": "PatternType.mesh",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 345,
       "symbol": "PatternType.raster_source",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 348,
       "symbol": "Extend",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 350,
       "symbol": "Extend",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 351,
       "symbol": "Extend.none_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 352,
       "symbol": "Extend.repeat_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 353,
       "symbol": "Extend.reflect",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 354,
       "symbol": "Extend.pad",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 357,
       "symbol": "Filter",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 359,
       "symbol": "Filter",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 360,
       "symbol": "Filter.fast",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 361,
       "symbol": "Filter.good",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 362,
       "symbol": "Filter.best",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 363,
       "symbol": "Filter.nearest",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 364,
       "symbol": "Filter.bilinear",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 365,
       "symbol": "Filter.gaussian",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 368,
       "symbol": "RegionOverlap",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 370,
       "symbol": "RegionOverlap",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 371,
       "symbol": "RegionOverlap.in_",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 372,
       "symbol": "RegionOverlap.out",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/Cairo-1.0.swift",
       "line": 373,
       "symbol": "RegionOverlap.part",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 5,
       "symbol": "_cairo_ContextProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 6,
       "symbol": "_cairo_DeviceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 7,
       "symbol": "_cairo_FontFaceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 8,
       "symbol": "_cairo_FontOptionsProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 9,
       "symbol": "_cairo_MatrixProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 10,
       "symbol": "_cairo_PathProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 11,
       "symbol": "_cairo_PatternProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 12,
       "symbol": "_cairo_RectangleIntProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 13,
       "symbol": "_cairo_RectangleProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 14,
       "symbol": "_cairo_RegionProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 15,
       "symbol": "_cairo_ScaledFontProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 16,
       "symbol": "_cairo_SurfaceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 18,
       "symbol": "_cairo_Context",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 19,
       "symbol": "_cairo_Device",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 20,
       "symbol": "_cairo_FontFace",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 21,
       "symbol": "_cairo_FontOptions",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 22,
       "symbol": "_cairo_Matrix",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 23,
       "symbol": "_cairo_Path",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 24,
       "symbol": "_cairo_Pattern",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 25,
       "symbol": "_cairo_Rectangle",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 26,
       "symbol": "_cairo_RectangleInt",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 27,
       "symbol": "_cairo_Region",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 28,
       "symbol": "_cairo_ScaledFont",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 29,
       "symbol": "_cairo_Surface",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 31,
       "symbol": "cairo",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 32,
       "symbol": "cairo.ContextProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 33,
       "symbol": "cairo.DeviceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 34,
       "symbol": "cairo.FontFaceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 35,
       "symbol": "cairo.FontOptionsProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 36,
       "symbol": "cairo.MatrixProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 37,
       "symbol": "cairo.PathProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 38,
       "symbol": "cairo.PatternProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 39,
       "symbol": "cairo.RectangleIntProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 40,
       "symbol": "cairo.RectangleProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 41,
       "symbol": "cairo.RegionProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 42,
       "symbol": "cairo.ScaledFontProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 43,
       "symbol": "cairo.SurfaceProtocol",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 45,
       "symbol": "cairo.Context",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 46,
       "symbol": "cairo.Device",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 47,
       "symbol": "cairo.FontFace",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 48,
       "symbol": "cairo.FontOptions",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 49,
       "symbol": "cairo.Matrix",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 50,
       "symbol": "cairo.Path",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 51,
       "symbol": "cairo.Pattern",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 52,
       "symbol": "cairo.Rectangle",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 53,
       "symbol": "cairo.RectangleInt",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 54,
       "symbol": "cairo.Region",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 55,
       "symbol": "cairo.ScaledFont",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 56,
       "symbol": "cairo.Surface",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 58,
       "symbol": "cairo.Status",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 59,
       "symbol": "cairo.Content",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 60,
       "symbol": "cairo.Operator",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 61,
       "symbol": "cairo.Antialias",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 62,
       "symbol": "cairo.FillRule",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 63,
       "symbol": "cairo.LineCap",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 64,
       "symbol": "cairo.LineJoin",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 65,
       "symbol": "cairo.TextClusterFlags",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 66,
       "symbol": "cairo.FontSlant",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 67,
       "symbol": "cairo.FontWeight",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 68,
       "symbol": "cairo.SubpixelOrder",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 69,
       "symbol": "cairo.HintStyle",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 70,
       "symbol": "cairo.HintMetrics",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 71,
       "symbol": "cairo.FontType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 72,
       "symbol": "cairo.PathDataType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 73,
       "symbol": "cairo.DeviceType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 74,
       "symbol": "cairo.SurfaceType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 75,
       "symbol": "cairo.Format",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 76,
       "symbol": "cairo.PatternType",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 77,
       "symbol": "cairo.Extend",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 78,
       "symbol": "cairo.Filter",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairo.swift",
       "line": 79,
       "symbol": "cairo.RegionOverlap",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift",
+      "file": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift",
       "line": 13,
       "symbol": "SurfaceProtocol.deviceOffset",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/s254227/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo"
+  "source_directory": "/Users/rh/Dropbox/Developer/src/swift/rh/gtk/SwiftCairo"
 }
