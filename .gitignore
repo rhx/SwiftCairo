@@ -5,5 +5,3 @@
 /*.xcodeproj
 Package.pins
 Package.resolved
-*-*.swift
-Sources/SwiftCairo.swift
