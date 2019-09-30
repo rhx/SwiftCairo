@@ -1,5 +1,6 @@
 # SwiftCairo
-A Swift wrapper around cairo-1.x that is largely auto-generated from gobject-introspection
+A Swift wrapper around cairo-1.x that is largely auto-generated from gobject-introspection.
+For up to date (auto-generated) reference documentation, see https://rhx.github.io/SwiftCairo/
 
 
 ## Prerequisites
@@ -9,13 +10,13 @@ A Swift wrapper around cairo-1.x that is largely auto-generated from gobject-int
 To build, you need at least Swift 4.2 (Swift 5.x should work fine), download from https://swift.org/download/ -- if you are using macOS, make sure you have the command line tools installed as well).  Test that your compiler works using `swift --version`, which should give you something like
 
 	$ swift --version
-	Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)
+	Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
 	Target: x86_64-apple-darwin18.6.0
 
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 5.0.2 (swift-5.0.2-RELEASE)
+	Swift version 5.1 (swift-5.1-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
 ### GLib 2.46 and Cairo 1.14.10 or higher
@@ -68,6 +69,15 @@ On macOS, you can build the project using Xcode instead.  To do this, you need t
 	open Cairo.xcodeproj
 
 After that, use the (usual) Build and Test buttons to build/test this package.
+
+
+
+## Documentation
+You can find reference documentation inside the [docs](https://rhx.github.io/SwiftCairo/) folder.
+This was generated using the [jazzy](https://github.com/realm/jazzy) tool.
+If you want to generate your own documentation, matching your local installation,
+you can use the `generate-documentation.sh` script in the repository.
+Unfortunately, at this stage [jazzy](https://github.com/realm/jazzy) only works on macOS (and crashes under Linux), so this will currently only work on a Mac.
 
 
 
