@@ -21,7 +21,7 @@ on macOS, or on Linux you should get something like:
 
 ### GLib 2.46 and Cairo 1.14.10 or higher
 
-These Swift wrappers have been tested with glib-2.46, 2.48, 2.52, 2.56, 2.58, and 2.60.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
+These Swift wrappers have been tested with glib-2.46, 2.48, 2.52, 2.56, 2.58, 2.60, and 2.62.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
 
 #### Linux
 
