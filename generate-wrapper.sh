@@ -7,14 +7,14 @@
 ./package.sh update
 if [ ! -x "${GIR2SWIFT_PATH}/gir2swift" ] &&
    ! pushd "$BUILD_DIR/gir2swift" >/dev/null 2>&1 ; then
-	mkdir -p .build
-	pushd .build >/dev/null
+	mkdir -p "$BUILD_DIR"
+	pushd "$BUILD_DIR" >/dev/null
 	git clone https://github.com/rhx/gir2swift.git
 	cd gir2swift && ./build.sh
 fi
 export PATH=`pwd`/.build/debug:${PATH}
 popd >/dev/null 2>&1
-export PACKAGES=.build/checkouts
+export PACKAGES="$BUILD_DIR/checkouts"
 [ -e $PACKAGES ] || export PACKAGES=Packages
 if which parallel >/dev/null ; then
   for gen in $PACKAGES/*/gir-to-swift.sh ; do \
