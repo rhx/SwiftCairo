@@ -10,13 +10,13 @@ For up to date (auto-generated) reference documentation, see https://rhx.github.
 To build, you need at least Swift 4.2 (Swift 5.x should work fine), download from https://swift.org/download/ -- if you are using macOS, make sure you have the command line tools installed as well).  Test that your compiler works using `swift --version`, which should give you something like
 
 	$ swift --version
-	Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
-	Target: x86_64-apple-darwin19.4.0
+	Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+    Target: x86_64-apple-darwin19.6.0
 
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 5.2 (swift-5.2-RELEASE)
+	Swift version 5.2.4 (swift-5.2.4-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
 ### GLib 2.46 and Cairo 1.14.10 or higher
