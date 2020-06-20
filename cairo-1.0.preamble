@@ -1,8 +1,0 @@
-import CGLib
-import CCairo
-import GLib
-import GLibObject
-
-extension _cairo {
-	public typealias FontType = cairo_font_type_t
-}
