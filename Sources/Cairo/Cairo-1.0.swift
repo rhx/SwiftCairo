@@ -1,3 +1,33 @@
+
+func cast(_ param: UInt)   -> Int    {    Int(bitPattern: param) }
+func cast(_ param: Int)    -> UInt   {   UInt(bitPattern: param) }
+func cast(_ param: UInt16) -> Int16  {  Int16(bitPattern: param) }
+func cast(_ param: Int16)  -> UInt16 { UInt16(bitPattern: param) }
+func cast(_ param: UInt32) -> Int32  {  Int32(bitPattern: param) }
+func cast(_ param: Int32)  -> UInt32 { UInt32(bitPattern: param) }
+func cast(_ param: UInt64) -> Int64  {  Int64(bitPattern: param) }
+func cast(_ param: Int64)  -> UInt64 { UInt64(bitPattern: param) }
+func cast(_ param: Float)  -> Double { Double(param) }
+func cast(_ param: Float80) -> Double { Double(param) }
+func cast(_ param: Double) -> Float { Float(param) }
+func cast(_ param: Double) -> Float80 { Float80(param) }
+func cast<U: UnsignedInteger>(_ param: U) -> Int { Int(param) }
+func cast<S: SignedInteger>(_ param: S) -> Int { Int(param) }
+func cast<U: UnsignedInteger>(_ param: Int) -> U { U(param) }
+func cast<S: SignedInteger>(_ param: Int) -> S  { S(param) }
+func cast<I: BinaryInteger>(_ param: I) -> Int32 { Int32(param) }
+func cast<I: BinaryInteger>(_ param: I) -> UInt32 { UInt32(param) }
+func cast<I: BinaryInteger>(_ param: I) -> Bool { param != 0 }
+func cast<I: BinaryInteger>(_ param: Bool) -> I { param ? 1 : 0 }
+
+func cast(_ param: UnsafeRawPointer?) -> String! {
+    return param.map { String(cString: $0.assumingMemoryBound(to: CChar.self)) }
+}
+
+func cast(_ param: OpaquePointer?) -> String! {
+    return param.map { String(cString: UnsafePointer<CChar>($0)) }
+}
+
 func cast(_ param: UnsafeRawPointer) -> OpaquePointer! {
     return OpaquePointer(param)
 }
@@ -82,57 +112,110 @@ extension _cairo {
 
 
 
+
+public func imageSurfaceCreate(format: cairo_format_t, width: Int, height: Int) -> Surface {
+    return Surface(cairo_image_surface_create(format, CInt(width), CInt(height)))
+
+}
+
+
+
 public typealias Status = cairo_status_t
 
 public extension Status {
     static let success = CAIRO_STATUS_SUCCESS /* 0 */
-    static let no_memory = CAIRO_STATUS_NO_MEMORY /* 1 */
-    static let invalid_restore = CAIRO_STATUS_INVALID_RESTORE /* 2 */
-    static let invalid_pop_group = CAIRO_STATUS_INVALID_POP_GROUP /* 3 */
-    static let no_current_point = CAIRO_STATUS_NO_CURRENT_POINT /* 4 */
-    static let invalid_matrix = CAIRO_STATUS_INVALID_MATRIX /* 5 */
-    static let invalid_status = CAIRO_STATUS_INVALID_STATUS /* 6 */
-    static let null_pointer = CAIRO_STATUS_NULL_POINTER /* 7 */
-    static let invalid_string = CAIRO_STATUS_INVALID_STRING /* 8 */
-    static let invalid_path_data = CAIRO_STATUS_INVALID_PATH_DATA /* 9 */
-    static let read_error = CAIRO_STATUS_READ_ERROR /* 10 */
-    static let write_error = CAIRO_STATUS_WRITE_ERROR /* 11 */
-    static let surface_finished = CAIRO_STATUS_SURFACE_FINISHED /* 12 */
-    static let surface_type_mismatch = CAIRO_STATUS_SURFACE_TYPE_MISMATCH /* 13 */
-    static let pattern_type_mismatch = CAIRO_STATUS_PATTERN_TYPE_MISMATCH /* 14 */
-    static let invalid_content = CAIRO_STATUS_INVALID_CONTENT /* 15 */
-    static let invalid_format = CAIRO_STATUS_INVALID_FORMAT /* 16 */
-    static let invalid_visual = CAIRO_STATUS_INVALID_VISUAL /* 17 */
-    static let file_not_found = CAIRO_STATUS_FILE_NOT_FOUND /* 18 */
-    static let invalid_dash = CAIRO_STATUS_INVALID_DASH /* 19 */
-    static let invalid_dsc_comment = CAIRO_STATUS_INVALID_DSC_COMMENT /* 20 */
-    static let invalid_index = CAIRO_STATUS_INVALID_INDEX /* 21 */
-    static let clip_not_representable = CAIRO_STATUS_CLIP_NOT_REPRESENTABLE /* 22 */
-    static let temp_file_error = CAIRO_STATUS_TEMP_FILE_ERROR /* 23 */
-    static let invalid_stride = CAIRO_STATUS_INVALID_STRIDE /* 24 */
-    static let font_type_mismatch = CAIRO_STATUS_FONT_TYPE_MISMATCH /* 25 */
-    static let user_font_immutable = CAIRO_STATUS_USER_FONT_IMMUTABLE /* 26 */
-    static let user_font_error = CAIRO_STATUS_USER_FONT_ERROR /* 27 */
-    static let negative_count = CAIRO_STATUS_NEGATIVE_COUNT /* 28 */
-    static let invalid_clusters = CAIRO_STATUS_INVALID_CLUSTERS /* 29 */
-    static let invalid_slant = CAIRO_STATUS_INVALID_SLANT /* 30 */
-    static let invalid_weight = CAIRO_STATUS_INVALID_WEIGHT /* 31 */
-    static let invalid_size = CAIRO_STATUS_INVALID_SIZE /* 32 */
-    static let user_font_not_implemented = CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED /* 33 */
-    static let device_type_mismatch = CAIRO_STATUS_DEVICE_TYPE_MISMATCH /* 34 */
-    static let device_error = CAIRO_STATUS_DEVICE_ERROR /* 35 */
-    static let invalid_mesh_construction = CAIRO_STATUS_INVALID_MESH_CONSTRUCTION /* 36 */
-    static let device_finished = CAIRO_STATUS_DEVICE_FINISHED /* 37 */
-    static let jbig2_global_missing = CAIRO_STATUS_JBIG2_GLOBAL_MISSING /* 38 */
+    static let noMemory = CAIRO_STATUS_NO_MEMORY /* 1 */
+    static let invalidRestore = CAIRO_STATUS_INVALID_RESTORE /* 2 */
+    static let invalidPopGroup = CAIRO_STATUS_INVALID_POP_GROUP /* 3 */
+    static let noCurrentPoint = CAIRO_STATUS_NO_CURRENT_POINT /* 4 */
+    static let invalidMatrix = CAIRO_STATUS_INVALID_MATRIX /* 5 */
+    static let invalidStatus = CAIRO_STATUS_INVALID_STATUS /* 6 */
+    static let nullPointer = CAIRO_STATUS_NULL_POINTER /* 7 */
+    static let invalidString = CAIRO_STATUS_INVALID_STRING /* 8 */
+    static let invalidPathData = CAIRO_STATUS_INVALID_PATH_DATA /* 9 */
+    static let readError = CAIRO_STATUS_READ_ERROR /* 10 */
+    static let writeError = CAIRO_STATUS_WRITE_ERROR /* 11 */
+    static let surfaceFinished = CAIRO_STATUS_SURFACE_FINISHED /* 12 */
+    static let surfaceTypeMismatch = CAIRO_STATUS_SURFACE_TYPE_MISMATCH /* 13 */
+    static let patternTypeMismatch = CAIRO_STATUS_PATTERN_TYPE_MISMATCH /* 14 */
+    static let invalidContent = CAIRO_STATUS_INVALID_CONTENT /* 15 */
+    static let invalidFormat = CAIRO_STATUS_INVALID_FORMAT /* 16 */
+    static let invalidVisual = CAIRO_STATUS_INVALID_VISUAL /* 17 */
+    static let fileNotFound = CAIRO_STATUS_FILE_NOT_FOUND /* 18 */
+    static let invalidDash = CAIRO_STATUS_INVALID_DASH /* 19 */
+    static let invalidDSCComment = CAIRO_STATUS_INVALID_DSC_COMMENT /* 20 */
+    static let invalidIndex = CAIRO_STATUS_INVALID_INDEX /* 21 */
+    static let clipNotRepresentable = CAIRO_STATUS_CLIP_NOT_REPRESENTABLE /* 22 */
+    static let tempFileError = CAIRO_STATUS_TEMP_FILE_ERROR /* 23 */
+    static let invalidStride = CAIRO_STATUS_INVALID_STRIDE /* 24 */
+    static let fontTypeMismatch = CAIRO_STATUS_FONT_TYPE_MISMATCH /* 25 */
+    static let userFontImmutable = CAIRO_STATUS_USER_FONT_IMMUTABLE /* 26 */
+    static let userFontError = CAIRO_STATUS_USER_FONT_ERROR /* 27 */
+    static let negativeCount = CAIRO_STATUS_NEGATIVE_COUNT /* 28 */
+    static let invalidClusters = CAIRO_STATUS_INVALID_CLUSTERS /* 29 */
+    static let invalidSlant = CAIRO_STATUS_INVALID_SLANT /* 30 */
+    static let invalidWeight = CAIRO_STATUS_INVALID_WEIGHT /* 31 */
+    static let invalidSize = CAIRO_STATUS_INVALID_SIZE /* 32 */
+    static let userFontNotImplemented = CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED /* 33 */
+    static let deviceTypeMismatch = CAIRO_STATUS_DEVICE_TYPE_MISMATCH /* 34 */
+    static let deviceError = CAIRO_STATUS_DEVICE_ERROR /* 35 */
+    static let invalidMeshConstruction = CAIRO_STATUS_INVALID_MESH_CONSTRUCTION /* 36 */
+    static let deviceFinished = CAIRO_STATUS_DEVICE_FINISHED /* 37 */
+    static let jbig2GlobalMissing = CAIRO_STATUS_JBIG2_GLOBAL_MISSING /* 38 */
+    @available(*, deprecated) static let no_memory = Status.noMemory /* CAIRO_STATUS_NO_MEMORY */
+    @available(*, deprecated) static let invalid_restore = Status.invalidRestore /* CAIRO_STATUS_INVALID_RESTORE */
+    @available(*, deprecated) static let invalid_pop_group = Status.invalidPopGroup /* CAIRO_STATUS_INVALID_POP_GROUP */
+    @available(*, deprecated) static let no_current_point = Status.noCurrentPoint /* CAIRO_STATUS_NO_CURRENT_POINT */
+    @available(*, deprecated) static let invalid_matrix = Status.invalidMatrix /* CAIRO_STATUS_INVALID_MATRIX */
+    @available(*, deprecated) static let invalid_status = Status.invalidStatus /* CAIRO_STATUS_INVALID_STATUS */
+    @available(*, deprecated) static let null_pointer = Status.nullPointer /* CAIRO_STATUS_NULL_POINTER */
+    @available(*, deprecated) static let invalid_string = Status.invalidString /* CAIRO_STATUS_INVALID_STRING */
+    @available(*, deprecated) static let invalid_path_data = Status.invalidPathData /* CAIRO_STATUS_INVALID_PATH_DATA */
+    @available(*, deprecated) static let read_error = Status.readError /* CAIRO_STATUS_READ_ERROR */
+    @available(*, deprecated) static let write_error = Status.writeError /* CAIRO_STATUS_WRITE_ERROR */
+    @available(*, deprecated) static let surface_finished = Status.surfaceFinished /* CAIRO_STATUS_SURFACE_FINISHED */
+    @available(*, deprecated) static let surface_type_mismatch = Status.surfaceTypeMismatch /* CAIRO_STATUS_SURFACE_TYPE_MISMATCH */
+    @available(*, deprecated) static let pattern_type_mismatch = Status.patternTypeMismatch /* CAIRO_STATUS_PATTERN_TYPE_MISMATCH */
+    @available(*, deprecated) static let invalid_content = Status.invalidContent /* CAIRO_STATUS_INVALID_CONTENT */
+    @available(*, deprecated) static let invalid_format = Status.invalidFormat /* CAIRO_STATUS_INVALID_FORMAT */
+    @available(*, deprecated) static let invalid_visual = Status.invalidVisual /* CAIRO_STATUS_INVALID_VISUAL */
+    @available(*, deprecated) static let file_not_found = Status.fileNotFound /* CAIRO_STATUS_FILE_NOT_FOUND */
+    @available(*, deprecated) static let invalid_dash = Status.invalidDash /* CAIRO_STATUS_INVALID_DASH */
+    @available(*, deprecated) static let invalid_dsc_comment = Status.invalidDSCComment /* CAIRO_STATUS_INVALID_DSC_COMMENT */
+    @available(*, deprecated) static let invalid_index = Status.invalidIndex /* CAIRO_STATUS_INVALID_INDEX */
+    @available(*, deprecated) static let clip_not_representable = Status.clipNotRepresentable /* CAIRO_STATUS_CLIP_NOT_REPRESENTABLE */
+    @available(*, deprecated) static let temp_file_error = Status.tempFileError /* CAIRO_STATUS_TEMP_FILE_ERROR */
+    @available(*, deprecated) static let invalid_stride = Status.invalidStride /* CAIRO_STATUS_INVALID_STRIDE */
+    @available(*, deprecated) static let font_type_mismatch = Status.fontTypeMismatch /* CAIRO_STATUS_FONT_TYPE_MISMATCH */
+    @available(*, deprecated) static let user_font_immutable = Status.userFontImmutable /* CAIRO_STATUS_USER_FONT_IMMUTABLE */
+    @available(*, deprecated) static let user_font_error = Status.userFontError /* CAIRO_STATUS_USER_FONT_ERROR */
+    @available(*, deprecated) static let negative_count = Status.negativeCount /* CAIRO_STATUS_NEGATIVE_COUNT */
+    @available(*, deprecated) static let invalid_clusters = Status.invalidClusters /* CAIRO_STATUS_INVALID_CLUSTERS */
+    @available(*, deprecated) static let invalid_slant = Status.invalidSlant /* CAIRO_STATUS_INVALID_SLANT */
+    @available(*, deprecated) static let invalid_weight = Status.invalidWeight /* CAIRO_STATUS_INVALID_WEIGHT */
+    @available(*, deprecated) static let invalid_size = Status.invalidSize /* CAIRO_STATUS_INVALID_SIZE */
+    @available(*, deprecated) static let user_font_not_implemented = Status.userFontNotImplemented /* CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED */
+    @available(*, deprecated) static let device_type_mismatch = Status.deviceTypeMismatch /* CAIRO_STATUS_DEVICE_TYPE_MISMATCH */
+    @available(*, deprecated) static let device_error = Status.deviceError /* CAIRO_STATUS_DEVICE_ERROR */
+    @available(*, deprecated) static let invalid_mesh_construction = Status.invalidMeshConstruction /* CAIRO_STATUS_INVALID_MESH_CONSTRUCTION */
+    @available(*, deprecated) static let device_finished = Status.deviceFinished /* CAIRO_STATUS_DEVICE_FINISHED */
+    @available(*, deprecated) static let jbig2_global_missing = Status.jbig2GlobalMissing /* CAIRO_STATUS_JBIG2_GLOBAL_MISSING */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Status { Status(rawValue: cast(param)) }
+func cast(_ param: Status) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Content = cairo_content_t
 
 public extension Content {
     static let color = CAIRO_CONTENT_COLOR /* 4096 */
     static let alpha = CAIRO_CONTENT_ALPHA /* 8192 */
-    static let color_alpha = CAIRO_CONTENT_COLOR_ALPHA /* 12288 */
+    static let colorAlpha = CAIRO_CONTENT_COLOR_ALPHA /* 12288 */
+    @available(*, deprecated) static let color_alpha = Content.colorAlpha /* CAIRO_CONTENT_COLOR_ALPHA */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Content { Content(rawValue: cast(param)) }
+func cast(_ param: Content) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Operator = cairo_operator_t
 
@@ -140,14 +223,14 @@ public extension Operator {
     static let clear = CAIRO_OPERATOR_CLEAR /* 0 */
     static let source = CAIRO_OPERATOR_SOURCE /* 1 */
     static let over = CAIRO_OPERATOR_OVER /* 2 */
-    static let in_ = CAIRO_OPERATOR_IN /* 3 */
+    static let `in` = CAIRO_OPERATOR_IN /* 3 */
     static let out = CAIRO_OPERATOR_OUT /* 4 */
     static let atop = CAIRO_OPERATOR_ATOP /* 5 */
     static let dest = CAIRO_OPERATOR_DEST /* 6 */
-    static let dest_over = CAIRO_OPERATOR_DEST_OVER /* 7 */
-    static let dest_in = CAIRO_OPERATOR_DEST_IN /* 8 */
-    static let dest_out = CAIRO_OPERATOR_DEST_OUT /* 9 */
-    static let dest_atop = CAIRO_OPERATOR_DEST_ATOP /* 10 */
+    static let destOver = CAIRO_OPERATOR_DEST_OVER /* 7 */
+    static let destIn = CAIRO_OPERATOR_DEST_IN /* 8 */
+    static let destOut = CAIRO_OPERATOR_DEST_OUT /* 9 */
+    static let destAtop = CAIRO_OPERATOR_DEST_ATOP /* 10 */
     static let xor = CAIRO_OPERATOR_XOR /* 11 */
     static let add = CAIRO_OPERATOR_ADD /* 12 */
     static let saturate = CAIRO_OPERATOR_SATURATE /* 13 */
@@ -156,36 +239,61 @@ public extension Operator {
     static let overlay = CAIRO_OPERATOR_OVERLAY /* 16 */
     static let darken = CAIRO_OPERATOR_DARKEN /* 17 */
     static let lighten = CAIRO_OPERATOR_LIGHTEN /* 18 */
-    static let color_dodge = CAIRO_OPERATOR_COLOR_DODGE /* 19 */
-    static let color_burn = CAIRO_OPERATOR_COLOR_BURN /* 20 */
-    static let hard_light = CAIRO_OPERATOR_HARD_LIGHT /* 21 */
-    static let soft_light = CAIRO_OPERATOR_SOFT_LIGHT /* 22 */
+    static let colorDodge = CAIRO_OPERATOR_COLOR_DODGE /* 19 */
+    static let colorBurn = CAIRO_OPERATOR_COLOR_BURN /* 20 */
+    static let hardLight = CAIRO_OPERATOR_HARD_LIGHT /* 21 */
+    static let softLight = CAIRO_OPERATOR_SOFT_LIGHT /* 22 */
     static let difference = CAIRO_OPERATOR_DIFFERENCE /* 23 */
     static let exclusion = CAIRO_OPERATOR_EXCLUSION /* 24 */
-    static let hsl_hue = CAIRO_OPERATOR_HSL_HUE /* 25 */
-    static let hsl_saturation = CAIRO_OPERATOR_HSL_SATURATION /* 26 */
-    static let hsl_color = CAIRO_OPERATOR_HSL_COLOR /* 27 */
-    static let hsl_luminosity = CAIRO_OPERATOR_HSL_LUMINOSITY /* 28 */
+    static let hslHue = CAIRO_OPERATOR_HSL_HUE /* 25 */
+    static let hslSaturation = CAIRO_OPERATOR_HSL_SATURATION /* 26 */
+    static let hslColor = CAIRO_OPERATOR_HSL_COLOR /* 27 */
+    static let hslLuminosity = CAIRO_OPERATOR_HSL_LUMINOSITY /* 28 */
+    @available(*, deprecated) static let in_ = Operator.`in` /* CAIRO_OPERATOR_IN */
+    @available(*, deprecated) static let dest_over = Operator.destOver /* CAIRO_OPERATOR_DEST_OVER */
+    @available(*, deprecated) static let dest_in = Operator.destIn /* CAIRO_OPERATOR_DEST_IN */
+    @available(*, deprecated) static let dest_out = Operator.destOut /* CAIRO_OPERATOR_DEST_OUT */
+    @available(*, deprecated) static let dest_atop = Operator.destAtop /* CAIRO_OPERATOR_DEST_ATOP */
+    @available(*, deprecated) static let color_dodge = Operator.colorDodge /* CAIRO_OPERATOR_COLOR_DODGE */
+    @available(*, deprecated) static let color_burn = Operator.colorBurn /* CAIRO_OPERATOR_COLOR_BURN */
+    @available(*, deprecated) static let hard_light = Operator.hardLight /* CAIRO_OPERATOR_HARD_LIGHT */
+    @available(*, deprecated) static let soft_light = Operator.softLight /* CAIRO_OPERATOR_SOFT_LIGHT */
+    @available(*, deprecated) static let hsl_hue = Operator.hslHue /* CAIRO_OPERATOR_HSL_HUE */
+    @available(*, deprecated) static let hsl_saturation = Operator.hslSaturation /* CAIRO_OPERATOR_HSL_SATURATION */
+    @available(*, deprecated) static let hsl_color = Operator.hslColor /* CAIRO_OPERATOR_HSL_COLOR */
+    @available(*, deprecated) static let hsl_luminosity = Operator.hslLuminosity /* CAIRO_OPERATOR_HSL_LUMINOSITY */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Operator { Operator(rawValue: cast(param)) }
+func cast(_ param: Operator) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Antialias = cairo_antialias_t
 
 public extension Antialias {
-    static let default_ = CAIRO_ANTIALIAS_DEFAULT /* 0 */
-    static let none_ = CAIRO_ANTIALIAS_NONE /* 1 */
+    static let `default` = CAIRO_ANTIALIAS_DEFAULT /* 0 */
+    static let `none` = CAIRO_ANTIALIAS_NONE /* 1 */
     static let gray = CAIRO_ANTIALIAS_GRAY /* 2 */
     static let subpixel = CAIRO_ANTIALIAS_SUBPIXEL /* 3 */
     static let fast = CAIRO_ANTIALIAS_FAST /* 4 */
     static let good = CAIRO_ANTIALIAS_GOOD /* 5 */
     static let best = CAIRO_ANTIALIAS_BEST /* 6 */
+    @available(*, deprecated) static let default_ = Antialias.`default` /* CAIRO_ANTIALIAS_DEFAULT */
+    @available(*, deprecated) static let none_ = Antialias.`none` /* CAIRO_ANTIALIAS_NONE */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Antialias { Antialias(rawValue: cast(param)) }
+func cast(_ param: Antialias) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias FillRule = cairo_fill_rule_t
 
 public extension FillRule {
     static let winding = CAIRO_FILL_RULE_WINDING /* 0 */
-    static let even_odd = CAIRO_FILL_RULE_EVEN_ODD /* 1 */
+    static let evenOdd = CAIRO_FILL_RULE_EVEN_ODD /* 1 */
+    @available(*, deprecated) static let even_odd = FillRule.evenOdd /* CAIRO_FILL_RULE_EVEN_ODD */
 }
+func cast<I: BinaryInteger>(_ param: I) -> FillRule { FillRule(rawValue: cast(param)) }
+func cast(_ param: FillRule) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias LineCap = cairo_line_cap_t
 
@@ -193,7 +301,11 @@ public extension LineCap {
     static let butt = CAIRO_LINE_CAP_BUTT /* 0 */
     static let round = CAIRO_LINE_CAP_ROUND /* 1 */
     static let square = CAIRO_LINE_CAP_SQUARE /* 2 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> LineCap { LineCap(rawValue: cast(param)) }
+func cast(_ param: LineCap) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias LineJoin = cairo_line_join_t
 
@@ -201,13 +313,21 @@ public extension LineJoin {
     static let miter = CAIRO_LINE_JOIN_MITER /* 0 */
     static let round = CAIRO_LINE_JOIN_ROUND /* 1 */
     static let bevel = CAIRO_LINE_JOIN_BEVEL /* 2 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> LineJoin { LineJoin(rawValue: cast(param)) }
+func cast(_ param: LineJoin) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias TextClusterFlags = cairo_text_cluster_flags_t
 
 public extension TextClusterFlags {
     static let backward = CAIRO_TEXT_CLUSTER_FLAG_BACKWARD /* 1 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> TextClusterFlags { TextClusterFlags(rawValue: cast(param)) }
+func cast(_ param: TextClusterFlags) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias FontSlant = cairo_font_slant_t
 
@@ -215,42 +335,63 @@ public extension FontSlant {
     static let normal = CAIRO_FONT_SLANT_NORMAL /* 0 */
     static let italic = CAIRO_FONT_SLANT_ITALIC /* 1 */
     static let oblique = CAIRO_FONT_SLANT_OBLIQUE /* 2 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> FontSlant { FontSlant(rawValue: cast(param)) }
+func cast(_ param: FontSlant) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias FontWeight = cairo_font_weight_t
 
 public extension FontWeight {
     static let normal = CAIRO_FONT_WEIGHT_NORMAL /* 0 */
     static let bold = CAIRO_FONT_WEIGHT_BOLD /* 1 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> FontWeight { FontWeight(rawValue: cast(param)) }
+func cast(_ param: FontWeight) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias SubpixelOrder = cairo_subpixel_order_t
 
 public extension SubpixelOrder {
-    static let default_ = CAIRO_SUBPIXEL_ORDER_DEFAULT /* 0 */
+    static let `default` = CAIRO_SUBPIXEL_ORDER_DEFAULT /* 0 */
     static let rgb = CAIRO_SUBPIXEL_ORDER_RGB /* 1 */
     static let bgr = CAIRO_SUBPIXEL_ORDER_BGR /* 2 */
     static let vrgb = CAIRO_SUBPIXEL_ORDER_VRGB /* 3 */
     static let vbgr = CAIRO_SUBPIXEL_ORDER_VBGR /* 4 */
+    @available(*, deprecated) static let default_ = SubpixelOrder.`default` /* CAIRO_SUBPIXEL_ORDER_DEFAULT */
 }
+func cast<I: BinaryInteger>(_ param: I) -> SubpixelOrder { SubpixelOrder(rawValue: cast(param)) }
+func cast(_ param: SubpixelOrder) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias HintStyle = cairo_hint_style_t
 
 public extension HintStyle {
-    static let default_ = CAIRO_HINT_STYLE_DEFAULT /* 0 */
-    static let none_ = CAIRO_HINT_STYLE_NONE /* 1 */
+    static let `default` = CAIRO_HINT_STYLE_DEFAULT /* 0 */
+    static let `none` = CAIRO_HINT_STYLE_NONE /* 1 */
     static let slight = CAIRO_HINT_STYLE_SLIGHT /* 2 */
     static let medium = CAIRO_HINT_STYLE_MEDIUM /* 3 */
     static let full = CAIRO_HINT_STYLE_FULL /* 4 */
+    @available(*, deprecated) static let default_ = HintStyle.`default` /* CAIRO_HINT_STYLE_DEFAULT */
+    @available(*, deprecated) static let none_ = HintStyle.`none` /* CAIRO_HINT_STYLE_NONE */
 }
+func cast<I: BinaryInteger>(_ param: I) -> HintStyle { HintStyle(rawValue: cast(param)) }
+func cast(_ param: HintStyle) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias HintMetrics = cairo_hint_metrics_t
 
 public extension HintMetrics {
-    static let default_ = CAIRO_HINT_METRICS_DEFAULT /* 0 */
+    static let `default` = CAIRO_HINT_METRICS_DEFAULT /* 0 */
     static let off = CAIRO_HINT_METRICS_OFF /* 1 */
     static let on = CAIRO_HINT_METRICS_ON /* 2 */
+    @available(*, deprecated) static let default_ = HintMetrics.`default` /* CAIRO_HINT_METRICS_DEFAULT */
 }
+func cast<I: BinaryInteger>(_ param: I) -> HintMetrics { HintMetrics(rawValue: cast(param)) }
+func cast(_ param: HintMetrics) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias FontType = cairo_font_type_t
 
@@ -260,16 +401,27 @@ public extension FontType {
     static let win32 = CAIRO_FONT_TYPE_WIN32 /* 2 */
     static let quartz = CAIRO_FONT_TYPE_QUARTZ /* 3 */
     static let user = CAIRO_FONT_TYPE_USER /* 4 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> FontType { FontType(rawValue: cast(param)) }
+func cast(_ param: FontType) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias PathDataType = cairo_path_data_type_t
 
 public extension PathDataType {
-    static let move_to = CAIRO_PATH_MOVE_TO /* 0 */
-    static let line_to = CAIRO_PATH_LINE_TO /* 1 */
-    static let curve_to = CAIRO_PATH_CURVE_TO /* 2 */
-    static let close_path = CAIRO_PATH_CLOSE_PATH /* 3 */
+    static let moveTo = CAIRO_PATH_MOVE_TO /* 0 */
+    static let lineTo = CAIRO_PATH_LINE_TO /* 1 */
+    static let curveTo = CAIRO_PATH_CURVE_TO /* 2 */
+    static let closePath = CAIRO_PATH_CLOSE_PATH /* 3 */
+    @available(*, deprecated) static let move_to = PathDataType.moveTo /* CAIRO_PATH_MOVE_TO */
+    @available(*, deprecated) static let line_to = PathDataType.lineTo /* CAIRO_PATH_LINE_TO */
+    @available(*, deprecated) static let curve_to = PathDataType.curveTo /* CAIRO_PATH_CURVE_TO */
+    @available(*, deprecated) static let close_path = PathDataType.closePath /* CAIRO_PATH_CLOSE_PATH */
 }
+func cast<I: BinaryInteger>(_ param: I) -> PathDataType { PathDataType(rawValue: cast(param)) }
+func cast(_ param: PathDataType) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias DeviceType = cairo_device_type_t
 
@@ -283,7 +435,11 @@ public extension DeviceType {
     static let cogl = CAIRO_DEVICE_TYPE_COGL /* 6 */
     static let win32 = CAIRO_DEVICE_TYPE_WIN32 /* 7 */
     static let invalid = CAIRO_DEVICE_TYPE_INVALID /* -1 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> DeviceType { DeviceType(rawValue: cast(param)) }
+func cast(_ param: DeviceType) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias SurfaceType = cairo_surface_type_t
 
@@ -300,8 +456,8 @@ public extension SurfaceType {
     static let directfb = CAIRO_SURFACE_TYPE_DIRECTFB /* 9 */
     static let svg = CAIRO_SURFACE_TYPE_SVG /* 10 */
     static let os2 = CAIRO_SURFACE_TYPE_OS2 /* 11 */
-    static let win32_printing = CAIRO_SURFACE_TYPE_WIN32_PRINTING /* 12 */
-    static let quartz_image = CAIRO_SURFACE_TYPE_QUARTZ_IMAGE /* 13 */
+    static let win32Printing = CAIRO_SURFACE_TYPE_WIN32_PRINTING /* 12 */
+    static let quartzImage = CAIRO_SURFACE_TYPE_QUARTZ_IMAGE /* 13 */
     static let script = CAIRO_SURFACE_TYPE_SCRIPT /* 14 */
     static let qt = CAIRO_SURFACE_TYPE_QT /* 15 */
     static let recording = CAIRO_SURFACE_TYPE_RECORDING /* 16 */
@@ -313,7 +469,12 @@ public extension SurfaceType {
     static let skia = CAIRO_SURFACE_TYPE_SKIA /* 22 */
     static let subsurface = CAIRO_SURFACE_TYPE_SUBSURFACE /* 23 */
     static let cogl = CAIRO_SURFACE_TYPE_COGL /* 24 */
+    @available(*, deprecated) static let win32_printing = SurfaceType.win32Printing /* CAIRO_SURFACE_TYPE_WIN32_PRINTING */
+    @available(*, deprecated) static let quartz_image = SurfaceType.quartzImage /* CAIRO_SURFACE_TYPE_QUARTZ_IMAGE */
 }
+func cast<I: BinaryInteger>(_ param: I) -> SurfaceType { SurfaceType(rawValue: cast(param)) }
+func cast(_ param: SurfaceType) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Format = cairo_format_t
 
@@ -323,9 +484,13 @@ public extension Format {
     static let rgb24 = CAIRO_FORMAT_RGB24 /* 1 */
     static let a8 = CAIRO_FORMAT_A8 /* 2 */
     static let a1 = CAIRO_FORMAT_A1 /* 3 */
-    static let rgb16_565 = CAIRO_FORMAT_RGB16_565 /* 4 */
+    static let rgb16565 = CAIRO_FORMAT_RGB16_565 /* 4 */
     static let rgb30 = CAIRO_FORMAT_RGB30 /* 5 */
+    @available(*, deprecated) static let rgb16_565 = Format.rgb16565 /* CAIRO_FORMAT_RGB16_565 */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Format { Format(rawValue: cast(param)) }
+func cast(_ param: Format) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias PatternType = cairo_pattern_type_t
 
@@ -335,17 +500,26 @@ public extension PatternType {
     static let linear = CAIRO_PATTERN_TYPE_LINEAR /* 2 */
     static let radial = CAIRO_PATTERN_TYPE_RADIAL /* 3 */
     static let mesh = CAIRO_PATTERN_TYPE_MESH /* 4 */
-    static let raster_source = CAIRO_PATTERN_TYPE_RASTER_SOURCE /* 5 */
+    static let rasterSource = CAIRO_PATTERN_TYPE_RASTER_SOURCE /* 5 */
+    @available(*, deprecated) static let raster_source = PatternType.rasterSource /* CAIRO_PATTERN_TYPE_RASTER_SOURCE */
 }
+func cast<I: BinaryInteger>(_ param: I) -> PatternType { PatternType(rawValue: cast(param)) }
+func cast(_ param: PatternType) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Extend = cairo_extend_t
 
 public extension Extend {
-    static let none_ = CAIRO_EXTEND_NONE /* 0 */
-    static let repeat_ = CAIRO_EXTEND_REPEAT /* 1 */
+    static let `none` = CAIRO_EXTEND_NONE /* 0 */
+    static let `repeat` = CAIRO_EXTEND_REPEAT /* 1 */
     static let reflect = CAIRO_EXTEND_REFLECT /* 2 */
     static let pad = CAIRO_EXTEND_PAD /* 3 */
+    @available(*, deprecated) static let none_ = Extend.`none` /* CAIRO_EXTEND_NONE */
+    @available(*, deprecated) static let repeat_ = Extend.`repeat` /* CAIRO_EXTEND_REPEAT */
 }
+func cast<I: BinaryInteger>(_ param: I) -> Extend { Extend(rawValue: cast(param)) }
+func cast(_ param: Extend) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias Filter = cairo_filter_t
 
@@ -356,21 +530,22 @@ public extension Filter {
     static let nearest = CAIRO_FILTER_NEAREST /* 3 */
     static let bilinear = CAIRO_FILTER_BILINEAR /* 4 */
     static let gaussian = CAIRO_FILTER_GAUSSIAN /* 5 */
+
 }
+func cast<I: BinaryInteger>(_ param: I) -> Filter { Filter(rawValue: cast(param)) }
+func cast(_ param: Filter) -> UInt32 { cast(param.rawValue) }
+
 
 public typealias RegionOverlap = cairo_region_overlap_t
 
 public extension RegionOverlap {
-    static let in_ = CAIRO_REGION_OVERLAP_IN /* 0 */
+    static let `in` = CAIRO_REGION_OVERLAP_IN /* 0 */
     static let out = CAIRO_REGION_OVERLAP_OUT /* 1 */
     static let part = CAIRO_REGION_OVERLAP_PART /* 2 */
+    @available(*, deprecated) static let in_ = RegionOverlap.`in` /* CAIRO_REGION_OVERLAP_IN */
 }
-public func imageSurfaceCreate(format: cairo_format_t, width: Int, height: Int) -> Surface {
-    return Surface(cairo_image_surface_create(format, CInt(width), CInt(height)))
-
-}
-
-
+func cast<I: BinaryInteger>(_ param: I) -> RegionOverlap { RegionOverlap(rawValue: cast(param)) }
+func cast(_ param: RegionOverlap) -> UInt32 { cast(param.rawValue) }
 
 // MARK: - Context Record
 
@@ -381,7 +556,7 @@ public func imageSurfaceCreate(format: cairo_format_t, width: Int, height: Int) 
 ///
 
 public protocol ContextProtocol {
-    /// Untyped pointer to the underlying `cairo_t` instance.
+        /// Untyped pointer to the underlying `cairo_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_t` instance.
@@ -394,7 +569,7 @@ public protocol ContextProtocol {
 ///
 
 public struct ContextRef: ContextProtocol {
-    /// Untyped pointer to the underlying `cairo_t` instance.
+        /// Untyped pointer to the underlying `cairo_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -447,7 +622,7 @@ public extension ContextRef {
 ///
 
 open class Context: ContextProtocol {
-    /// Untyped pointer to the underlying `cairo_t` instance.
+        /// Untyped pointer to the underlying `cairo_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -476,7 +651,7 @@ open class Context: ContextProtocol {
         ref()
     }
 
-    /// Do-nothing destructor for`cairo_t`.
+    /// Do-nothing destructor for `cairo_t`.
     deinit {
         unref()
     }
@@ -544,14 +719,17 @@ open class Context: ContextProtocol {
 
 }
 
-// MARK: - no Context properties
+// MARK: no Context properties
 
-// MARK: - no signals
+// MARK: no Context signals
 
 
+// MARK: Context Record: ContextProtocol extension (methods and fields)
 public extension ContextProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_t> { return ptr.assumingMemoryBound(to: cairo_t.self) }
+
+
 
 }
 
@@ -566,7 +744,7 @@ public extension ContextProtocol {
 ///
 
 public protocol DeviceProtocol {
-    /// Untyped pointer to the underlying `cairo_device_t` instance.
+        /// Untyped pointer to the underlying `cairo_device_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_device_t` instance.
@@ -579,7 +757,7 @@ public protocol DeviceProtocol {
 ///
 
 public struct DeviceRef: DeviceProtocol {
-    /// Untyped pointer to the underlying `cairo_device_t` instance.
+        /// Untyped pointer to the underlying `cairo_device_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -632,7 +810,7 @@ public extension DeviceRef {
 ///
 
 open class Device: DeviceProtocol {
-    /// Untyped pointer to the underlying `cairo_device_t` instance.
+        /// Untyped pointer to the underlying `cairo_device_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -661,7 +839,7 @@ open class Device: DeviceProtocol {
         // no reference counting for cairo_device_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_device_t`.
+    /// Do-nothing destructor for `cairo_device_t`.
     deinit {
         // no reference counting for cairo_device_t, cannot unref(cast(_ptr))
     }
@@ -729,14 +907,17 @@ open class Device: DeviceProtocol {
 
 }
 
-// MARK: - no Device properties
+// MARK: no Device properties
 
-// MARK: - no signals
+// MARK: no Device signals
 
 
+// MARK: Device Record: DeviceProtocol extension (methods and fields)
 public extension DeviceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_device_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_device_t> { return ptr.assumingMemoryBound(to: cairo_device_t.self) }
+
+
 
 }
 
@@ -751,7 +932,7 @@ public extension DeviceProtocol {
 ///
 
 public protocol SurfaceProtocol {
-    /// Untyped pointer to the underlying `cairo_surface_t` instance.
+        /// Untyped pointer to the underlying `cairo_surface_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_surface_t` instance.
@@ -764,7 +945,7 @@ public protocol SurfaceProtocol {
 ///
 
 public struct SurfaceRef: SurfaceProtocol {
-    /// Untyped pointer to the underlying `cairo_surface_t` instance.
+        /// Untyped pointer to the underlying `cairo_surface_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -817,7 +998,7 @@ public extension SurfaceRef {
 ///
 
 open class Surface: SurfaceProtocol {
-    /// Untyped pointer to the underlying `cairo_surface_t` instance.
+        /// Untyped pointer to the underlying `cairo_surface_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -846,7 +1027,7 @@ open class Surface: SurfaceProtocol {
         // no reference counting for cairo_surface_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_surface_t`.
+    /// Do-nothing destructor for `cairo_surface_t`.
     deinit {
         cairo_surface_destroy(cast(ptr))
     }
@@ -914,14 +1095,17 @@ open class Surface: SurfaceProtocol {
 
 }
 
-// MARK: - no Surface properties
+// MARK: no Surface properties
 
-// MARK: - no signals
+// MARK: no Surface signals
 
 
+// MARK: Surface Record: SurfaceProtocol extension (methods and fields)
 public extension SurfaceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_surface_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_surface_t> { return ptr.assumingMemoryBound(to: cairo_surface_t.self) }
+
+
 
 }
 
@@ -936,7 +1120,7 @@ public extension SurfaceProtocol {
 ///
 
 public protocol MatrixProtocol {
-    /// Untyped pointer to the underlying `cairo_matrix_t` instance.
+        /// Untyped pointer to the underlying `cairo_matrix_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_matrix_t` instance.
@@ -949,7 +1133,7 @@ public protocol MatrixProtocol {
 ///
 
 public struct MatrixRef: MatrixProtocol {
-    /// Untyped pointer to the underlying `cairo_matrix_t` instance.
+        /// Untyped pointer to the underlying `cairo_matrix_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1002,7 +1186,7 @@ public extension MatrixRef {
 ///
 
 open class Matrix: MatrixProtocol {
-    /// Untyped pointer to the underlying `cairo_matrix_t` instance.
+        /// Untyped pointer to the underlying `cairo_matrix_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1031,7 +1215,7 @@ open class Matrix: MatrixProtocol {
         // no reference counting for cairo_matrix_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_matrix_t`.
+    /// Do-nothing destructor for `cairo_matrix_t`.
     deinit {
         // no reference counting for cairo_matrix_t, cannot unref(cast(_ptr))
     }
@@ -1099,14 +1283,17 @@ open class Matrix: MatrixProtocol {
 
 }
 
-// MARK: - no Matrix properties
+// MARK: no Matrix properties
 
-// MARK: - no signals
+// MARK: no Matrix signals
 
 
+// MARK: Matrix Record: MatrixProtocol extension (methods and fields)
 public extension MatrixProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_matrix_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_matrix_t> { return ptr.assumingMemoryBound(to: cairo_matrix_t.self) }
+
+
 
 }
 
@@ -1121,7 +1308,7 @@ public extension MatrixProtocol {
 ///
 
 public protocol PatternProtocol {
-    /// Untyped pointer to the underlying `cairo_pattern_t` instance.
+        /// Untyped pointer to the underlying `cairo_pattern_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_pattern_t` instance.
@@ -1134,7 +1321,7 @@ public protocol PatternProtocol {
 ///
 
 public struct PatternRef: PatternProtocol {
-    /// Untyped pointer to the underlying `cairo_pattern_t` instance.
+        /// Untyped pointer to the underlying `cairo_pattern_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1187,7 +1374,7 @@ public extension PatternRef {
 ///
 
 open class Pattern: PatternProtocol {
-    /// Untyped pointer to the underlying `cairo_pattern_t` instance.
+        /// Untyped pointer to the underlying `cairo_pattern_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1216,7 +1403,7 @@ open class Pattern: PatternProtocol {
         // no reference counting for cairo_pattern_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_pattern_t`.
+    /// Do-nothing destructor for `cairo_pattern_t`.
     deinit {
         // no reference counting for cairo_pattern_t, cannot unref(cast(_ptr))
     }
@@ -1284,14 +1471,17 @@ open class Pattern: PatternProtocol {
 
 }
 
-// MARK: - no Pattern properties
+// MARK: no Pattern properties
 
-// MARK: - no signals
+// MARK: no Pattern signals
 
 
+// MARK: Pattern Record: PatternProtocol extension (methods and fields)
 public extension PatternProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_pattern_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_pattern_t> { return ptr.assumingMemoryBound(to: cairo_pattern_t.self) }
+
+
 
 }
 
@@ -1306,7 +1496,7 @@ public extension PatternProtocol {
 ///
 
 public protocol RegionProtocol {
-    /// Untyped pointer to the underlying `cairo_region_t` instance.
+        /// Untyped pointer to the underlying `cairo_region_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_region_t` instance.
@@ -1319,7 +1509,7 @@ public protocol RegionProtocol {
 ///
 
 public struct RegionRef: RegionProtocol {
-    /// Untyped pointer to the underlying `cairo_region_t` instance.
+        /// Untyped pointer to the underlying `cairo_region_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1372,7 +1562,7 @@ public extension RegionRef {
 ///
 
 open class Region: RegionProtocol {
-    /// Untyped pointer to the underlying `cairo_region_t` instance.
+        /// Untyped pointer to the underlying `cairo_region_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1401,7 +1591,7 @@ open class Region: RegionProtocol {
         // no reference counting for cairo_region_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_region_t`.
+    /// Do-nothing destructor for `cairo_region_t`.
     deinit {
         // no reference counting for cairo_region_t, cannot unref(cast(_ptr))
     }
@@ -1469,14 +1659,17 @@ open class Region: RegionProtocol {
 
 }
 
-// MARK: - no Region properties
+// MARK: no Region properties
 
-// MARK: - no signals
+// MARK: no Region signals
 
 
+// MARK: Region Record: RegionProtocol extension (methods and fields)
 public extension RegionProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_region_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_region_t> { return ptr.assumingMemoryBound(to: cairo_region_t.self) }
+
+
 
 }
 
@@ -1491,7 +1684,7 @@ public extension RegionProtocol {
 ///
 
 public protocol FontOptionsProtocol {
-    /// Untyped pointer to the underlying `cairo_font_options_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_options_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_font_options_t` instance.
@@ -1504,7 +1697,7 @@ public protocol FontOptionsProtocol {
 ///
 
 public struct FontOptionsRef: FontOptionsProtocol {
-    /// Untyped pointer to the underlying `cairo_font_options_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_options_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1557,7 +1750,7 @@ public extension FontOptionsRef {
 ///
 
 open class FontOptions: FontOptionsProtocol {
-    /// Untyped pointer to the underlying `cairo_font_options_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_options_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1586,7 +1779,7 @@ open class FontOptions: FontOptionsProtocol {
         // no reference counting for cairo_font_options_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_font_options_t`.
+    /// Do-nothing destructor for `cairo_font_options_t`.
     deinit {
         // no reference counting for cairo_font_options_t, cannot unref(cast(_ptr))
     }
@@ -1654,14 +1847,17 @@ open class FontOptions: FontOptionsProtocol {
 
 }
 
-// MARK: - no FontOptions properties
+// MARK: no FontOptions properties
 
-// MARK: - no signals
+// MARK: no FontOptions signals
 
 
+// MARK: FontOptions Record: FontOptionsProtocol extension (methods and fields)
 public extension FontOptionsProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_font_options_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_font_options_t> { return ptr.assumingMemoryBound(to: cairo_font_options_t.self) }
+
+
 
 }
 
@@ -1676,7 +1872,7 @@ public extension FontOptionsProtocol {
 ///
 
 public protocol FontFaceProtocol {
-    /// Untyped pointer to the underlying `cairo_font_face_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_face_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_font_face_t` instance.
@@ -1689,7 +1885,7 @@ public protocol FontFaceProtocol {
 ///
 
 public struct FontFaceRef: FontFaceProtocol {
-    /// Untyped pointer to the underlying `cairo_font_face_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_face_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1742,7 +1938,7 @@ public extension FontFaceRef {
 ///
 
 open class FontFace: FontFaceProtocol {
-    /// Untyped pointer to the underlying `cairo_font_face_t` instance.
+        /// Untyped pointer to the underlying `cairo_font_face_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1771,7 +1967,7 @@ open class FontFace: FontFaceProtocol {
         // no reference counting for cairo_font_face_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_font_face_t`.
+    /// Do-nothing destructor for `cairo_font_face_t`.
     deinit {
         // no reference counting for cairo_font_face_t, cannot unref(cast(_ptr))
     }
@@ -1839,14 +2035,17 @@ open class FontFace: FontFaceProtocol {
 
 }
 
-// MARK: - no FontFace properties
+// MARK: no FontFace properties
 
-// MARK: - no signals
+// MARK: no FontFace signals
 
 
+// MARK: FontFace Record: FontFaceProtocol extension (methods and fields)
 public extension FontFaceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_font_face_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_font_face_t> { return ptr.assumingMemoryBound(to: cairo_font_face_t.self) }
+
+
 
 }
 
@@ -1861,7 +2060,7 @@ public extension FontFaceProtocol {
 ///
 
 public protocol ScaledFontProtocol {
-    /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
+        /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_scaled_font_t` instance.
@@ -1874,7 +2073,7 @@ public protocol ScaledFontProtocol {
 ///
 
 public struct ScaledFontRef: ScaledFontProtocol {
-    /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
+        /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -1927,7 +2126,7 @@ public extension ScaledFontRef {
 ///
 
 open class ScaledFont: ScaledFontProtocol {
-    /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
+        /// Untyped pointer to the underlying `cairo_scaled_font_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -1956,7 +2155,7 @@ open class ScaledFont: ScaledFontProtocol {
         ref()
     }
 
-    /// Do-nothing destructor for`cairo_scaled_font_t`.
+    /// Do-nothing destructor for `cairo_scaled_font_t`.
     deinit {
         unref()
     }
@@ -2024,14 +2223,17 @@ open class ScaledFont: ScaledFontProtocol {
 
 }
 
-// MARK: - no ScaledFont properties
+// MARK: no ScaledFont properties
 
-// MARK: - no signals
+// MARK: no ScaledFont signals
 
 
+// MARK: ScaledFont Record: ScaledFontProtocol extension (methods and fields)
 public extension ScaledFontProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_scaled_font_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_scaled_font_t> { return ptr.assumingMemoryBound(to: cairo_scaled_font_t.self) }
+
+
 
 }
 
@@ -2046,7 +2248,7 @@ public extension ScaledFontProtocol {
 ///
 
 public protocol PathProtocol {
-    /// Untyped pointer to the underlying `cairo_path_t` instance.
+        /// Untyped pointer to the underlying `cairo_path_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_path_t` instance.
@@ -2059,7 +2261,7 @@ public protocol PathProtocol {
 ///
 
 public struct PathRef: PathProtocol {
-    /// Untyped pointer to the underlying `cairo_path_t` instance.
+        /// Untyped pointer to the underlying `cairo_path_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -2112,7 +2314,7 @@ public extension PathRef {
 ///
 
 open class Path: PathProtocol {
-    /// Untyped pointer to the underlying `cairo_path_t` instance.
+        /// Untyped pointer to the underlying `cairo_path_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -2141,7 +2343,7 @@ open class Path: PathProtocol {
         // no reference counting for cairo_path_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_path_t`.
+    /// Do-nothing destructor for `cairo_path_t`.
     deinit {
         // no reference counting for cairo_path_t, cannot unref(cast(_ptr))
     }
@@ -2209,14 +2411,17 @@ open class Path: PathProtocol {
 
 }
 
-// MARK: - no Path properties
+// MARK: no Path properties
 
-// MARK: - no signals
+// MARK: no Path signals
 
 
+// MARK: Path Record: PathProtocol extension (methods and fields)
 public extension PathProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_path_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_path_t> { return ptr.assumingMemoryBound(to: cairo_path_t.self) }
+
+
 
 }
 
@@ -2231,7 +2436,7 @@ public extension PathProtocol {
 ///
 
 public protocol RectangleProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_rectangle_t` instance.
@@ -2244,7 +2449,7 @@ public protocol RectangleProtocol {
 ///
 
 public struct RectangleRef: RectangleProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -2297,7 +2502,7 @@ public extension RectangleRef {
 ///
 
 open class Rectangle: RectangleProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -2326,7 +2531,7 @@ open class Rectangle: RectangleProtocol {
         // no reference counting for cairo_rectangle_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_rectangle_t`.
+    /// Do-nothing destructor for `cairo_rectangle_t`.
     deinit {
         // no reference counting for cairo_rectangle_t, cannot unref(cast(_ptr))
     }
@@ -2394,14 +2599,56 @@ open class Rectangle: RectangleProtocol {
 
 }
 
-// MARK: - no Rectangle properties
+// MARK: no Rectangle properties
 
-// MARK: - no signals
+// MARK: no Rectangle signals
 
 
+// MARK: Rectangle Record: RectangleProtocol extension (methods and fields)
 public extension RectangleProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_rectangle_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_rectangle_t> { return ptr.assumingMemoryBound(to: cairo_rectangle_t.self) }
+
+
+    var x: Double {
+        get {
+            let rv: Double = cast(_ptr.pointee.x)
+            return rv
+        }
+         set {
+            _ptr.pointee.x = cast(newValue)
+        }
+    }
+
+    var y: Double {
+        get {
+            let rv: Double = cast(_ptr.pointee.y)
+            return rv
+        }
+         set {
+            _ptr.pointee.y = cast(newValue)
+        }
+    }
+
+    var width: Double {
+        get {
+            let rv: Double = cast(_ptr.pointee.width)
+            return rv
+        }
+         set {
+            _ptr.pointee.width = cast(newValue)
+        }
+    }
+
+    var height: Double {
+        get {
+            let rv: Double = cast(_ptr.pointee.height)
+            return rv
+        }
+         set {
+            _ptr.pointee.height = cast(newValue)
+        }
+    }
 
 }
 
@@ -2416,7 +2663,7 @@ public extension RectangleProtocol {
 ///
 
 public protocol RectangleIntProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
     var ptr: UnsafeMutableRawPointer { get }
 
     /// Typed pointer to the underlying `cairo_rectangle_int_t` instance.
@@ -2429,7 +2676,7 @@ public protocol RectangleIntProtocol {
 ///
 
 public struct RectangleIntRef: RectangleIntProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 }
@@ -2482,7 +2729,7 @@ public extension RectangleIntRef {
 ///
 
 open class RectangleInt: RectangleIntProtocol {
-    /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
+        /// Untyped pointer to the underlying `cairo_rectangle_int_t` instance.
     /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
     public let ptr: UnsafeMutableRawPointer
 
@@ -2511,7 +2758,7 @@ open class RectangleInt: RectangleIntProtocol {
         // no reference counting for cairo_rectangle_int_t, cannot ref(cast(_ptr))
     }
 
-    /// Do-nothing destructor for`cairo_rectangle_int_t`.
+    /// Do-nothing destructor for `cairo_rectangle_int_t`.
     deinit {
         // no reference counting for cairo_rectangle_int_t, cannot unref(cast(_ptr))
     }
@@ -2579,14 +2826,56 @@ open class RectangleInt: RectangleIntProtocol {
 
 }
 
-// MARK: - no RectangleInt properties
+// MARK: no RectangleInt properties
 
-// MARK: - no signals
+// MARK: no RectangleInt signals
 
 
+// MARK: RectangleInt Record: RectangleIntProtocol extension (methods and fields)
 public extension RectangleIntProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_rectangle_int_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_rectangle_int_t> { return ptr.assumingMemoryBound(to: cairo_rectangle_int_t.self) }
+
+
+    var x: Int {
+        get {
+            let rv: Int = cast(_ptr.pointee.x)
+            return rv
+        }
+         set {
+            _ptr.pointee.x = gint(newValue)
+        }
+    }
+
+    var y: Int {
+        get {
+            let rv: Int = cast(_ptr.pointee.y)
+            return rv
+        }
+         set {
+            _ptr.pointee.y = gint(newValue)
+        }
+    }
+
+    var width: Int {
+        get {
+            let rv: Int = cast(_ptr.pointee.width)
+            return rv
+        }
+         set {
+            _ptr.pointee.width = gint(newValue)
+        }
+    }
+
+    var height: Int {
+        get {
+            let rv: Int = cast(_ptr.pointee.height)
+            return rv
+        }
+         set {
+            _ptr.pointee.height = gint(newValue)
+        }
+    }
 
 }
 
