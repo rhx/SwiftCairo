@@ -17,29 +17,29 @@ public extension ScaledFontProtocol {
     /// The number of references to a #cairo_scaled_font_t can be get using
     /// referenceCount.
     @discardableResult
-    func ref() -> ScaledFontRef {
+    @inlinable func ref() -> ScaledFontRef {
         return ScaledFontRef(cairo_scaled_font_reference(_ptr))
     }
     
     /// Decreases the reference count on @font by one. If the result
     /// is zero, then @font and all associated resources are freed.
     /// See ref().
-    func unref() { cairo_scaled_font_destroy(_ptr) }
+    @inlinable func unref() { cairo_scaled_font_destroy(_ptr) }
     
     /// Current reference count of @scaled_font.
-    var referenceCount: Int {
+    @inlinable var referenceCount: Int {
         return Int(cairo_scaled_font_get_reference_count(_ptr))
     }
 
     /// type of the backend used to create
     /// a scaled font. See #cairo_font_type_t for available types.
     /// However, this never returns %CAIRO_FONT_TYPE_TOY.
-    var type: cairo_font_type_t {
+    @inlinable var type: cairo_font_type_t {
         return cairo_scaled_font_get_type(_ptr)
     }
 
     /// Font extents for the receiver
-    var extents: cairo_font_extents_t {
+    @inlinable var extents: cairo_font_extents_t {
         var e = cairo_font_extents_t(ascent: 0, descent: 0, height: 0, max_x_advance: 0, max_y_advance: 0)
         cairo_scaled_font_extents(_ptr, &e)
         return e
@@ -50,7 +50,7 @@ public extension ScaledFontProtocol {
     ///
     /// Return value: %CAIRO_STATUS_SUCCESS or another error such as
     ///   %CAIRO_STATUS_NO_MEMORY.
-    var status: cairo_status_t {
+    @inlinable var status: cairo_status_t {
         return cairo_scaled_font_status(_ptr)
     }
 
@@ -68,7 +68,7 @@ public extension ScaledFontProtocol {
     /// characters. In particular, trailing whitespace characters are
     /// likely to not affect the size of the rectangle, though they will
     /// affect the x_advance and y_advance values.
-    func textExtents(_ text: UnsafePointer<CChar>) -> cairo_text_extents_t {
+    @inlinable func textExtents(_ text: UnsafePointer<CChar>) -> cairo_text_extents_t {
         var e = cairo_text_extents_t(x_bearing: 0, y_bearing: 0, width: 0, height: 0, x_advance: 0, y_advance: 0)
         cairo_scaled_font_text_extents(_ptr, text, &e)
         return e
@@ -84,7 +84,7 @@ public extension ScaledFontProtocol {
     ///
     /// Note that whitespace glyphs do not contribute to the size of the
     /// rectangle (extents.width and extents.height).
-    func glyphExtents(_ glyphs: [cairo_glyph_t]) -> cairo_text_extents_t {
+    @inlinable func glyphExtents(_ glyphs: [cairo_glyph_t]) -> cairo_text_extents_t {
         var e = cairo_text_extents_t(x_bearing: 0, y_bearing: 0, width: 0, height: 0, x_advance: 0, y_advance: 0)
         cairo_scaled_font_glyph_extents(_ptr, glyphs, Int32(glyphs.count), &e)
         return e
@@ -213,12 +213,12 @@ public extension ScaledFontProtocol {
     /// if the input values are wrong or if conversion failed.  If the input
     /// values are correct but the conversion failed, the error status is also
     /// set on @scaled_font.
-    func textToGlyphs(_ text: String, x: Double = 0, y: Double = 0) -> (glyphs: [cairo_glyph_t], clusters: [cairo_text_cluster_t], flags: cairo_text_cluster_flags_t)? {
+    @inlinable func textToGlyphs(_ text: String, x: Double = 0, y: Double = 0) -> (glyphs: [cairo_glyph_t], clusters: [cairo_text_cluster_t], flags: cairo_text_cluster_flags_t)? {
         var glyphs: UnsafeMutablePointer<cairo_glyph_t>?
         var clusters: UnsafeMutablePointer<cairo_text_cluster_t>?
         var num_glyphs: CInt = 0
         var num_clusters: CInt = 0
-        var flags = cairo_text_cluster_flags_t(0)
+        var flags = cairo_text_cluster_flags_t(rawValue: 0)
         guard cairo_scaled_font_text_to_glyphs(_ptr, x, y, text, CInt(text.utf16.count), &glyphs, &num_glyphs, &clusters, &num_clusters, &flags) == CAIRO_STATUS_SUCCESS else { return nil }
         var gl = [cairo_glyph_t]()
         if let glyphs = glyphs {
@@ -240,8 +240,7 @@ public extension ScaledFontProtocol {
     /// the font face that this scaled font uses.  This might be the
     /// font face passed to cairo_scaled_font_create(), but this does not
     /// hold true for all possible cases.
-    var fontFace: UnsafeMutablePointer<cairo_font_face_t> {
+    @inlinable var fontFace: UnsafeMutablePointer<cairo_font_face_t> {
         get { return cairo_scaled_font_get_font_face(_ptr) }
     }
-
 }
