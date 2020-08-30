@@ -24,7 +24,10 @@ public extension Context {
 }
 
 public extension ContextProtocol {
-    /// Increases the reference count on cr by one.
+    /// Typed pointer to the underlying context
+    @inlinable var context_ptr: UnsafeMutablePointer<cairo_t>! { _ptr }
+
+        /// Increases the reference count on cr by one.
     /// This prevents cr from being destroyed until
     /// a matching call to unref() is made.
     @discardableResult
