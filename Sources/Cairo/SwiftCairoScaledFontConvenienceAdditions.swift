@@ -3,7 +3,7 @@
 //  Cairo
 //
 //  Created by Rene Hexel on 17/9/16.
-//  Copyright © 2017, 2018, 2019 Rene Hexel.  All rights reserved.
+//  Copyright © 2017, 2018, 2019, 2020 Rene Hexel.  All rights reserved.
 //
 import CCairo
 import GLib
