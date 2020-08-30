@@ -695,3 +695,8 @@ public extension ContextProtocol {
         return (x1, y1, x2, y2)
     }
 }
+
+public extension PathProtocol {
+    /// Typed pointer to the underlying path
+    @inlinable var path_ptr: UnsafeMutablePointer<cairo_path_t>! { _ptr }
+}
