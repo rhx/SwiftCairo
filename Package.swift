@@ -1,14 +1,12 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.2
 
 import PackageDescription
 
 let package = Package(
     name: "Cairo",
-    products: [
-        .library(name: "Cairo", targets: ["Cairo"]),
-    ],
+    products: [ .library(name: "Cairo", targets: ["Cairo"]) ],
     dependencies: [
-        .package(url: "https://github.com/rhx/SwiftGObject.git", .branch("master"))
+        .package(name: "GLibObject", url: "https://github.com/rhx/SwiftGObject.git", .branch("master"))
     ],
     targets: [
 	.systemLibrary(name: "CCairo", pkgConfig: "cairo glib-2.0 gio-unix-2.0",
