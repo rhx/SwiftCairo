@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cairo 1.16.0 Docs
         </a>
-         (54% documented)
+         (66% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -450,9 +450,9 @@ Alternatively, use <code><a href="../Structs/ContextRef.html">ContextRef</a></co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo15ContextProtocolP3ptrSvvp"></a>
+                    <a name="/s:5Cairo15ContextProtocolP3ptrSvSgvp"></a>
                     <a name="//apple_ref/swift/Property/ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo15ContextProtocolP3ptrSvvp">ptr</a>
+                    <a class="token" href="#/s:5Cairo15ContextProtocolP3ptrSvSgvp">ptr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,12 +467,12 @@ Alternatively, use <code><a href="../Structs/ContextRef.html">ContextRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L560">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L535">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,9 +480,9 @@ Alternatively, use <code><a href="../Structs/ContextRef.html">ContextRef</a></co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo15ContextProtocolP4_ptrSpySo6_cairoVGvp"></a>
+                    <a name="/s:5Cairo15ContextProtocolP4_ptrSpySo6_cairoVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/_ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo15ContextProtocolP4_ptrSpySo6_cairoVGvp">_ptr</a>
+                    <a class="token" href="#/s:5Cairo15ContextProtocolP4_ptrSpySo6_cairoVGSgvp">_ptr</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -505,12 +505,46 @@ Alternatively, use <code><a href="../Structs/ContextRef.html">ContextRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_t</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L563">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L538">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo15ContextProtocolPAAE11context_ptrSpySo6_cairoVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/context_ptr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo15ContextProtocolPAAE11context_ptrSpySo6_cairoVGSgvp">context_ptr</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Typed pointer to the underlying context</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">context_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_t</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,8 +565,10 @@ Alternatively, use <code><a href="../Structs/ContextRef.html">ContextRef</a></co
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Increases the reference count on cr by one.
-This prevents cr from being destroyed until
+                        <pre class="highlight swift"><code><span class="kt">Increases</span> <span class="n">the</span> <span class="n">reference</span> <span class="n">count</span> <span class="n">on</span> <span class="n">cr</span> <span class="n">by</span> <span class="n">one</span><span class="o">.</span>
+</code></pre>
+
+<p>This prevents cr from being destroyed until
 a matching call to unref() is made.</p>
 
                       </div>
@@ -541,12 +577,13 @@ a matching call to unref() is made.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
 <span class="kd">func</span> <span class="nf">ref</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ContextRef.html">ContextRef</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L31-L33">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L34-L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -577,12 +614,13 @@ See ref().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unref</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">unref</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L39">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -610,12 +648,13 @@ See ref().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">referenceCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">referenceCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L42-L44">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L45-L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -643,12 +682,13 @@ See ref().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="n">cairo_status_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="n">cairo_status_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L47">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -689,12 +729,13 @@ with the cairo_t.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">save</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">save</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L63">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -722,12 +763,13 @@ with the cairo_t.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">restore</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">restore</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L66">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -757,12 +799,13 @@ with the cairo_t.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Structs/SurfaceRef.html">SurfaceRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Structs/SurfaceRef.html">SurfaceRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L71-L73">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L74-L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -807,12 +850,13 @@ cairo_paint_with_alpha (cr, alpha);</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pushGroup</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">pushGroup</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L93">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -842,12 +886,13 @@ cairo_paint_with_alpha (cr, alpha);</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pushGroup</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Cairo7Contenta">Content</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">pushGroup</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5Cairo7Contenta">Content</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L98-L100">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L101-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,12 +923,13 @@ cairo_paint_with_alpha (cr, alpha);</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
 <span class="kd">func</span> <span class="nf">popGroup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/PatternRef.html">PatternRef</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L106-L108">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L109-L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -919,12 +965,13 @@ but is more convenient as their is no need for a variable to store the short-liv
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">popGroupToSource</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">popGroupToSource</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L119-L121">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L122-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -953,12 +1000,13 @@ This property will always return a valid pointer, but the result can be a &ldquo
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">groupTarget</span><span class="p">:</span> <span class="kt"><a href="../Structs/SurfaceRef.html">SurfaceRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">groupTarget</span><span class="p">:</span> <span class="kt"><a href="../Structs/SurfaceRef.html">SurfaceRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L125-L127">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L128-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -991,12 +1039,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSource</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setSource</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L135-L137">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L138-L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1028,12 +1077,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSource</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setSource</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L144-L146">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L147-L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1065,12 +1115,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Structs/PatternRef.html">PatternRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Structs/PatternRef.html">PatternRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L153-L156">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L156-L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1100,12 +1151,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">antiAlias</span><span class="p">:</span> <span class="n">cairo_antialias_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">antiAlias</span><span class="p">:</span> <span class="n">cairo_antialias_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L161-L164">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L164-L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1143,7 +1195,8 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setDash</span><span class="p">(</span><span class="n">_</span> <span class="nv">dashes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setDash</span><span class="p">(</span><span class="n">_</span> <span class="nv">dashes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1179,7 +1232,7 @@ If the values passed in are outside that range, they will be clamped.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L180-L182">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L183-L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1207,12 +1260,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dashCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">dashCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L185-L187">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L188-L190">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1250,12 +1304,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dash</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">dash</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L200-L207">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L203-L210">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1285,12 +1340,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fillRule</span><span class="p">:</span> <span class="n">cairo_fill_rule_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fillRule</span><span class="p">:</span> <span class="n">cairo_fill_rule_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L212-L215">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L215-L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1320,12 +1376,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lineCap</span><span class="p">:</span> <span class="n">cairo_line_cap_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">lineCap</span><span class="p">:</span> <span class="n">cairo_line_cap_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L220-L223">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L223-L226">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1357,12 +1414,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lineJoin</span><span class="p">:</span> <span class="n">cairo_line_join_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">lineJoin</span><span class="p">:</span> <span class="n">cairo_line_join_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L230-L233">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L233-L236">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1396,12 +1454,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lineWidth</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">lineWidth</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L242-L245">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L245-L248">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1437,12 +1496,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">miterLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">miterLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L256-L259">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L259-L262">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1478,12 +1538,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mitreLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">mitreLimit</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L270-L273">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L273-L276">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1513,12 +1574,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">var</span> <span class="p">`</span><span class="nv">operator</span><span class="p">`:</span> <span class="n">cairo_operator_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">var</span> <span class="p">`</span><span class="nv">operator</span><span class="p">`:</span> <span class="n">cairo_operator_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L278-L281">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L281-L284">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1548,12 +1610,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">compositingOperator</span><span class="p">:</span> <span class="n">cairo_operator_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">compositingOperator</span><span class="p">:</span> <span class="n">cairo_operator_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L286-L289">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L289-L292">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1581,12 +1644,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tolerance</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">tolerance</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L292-L295">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L295-L298">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1620,12 +1684,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clip</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">clip</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L304">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1659,12 +1724,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clipPreserve</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">clipPreserve</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L313">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L316">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1692,12 +1758,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">clipExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">clipExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L316-L323">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L319-L326">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1727,12 +1794,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isInClip</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">isInClip</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L328-L330">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L331-L333">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1762,12 +1830,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resetClip</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">resetClip</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L335">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L338">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1795,12 +1864,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">clipRectangleList</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_rectangle_t</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">clipRectangleList</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_rectangle_t</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L338-L348">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L341-L351">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1828,12 +1898,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fill</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">fill</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L351">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L354">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1861,12 +1932,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fillPreserve</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">fillPreserve</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L354">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L357">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1900,12 +1972,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fillExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fillExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L363-L370">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L366-L373">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1935,12 +2008,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isInFill</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">isInFill</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L375-L377">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L378-L380">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1968,12 +2042,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">mask</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PatternProtocol.html">PatternProtocol</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="n">mask</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PatternProtocol.html">PatternProtocol</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L380">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L383">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2001,7 +2076,8 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">mask</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">surface</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SurfaceProtocol.html">SurfaceProtocol</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="n">mask</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">surface</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/SurfaceProtocol.html">SurfaceProtocol</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2049,7 +2125,7 @@ If the values passed in are outside that range, they will be clamped.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L388-L390">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L391-L393">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2077,12 +2153,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paint</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">paint</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L393">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L396">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2110,12 +2187,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paint</span><span class="p">(</span><span class="nv">alpha</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">paint</span><span class="p">(</span><span class="nv">alpha</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L396">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L399">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2151,12 +2229,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stroke</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">stroke</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L407">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L410">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2186,12 +2265,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">strokePreserve</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">strokePreserve</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L412">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L415">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2225,7 +2305,8 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">strokeExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">strokeExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2239,7 +2320,7 @@ If the values passed in are outside that range, they will be clamped.</p>
 </ul></p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L426-L433">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L429-L436">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2269,12 +2350,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isInStroke</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">isInStroke</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L438-L440">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L441-L443">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2304,12 +2386,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">copyPage</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">copyPage</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L445">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L448">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2339,12 +2422,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showPage</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">showPage</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L450">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L453">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2372,7 +2456,8 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">userData</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_user_data_key_t</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">userData</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_user_data_key_t</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span></code></pre>
 
                         </div>
                       </div>
@@ -2396,7 +2481,7 @@ If the values passed in are outside that range, they will be clamped.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L456-L458">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L459-L461">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2425,6 +2510,7 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
 <span class="kd">func</span> <span class="nf">setUserData</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_user_data_key_t</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">,</span> <span class="nv">destroy</span><span class="p">:</span> <span class="n">cairo_destroy_func_t</span><span class="o">!</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cairo_status_t</span></code></pre>
 
                         </div>
@@ -2477,7 +2563,7 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <p>CAIRO_STATUS_SUCCESS or CAIRO_STATUS_NO_MEMORY if a slot could not be allocated for the user data.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L467-L469">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L470-L472">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2518,12 +2604,13 @@ If the values passed in are outside that range, they will be clamped.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">newPath</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">newPath</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L474">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L477">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2556,7 +2643,8 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Structs/PathRef.html">PathRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt"><a href="../Structs/PathRef.html">PathRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2565,7 +2653,7 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <p>The copy of the current path.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L483">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L486">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2600,12 +2688,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">flatPath</span><span class="p">:</span> <span class="kt"><a href="../Structs/PathRef.html">PathRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">flatPath</span><span class="p">:</span> <span class="kt"><a href="../Structs/PathRef.html">PathRef</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L493-L495">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L496-L498">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2633,7 +2722,8 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">append</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PathProtocol.html">PathProtocol</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="n">append</span><span class="o">&lt;</span><span class="kt">P</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span> <span class="k">where</span> <span class="kt">P</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PathProtocol.html">PathProtocol</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2657,7 +2747,7 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L500-L502">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L503-L505">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2685,12 +2775,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hasCurrentPoint</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">hasCurrentPoint</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L505-L507">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L508-L510">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2726,12 +2817,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentPoint</span><span class="p">:</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">currentPoint</span><span class="p">:</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L518-L522">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L521-L525">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2763,12 +2855,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">newSubPath</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">newSubPath</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L529">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L532">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2802,12 +2895,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">closePath</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">closePath</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L538">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L541">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2851,12 +2945,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">arc</span><span class="p">(</span><span class="nv">xc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">yc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">angle1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">angle2</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">arc</span><span class="p">(</span><span class="nv">xc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">yc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">angle1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">angle2</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L557-L559">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L560-L562">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2886,12 +2981,13 @@ If cr is already in an error state. In this case path-&gt;status will contain th
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">arcNegative</span><span class="p">(</span><span class="nv">xc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">yc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">angle1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="nv">angle2</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">arcNegative</span><span class="p">(</span><span class="nv">xc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">yc</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">angle1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="nv">angle2</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L564-L566">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L567-L569">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2920,7 +3016,8 @@ If there is no current point before the call to curveTo() this function will beh
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">curveTo</span><span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">curveTo</span><span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3004,7 +3101,7 @@ If there is no current point before the call to curveTo() this function will beh
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L577-L579">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L580-L582">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3034,7 +3131,8 @@ If there is no current point before the call to curveTo() this function will beh
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">lineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3070,7 +3168,7 @@ If there is no current point before the call to curveTo() this function will beh
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L588">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L591">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3098,7 +3196,8 @@ If there is no current point before the call to curveTo() this function will beh
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3134,7 +3233,7 @@ If there is no current point before the call to curveTo() this function will beh
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L595">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L598">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3170,12 +3269,13 @@ If there is no current point before the call to curveTo() this function will beh
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rectangle</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">rectangle</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L606-L608">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L609-L611">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3203,12 +3303,13 @@ If there is no current point before the call to curveTo() this function will beh
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">glyphPath</span><span class="p">(</span><span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">glyphPath</span><span class="p">(</span><span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L611-L613">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L614-L616">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3253,12 +3354,13 @@ serious text-using applications. See cairo_glyph_path() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">textPath</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L633-L635">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L636-L638">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3290,7 +3392,8 @@ serious text-using applications. See cairo_glyph_path() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">relCurveTo</span><span class="p">(</span><span class="nv">dx1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dx2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dx3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">relCurveTo</span><span class="p">(</span><span class="nv">dx1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dx2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dx3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">dy3</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3374,7 +3477,7 @@ serious text-using applications. See cairo_glyph_path() for the
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L649-L651">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L652-L654">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3406,7 +3509,8 @@ serious text-using applications. See cairo_glyph_path() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">relLineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">relLineTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3442,7 +3546,7 @@ serious text-using applications. See cairo_glyph_path() for the
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L662-L664">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L665-L667">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3474,7 +3578,8 @@ serious text-using applications. See cairo_glyph_path() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">relMoveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">relMoveTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">dx</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dy</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3510,7 +3615,7 @@ serious text-using applications. See cairo_glyph_path() for the
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L675-L677">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L678-L680">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3544,12 +3649,13 @@ serious text-using applications. See cairo_glyph_path() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pathExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">pathExtents</span><span class="p">:</span> <span class="p">(</span><span class="nv">x1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y1</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y2</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L686-L693">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoContextConvenienceAdditions.swift#L689-L696">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3619,7 +3725,8 @@ followed by cairo_set_font_face().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">selectFontFace</span><span class="p">(</span><span class="n">_</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">slant</span><span class="p">:</span> <span class="n">cairo_font_slant_t</span><span class="p">,</span> <span class="nv">weight</span><span class="p">:</span> <span class="n">cairo_font_weight_t</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">selectFontFace</span><span class="p">(</span><span class="n">_</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">slant</span><span class="p">:</span> <span class="n">cairo_font_slant_t</span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="nv">weight</span><span class="p">:</span> <span class="n">cairo_font_weight_t</span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3660,7 +3767,8 @@ font size is 10.0.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -3698,7 +3806,8 @@ or stretch it unequally along the two axes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fontMatrix</span><span class="p">:</span> <span class="n">cairo_matrix_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fontMatrix</span><span class="p">:</span> <span class="n">cairo_matrix_t</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -3735,7 +3844,8 @@ from the surface is used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setFont</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_font_options_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setFont</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_font_options_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3771,7 +3881,8 @@ passed to cairo_set_font_options().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFont</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_options_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">getFont</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_options_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3834,7 +3945,8 @@ will shutdown the #cairo_t object).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fontFace</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fontFace</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -3878,7 +3990,8 @@ will shutdown the #cairo_t object).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">scaledFont</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScaledFont.html">ScaledFont</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">scaledFont</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScaledFont.html">ScaledFont</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -3931,7 +4044,8 @@ serious text-using applications. See cairo_show_glyphs() for the
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showText</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">showText</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3983,7 +4097,8 @@ following clusters move backward.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showText</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">],</span> <span class="nv">clusters</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_text_cluster_t</span><span class="p">],</span> <span class="nv">flags</span><span class="p">:</span> <span class="n">cairo_text_cluster_flags_t</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">showText</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">],</span> <span class="nv">clusters</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_text_cluster_t</span><span class="p">],</span> <span class="nv">flags</span><span class="p">:</span> <span class="n">cairo_text_cluster_flags_t</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -4027,7 +4142,8 @@ affect the x_advance and y_advance values.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">textExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
 
                         </div>
                       </div>
@@ -4068,7 +4184,8 @@ rectangle (extents.width and extents.height).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">glyphExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">glyphExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
 
                         </div>
                       </div>
@@ -4101,7 +4218,8 @@ rectangle (extents.width and extents.height).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fontExtents</span><span class="p">:</span> <span class="n">cairo_font_extents_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fontExtents</span><span class="p">:</span> <span class="n">cairo_font_extents_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -4119,7 +4237,7 @@ rectangle (extents.width and extents.height).</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-09-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

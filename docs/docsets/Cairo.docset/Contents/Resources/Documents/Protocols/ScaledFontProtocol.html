@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cairo 1.16.0 Docs
         </a>
-         (54% documented)
+         (66% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -450,9 +450,9 @@ Alternatively, use <code><a href="../Structs/ScaledFontRef.html">ScaledFontRef</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo18ScaledFontProtocolP3ptrSvvp"></a>
+                    <a name="/s:5Cairo18ScaledFontProtocolP3ptrSvSgvp"></a>
                     <a name="//apple_ref/swift/Property/ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo18ScaledFontProtocolP3ptrSvvp">ptr</a>
+                    <a class="token" href="#/s:5Cairo18ScaledFontProtocolP3ptrSvSgvp">ptr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,12 +467,12 @@ Alternatively, use <code><a href="../Structs/ScaledFontRef.html">ScaledFontRef</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2064">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2655">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,9 +480,9 @@ Alternatively, use <code><a href="../Structs/ScaledFontRef.html">ScaledFontRef</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo18ScaledFontProtocolP4_ptrSpySo18_cairo_scaled_fontVGvp"></a>
+                    <a name="/s:5Cairo18ScaledFontProtocolP4_ptrSpySo18_cairo_scaled_fontVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/_ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo18ScaledFontProtocolP4_ptrSpySo18_cairo_scaled_fontVGvp">_ptr</a>
+                    <a class="token" href="#/s:5Cairo18ScaledFontProtocolP4_ptrSpySo18_cairo_scaled_fontVGSgvp">_ptr</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -505,12 +505,12 @@ Alternatively, use <code><a href="../Structs/ScaledFontRef.html">ScaledFontRef</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_scaled_font_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_scaled_font_t</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2067">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2658">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -544,6 +544,7 @@ referenceCount.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
 <span class="kd">func</span> <span class="nf">ref</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ScaledFontRef.html">ScaledFontRef</a></span></code></pre>
 
                         </div>
@@ -579,7 +580,8 @@ See ref().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unref</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">unref</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -612,7 +614,8 @@ See ref().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">referenceCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">referenceCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -647,7 +650,8 @@ However, this never returns %CAIRO_FONT_TYPE_TOY.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="n">cairo_font_type_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="n">cairo_font_type_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -680,7 +684,8 @@ However, this never returns %CAIRO_FONT_TYPE_TOY.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extents</span><span class="p">:</span> <span class="n">cairo_font_extents_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">extents</span><span class="p">:</span> <span class="n">cairo_font_extents_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -717,7 +722,8 @@ scaled_font.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="n">cairo_status_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="n">cairo_status_t</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -763,7 +769,8 @@ affect the x_advance and y_advance values.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">textExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
 
                         </div>
                       </div>
@@ -805,7 +812,8 @@ rectangle (extents.width and extents.height).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">glyphExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">glyphExtents</span><span class="p">(</span><span class="n">_</span> <span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">cairo_text_extents_t</span></code></pre>
 
                         </div>
                       </div>
@@ -957,7 +965,8 @@ set on @scaled_font.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">textToGlyphs</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">],</span> <span class="nv">clusters</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_text_cluster_t</span><span class="p">],</span> <span class="nv">flags</span><span class="p">:</span> <span class="n">cairo_text_cluster_flags_t</span><span class="p">)?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">textToGlyphs</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">glyphs</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_glyph_t</span><span class="p">],</span> <span class="nv">clusters</span><span class="p">:</span> <span class="p">[</span><span class="n">cairo_text_cluster_t</span><span class="p">],</span> <span class="nv">flags</span><span class="p">:</span> <span class="n">cairo_text_cluster_flags_t</span><span class="p">)?</span></code></pre>
 
                         </div>
                       </div>
@@ -992,7 +1001,8 @@ hold true for all possible cases.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fontFace</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">fontFace</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1010,7 +1020,7 @@ hold true for all possible cases.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-09-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

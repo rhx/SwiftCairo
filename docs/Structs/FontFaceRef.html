@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cairo 1.16.0 Docs
         </a>
-         (54% documented)
+         (66% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -449,9 +449,9 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo11FontFaceRefV3ptrSvvp"></a>
+                    <a name="/s:5Cairo11FontFaceRefV3ptrSvSgvp"></a>
                     <a name="//apple_ref/swift/Property/ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo11FontFaceRefV3ptrSvvp">ptr</a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefV3ptrSvSgvp">ptr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,12 +469,12 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1890">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2405">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -512,12 +512,168 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1895-L1896">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2410-L2412">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo11FontFaceRefVyACSPySo16_cairo_font_faceVGcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefVyACSPySo16_cairo_font_faceVGcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated initialiser from a constant pointer to the underlying <code>C</code> data type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2415-L2417">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo11FontFaceRefVyACSgSpySo16_cairo_font_faceVGSgcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefVyACSgSpySo16_cairo_font_faceVGSgcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conditional initialiser from an optional pointer to the underlying <code>C</code> data type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">_</span> <span class="nv">maybePointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2420-L2423">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo11FontFaceRefVyACSgSPySo16_cairo_font_faceVGSgcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefVyACSgSPySo16_cairo_font_faceVGSgcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conditional initialiser from an optional, non-mutable pointer to the underlying <code>C</code> data type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">_</span> <span class="nv">maybePointer</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">cairo_font_face_t</span><span class="o">&gt;</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2426-L2429">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo11FontFaceRefV8gpointerACSgSvSg_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(gpointer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefV8gpointerACSgSvSg_tcfc">init(gpointer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conditional initialiser from an optional <code>gpointer</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">gpointer</span> <span class="nv">g</span><span class="p">:</span> <span class="n">gpointer</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2432-L2435">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo11FontFaceRefV13gconstpointerACSgSVSg_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(gconstpointer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo11FontFaceRefV13gconstpointerACSgSVSg_tcfc">init(gconstpointer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conditional initialiser from an optional, non-mutable <code>gconstpointer</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">gconstpointer</span> <span class="nv">g</span><span class="p">:</span> <span class="n">gconstpointer</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2438-L2441">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -542,12 +698,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/FontFaceProtocol.html">FontFaceProtocol</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/FontFaceProtocol.html">FontFaceProtocol</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1899-L1901">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2444-L2446">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -573,12 +730,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">cPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">cPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1905-L1907">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2450-L2452">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -604,12 +762,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">constPointer</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">constPointer</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1911-L1913">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2456-L2458">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -635,12 +794,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="kt">UnsafeRawPointer</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1917-L1919">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2462-L2464">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -666,12 +826,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="p">(</span><span class="nv">raw</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1923-L1925">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2468-L2470">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,12 +858,13 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">opaquePointer</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="nf">init</span><span class="p">(</span><span class="nv">opaquePointer</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1929-L1931">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L2474-L2476">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -715,7 +877,7 @@ Use <code>FontFaceRef</code> only as an <code>unowned</code> reference to an exi
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-09-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

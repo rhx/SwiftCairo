@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Cairo 1.16.0 Docs
         </a>
-         (54% documented)
+         (66% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -450,9 +450,9 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo15SurfaceProtocolP3ptrSvvp"></a>
+                    <a name="/s:5Cairo15SurfaceProtocolP3ptrSvSgvp"></a>
                     <a name="//apple_ref/swift/Property/ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo15SurfaceProtocolP3ptrSvvp">ptr</a>
+                    <a class="token" href="#/s:5Cairo15SurfaceProtocolP3ptrSvSgvp">ptr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,12 +467,12 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L936">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1065">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,9 +480,9 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Cairo15SurfaceProtocolP4_ptrSpySo14_cairo_surfaceVGvp"></a>
+                    <a name="/s:5Cairo15SurfaceProtocolP4_ptrSpySo14_cairo_surfaceVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/_ptr" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Cairo15SurfaceProtocolP4_ptrSpySo14_cairo_surfaceVGvp">_ptr</a>
+                    <a class="token" href="#/s:5Cairo15SurfaceProtocolP4_ptrSpySo14_cairo_surfaceVGSgvp">_ptr</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -505,12 +505,12 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_surface_t</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">_ptr</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">cairo_surface_t</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L939">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/Cairo-1.0.swift#L1068">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,19 +531,20 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Device offset as an x/y tuple</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">deviceOffset</span><span class="p">:</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">deviceOffset</span><span class="p">:</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L13-L23">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L14-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -571,7 +572,8 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setDeviceOffset</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setDeviceOffset</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -607,7 +609,41 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L29-L31">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L30-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Cairo15SurfaceProtocolPAAE11deviceScaleSd1x_Sd1ytvp"></a>
+                    <a name="//apple_ref/swift/Property/deviceScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Cairo15SurfaceProtocolPAAE11deviceScaleSd1x_Sd1ytvp">deviceScale</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device scale as an x/y tuple</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="k">var</span> <span class="nv">deviceScale</span><span class="p">:</span> <span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L35-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -635,7 +671,8 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setDeviceScale</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">func</span> <span class="nf">setDeviceScale</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -671,7 +708,7 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L38-L40">Show on GitHub</a>
+                        <a href="https://github.com/rhx/SwiftCairo/tree/generated/Sources/Cairo/SwiftCairoSurfaceConvenienceAdditions.swift#L51-L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -684,7 +721,7 @@ Alternatively, use <code><a href="../Structs/SurfaceRef.html">SurfaceRef</a></co
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+      <p>&copy; 2020 <a class="link" href="https://www.ict.griffith.edu.au/~rhexel/" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2020-09-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
