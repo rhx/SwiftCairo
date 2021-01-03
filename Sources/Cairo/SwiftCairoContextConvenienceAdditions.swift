@@ -3,7 +3,7 @@
 //  SwiftCairo
 //
 //  Created by Rene Hexel on 16/9/16.
-//  Copyright © 2017, 2018, 2019, 2020 Rene Hexel.  All rights reserved.
+//  Copyright © 2017, 2018, 2019, 2020, 2021 Rene Hexel.  All rights reserved.
 //
 import CCairo
 import GLib
@@ -155,7 +155,7 @@ public extension ContextProtocol {
     /// The default source pattern is a solid pattern that is opaque black, (that is, it is equivalent to cairo_set_source_rgb(cr, 0.0, 0.0, 0.0)).
     @inlinable var source: PatternRef {
         get { return PatternRef(cairo_get_source(_ptr)) }
-        set { cairo_set_source(_ptr, newValue._ptr) }
+        nonmutating set { cairo_set_source(_ptr, newValue._ptr) }
     }
 
     /// Antialiasing mode of the rasterizer used for drawing shapes. This value is a hint, and a particular backend may or may not support a particular value. At the current time, no backend supports CAIRO_ANTIALIAS_SUBPIXEL when drawing shapes.
@@ -163,7 +163,7 @@ public extension ContextProtocol {
     /// Note that this option does not affect text rendering, instead see cairo_font_options_set_antialias().
     @inlinable var antiAlias: cairo_antialias_t {
         get { return cairo_get_antialias(_ptr) }
-        set { cairo_set_antialias(_ptr, newValue) }
+        nonmutating set { cairo_set_antialias(_ptr, newValue) }
     }
 
     /// Sets the dash pattern to be used by cairo_stroke(). A dash pattern is specified by dashes , an array of positive values. Each value provides the length of alternate "on" and "off" portions of the stroke. The offset specifies an offset into the pattern at which the stroke begins.
@@ -206,7 +206,7 @@ public extension ContextProtocol {
             cairo_get_dash(_ptr, &dashes, nil)
             return dashes
         }
-        set { setDash(newValue) }
+        nonmutating set { setDash(newValue) }
     }
 
     /// Current fill rule within the cairo context. The fill rule is used to determine which regions are inside or outside a complex (potentially self-intersecting) path. The current fill rule affects both cairo_fill() and cairo_clip(). See cairo_fill_rule_t for details on the semantics of each available fill rule.
@@ -214,7 +214,7 @@ public extension ContextProtocol {
     /// The default fill rule is CAIRO_FILL_RULE_WINDING.
     @inlinable var fillRule: cairo_fill_rule_t {
         get { return cairo_get_fill_rule(_ptr) }
-        set { cairo_set_fill_rule(_ptr, newValue) }
+        nonmutating set { cairo_set_fill_rule(_ptr, newValue) }
     }
 
     /// Current line cap style within the cairo context. See cairo_line_cap_t for details about how the available line cap styles are drawn.
@@ -222,7 +222,7 @@ public extension ContextProtocol {
     /// As with the other stroke parameters, the current line cap style is examined by cairo_stroke(), cairo_stroke_extents(), and cairo_stroke_to_path(), but does not have any effect during path construction.
     @inlinable var lineCap: cairo_line_cap_t {
         get { return cairo_get_line_cap(_ptr) }
-        set { cairo_set_line_cap(_ptr, newValue) }
+        nonmutating set { cairo_set_line_cap(_ptr, newValue) }
     }
 
     /// Current line join style within the cairo context. See cairo_line_join_t for details about how the available line join styles are drawn.
@@ -232,7 +232,7 @@ public extension ContextProtocol {
     /// The default line join style is CAIRO_LINE_JOIN_MITER.
     @inlinable var lineJoin: cairo_line_join_t {
         get { return cairo_get_line_join(_ptr) }
-        set { cairo_set_line_join(_ptr, newValue) }
+        nonmutating set { cairo_set_line_join(_ptr, newValue) }
     }
 
     /// Current line width within the cairo context. The line width value specifies the diameter of a pen that is circular in user space, (though device-space pen may be an ellipse in general due to scaling/shear/rotation of the CTM).
@@ -244,7 +244,7 @@ public extension ContextProtocol {
     /// The default line width value is 2.0.
     @inlinable var lineWidth: Double {
         get { return cairo_get_line_width(_ptr) }
-        set { cairo_set_line_width(_ptr, newValue) }
+        nonmutating set { cairo_set_line_width(_ptr, newValue) }
     }
 
     /// Current miter limit within the cairo context.
@@ -258,7 +258,7 @@ public extension ContextProtocol {
     /// A miter limit for a desired angle can be computed as: miter limit = 1/sin(angle/2)
     @inlinable var miterLimit: Double {
         get { return cairo_get_miter_limit(_ptr) }
-        set { cairo_set_miter_limit(_ptr, newValue) }
+        nonmutating set { cairo_set_miter_limit(_ptr, newValue) }
     }
     
     /// Current mitre limit within the cairo context.
@@ -272,7 +272,7 @@ public extension ContextProtocol {
     /// A mitre limit for a desired angle can be computed as: mitre limit = 1/sin(angle/2)
     @inlinable var mitreLimit: Double {
         get { return cairo_get_miter_limit(_ptr) }
-        set { cairo_set_miter_limit(_ptr, newValue) }
+        nonmutating set { cairo_set_miter_limit(_ptr, newValue) }
     }
 
     /// Compositing operator to be used for all drawing operations. See cairo_operator_t for details on the semantics of each available compositing operator.
@@ -280,7 +280,7 @@ public extension ContextProtocol {
     /// The default operator is CAIRO_OPERATOR_OVER.
     @inlinable var `operator`: cairo_operator_t {
         get { return cairo_get_operator(_ptr) }
-        set { cairo_set_operator(_ptr, newValue) }
+        nonmutating set { cairo_set_operator(_ptr, newValue) }
     }
     
     /// Compositing operator to be used for all drawing operations. See cairo_operator_t for details on the semantics of each available compositing operator.
@@ -288,13 +288,13 @@ public extension ContextProtocol {
     /// The default operator is CAIRO_OPERATOR_OVER.
     @inlinable var compositingOperator: cairo_operator_t {
         get { return cairo_get_operator(_ptr) }
-        set { cairo_set_operator(_ptr, newValue) }
+        nonmutating set { cairo_set_operator(_ptr, newValue) }
     }
 
     /// Tolerance used when converting paths into trapezoids. Curved segments of the path will be subdivided until the maximum deviation between the original path and the polygonal approximation is less than tolerance. The default value is 0.1. A larger value will give better performance, a smaller value, better appearance. (Reducing the value from the default value of 0.1 is unlikely to improve appearance significantly.) The accuracy of paths within Cairo is limited by the precision of its internal arithmetic, and the prescribed tolerance is restricted to the smallest representable internal value.
     @inlinable var tolerance: Double {
         get { return cairo_get_tolerance(_ptr) }
-        set { cairo_set_tolerance(_ptr, newValue) }
+        nonmutating set { cairo_set_tolerance(_ptr, newValue) }
     }
 
     /// Establishes a new clip region by intersecting the current clip region with the current path as it would be filled by cairo_fill() and according to the current fill rule (see cairo_set_fill_rule()).
