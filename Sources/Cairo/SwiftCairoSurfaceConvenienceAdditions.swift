@@ -18,7 +18,7 @@ public extension SurfaceProtocol {
             cairo_surface_get_device_offset(_ptr, &x, &y)
             return (x: x, y: y)
         }
-        set {
+        nonmutating set {
             setDeviceOffset(x: newValue.x, y: newValue.y)
         }
     }
@@ -39,7 +39,7 @@ public extension SurfaceProtocol {
             cairo_surface_get_device_scale(_ptr, &x, &y)
             return (x: x, y: y)
         }
-        set {
+        nonmutating set {
             setDeviceScale(x: newValue.x, y: newValue.y)
         }
     }

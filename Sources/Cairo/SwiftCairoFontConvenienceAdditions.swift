@@ -107,7 +107,7 @@ public extension ContextProtocol {
             let size = (m.xx + m.yx + m.xy + m.yy) / 2
             return size
         }
-        set { cairo_set_font_size(_ptr, newValue) }
+        nonmutating set { cairo_set_font_size(_ptr, newValue) }
     }
 
     /// The font matrix gives a
@@ -122,7 +122,7 @@ public extension ContextProtocol {
             cairo_get_font_matrix(_ptr, &m)
             return m
         }
-        set {
+        nonmutating set {
             var matrix = newValue
             cairo_set_font_matrix(_ptr, &matrix)
         }
@@ -161,7 +161,7 @@ public extension ContextProtocol {
     /// will shutdown the #cairo_t object).
     @inlinable var fontFace: UnsafeMutablePointer<cairo_font_face_t> {
         get { return cairo_get_font_face(_ptr) }
-        set { cairo_set_font_face(_ptr, newValue) }
+        nonmutating set { cairo_set_font_face(_ptr, newValue) }
     }
 
     /// the current scaled font for a #cairo_t.
@@ -178,7 +178,7 @@ public extension ContextProtocol {
     /// will shutdown the #cairo_t object).
     @inlinable var scaledFont: ScaledFont {
         get { return ScaledFont(cairo_get_scaled_font(_ptr)) }
-        set { cairo_set_scaled_font(_ptr, newValue._ptr) }
+        nonmutating set { cairo_set_scaled_font(_ptr, newValue._ptr) }
     }
 
     /// A drawing operator that generates the shape from a string of UTF-8
