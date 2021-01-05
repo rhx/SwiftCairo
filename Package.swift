@@ -6,7 +6,7 @@ let package = Package(
     name: "Cairo",
     products: [ .library(name: "Cairo", targets: ["Cairo"]) ],
     dependencies: [
-        .package(name: "GLibObject", url: "https://github.com/rhx/SwiftGObject.git", .branch("master"))
+        .package(name: "GLibObject", url: "https://github.com/rhx/SwiftGObject.git", .branch("main"))
     ],
     targets: [
 	.systemLibrary(name: "CCairo", pkgConfig: "cairo glib-2.0 gio-unix-2.0",
