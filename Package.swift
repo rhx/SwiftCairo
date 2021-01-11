@@ -6,15 +6,20 @@ let package = Package(
     name: "Cairo",
     products: [ .library(name: "Cairo", targets: ["Cairo"]) ],
     dependencies: [
-        .package(name: "GLibObject", url: "https://github.com/rhx/SwiftGObject.git", .branch("main"))
+        .package(name: "gir2swift", url: "https://github.com/rhx/gir2swift.git", .branch("development")),
+        .package(name: "GLibObject", url: "https://github.com/rhx/SwiftGObject.git", .branch("development"))
     ],
     targets: [
-	.systemLibrary(name: "CCairo", pkgConfig: "cairo glib-2.0 gio-unix-2.0",
+	.systemLibrary(name: "CCairo", pkgConfig: "cairo",
 	    providers: [
 		.brew(["cairo", "glib", "glib-networking", "gobject-introspection"]),
 		.apt(["libcairo2-dev", "libglib2.0-dev", "glib-networking", "gobject-introspection", "libgirepository1.0-dev"])
 	    ]),
-        .target(name: "Cairo", dependencies: ["CCairo", "GLibObject"]),
+        .target(
+            name: "Cairo", 
+            dependencies: ["CCairo", "GLibObject"],
+            swiftSettings: [.unsafeFlags(["-Xfrontend", "-serialize-debugging-options"], .when(configuration: .debug))]
+        ),
         .testTarget(name: "CairoTests", dependencies: ["Cairo"]),
     ]
 )

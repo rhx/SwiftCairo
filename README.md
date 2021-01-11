@@ -4,6 +4,10 @@ For up to date (auto-generated) reference documentation, see https://rhx.github.
 
 ## What is new?
 
+The current version introduces a new build system and signal generation code contributed by Mikoláš Stuchlík (see the **Building** Section below).
+
+### Other notable changes
+
 Version 11 introduces a new type system into `gir2swift`,
 to ensure it has a representation of the underlying types.
 This is necessary for Swift 5.3 onwards, which requires more stringent casts.
@@ -11,8 +15,6 @@ As a consequence, accessors can accept and return idiomatic Swift rather than
 underlying types or pointers.
 This means that a lot of the changes will be source-breaking for code that
 was compiled against libraries built with earlier versions of `gir2swift`.
-
-### Notable changes
 
  * Requires Swift 5.2 or later
  * Wrapper code is now `@inlinable` to enable the compiler to optimise away most of the wrappers
@@ -72,13 +74,38 @@ On macOS, you can install glib and Cairo using HomeBrew (for setup instructions,
 	brew install cairo glib glib-networking gobject-introspection pkg-config
 
 
+## Usage
+
+Normally, you don't build this package directly (but for testing you can - see 'Building' below). Instead you need to embed SwiftCairo into your own project using the [Swift Package Manager](https://swift.org/package-manager/).  After installing the prerequisites (see 'Prerequisites' below), add `SwiftCairo` as a dependency to your `Package.swift` file, e.g.:
+
+```Swift
+// swift-tools-version:5.3
+
+import PackageDescription
+
+let package = Package(name: "MyPackage",
+    dependencies: [
+        .package(name: "Cairo", url: "https://github.com/rhx/SwiftCairo.git", .branch("main")),
+    ],
+    targets: [.target(name: "MyPackage", dependencies: ["Cairo"])]
+)
+```
+
 ## Building
-Normally, you don't build this package directly, but you embed it into your own project (see 'Embedding' below).  However, you can build and test this module separately to ensure that everything works.  Make sure you have all the prerequisites installed (see above).  After that, you can simply clone this repository and build the command line executable (be patient, this will download all the required dependencies and take a while to compile) using
+
+Normally, you don't build this package directly, but you embed it into your own project (see 'Usage' above).  However, you can build and test this module separately to ensure that everything works.  Make sure you have all the prerequisites installed (see above).  After that, you can simply clone this repository and build the command line executable (be patient, this will download all the required dependencies and take a while to compile) using
 
 	git clone https://github.com/rhx/SwiftCairo.git
 	cd SwiftCairo
-	./build.sh
-	./test.sh
+    ./run-gir2swift.sh
+    swift build
+    swift test
+
+Please note that on macOS, due to a bug currently in the Swift Package Manager,
+you need to pass in the build flags manually, i.e. instead of `swift build` and `swift test` you can run
+
+    swift build `./run-gir2swift.sh flags -noUpdate`
+    swift test  `./run-gir2swift.sh flags -noUpdate`
 
 ### Xcode
 
@@ -116,3 +143,10 @@ this probably means that your Swift toolchain is too old.  Make sure the latest 
 	sudo xcode-select -s /Applications/Xcode.app
 	xcode-select --install
 
+### Known Issues
+
+ * The current build system does not support directory paths with spaces (e.g. the `My Drive` directory used by Google Drive File Stream).
+ * BUILD_DIR is not supported in the current build system.
+ 
+As a workaround, you can use the old build scripts, e.g. `./build.sh` instead of `run-gir2swift.sh` and `swift build` to build a package.
+ 
