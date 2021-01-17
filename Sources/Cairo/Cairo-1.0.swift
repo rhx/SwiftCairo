@@ -775,7 +775,7 @@ open class Context: ContextProtocol {
 
 // MARK: no Context signals
 
-
+// MARK: Context has no signals
 // MARK: Context Record: ContextProtocol extension (methods and fields)
 public extension ContextProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_t` instance.
@@ -1040,7 +1040,7 @@ open class Device: DeviceProtocol {
 
 // MARK: no Device signals
 
-
+// MARK: Device has no signals
 // MARK: Device Record: DeviceProtocol extension (methods and fields)
 public extension DeviceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_device_t` instance.
@@ -1305,7 +1305,7 @@ open class Surface: SurfaceProtocol {
 
 // MARK: no Surface signals
 
-
+// MARK: Surface has no signals
 // MARK: Surface Record: SurfaceProtocol extension (methods and fields)
 public extension SurfaceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_surface_t` instance.
@@ -1570,7 +1570,7 @@ open class Matrix: MatrixProtocol {
 
 // MARK: no Matrix signals
 
-
+// MARK: Matrix has no signals
 // MARK: Matrix Record: MatrixProtocol extension (methods and fields)
 public extension MatrixProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_matrix_t` instance.
@@ -1835,7 +1835,7 @@ open class Pattern: PatternProtocol {
 
 // MARK: no Pattern signals
 
-
+// MARK: Pattern has no signals
 // MARK: Pattern Record: PatternProtocol extension (methods and fields)
 public extension PatternProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_pattern_t` instance.
@@ -2100,7 +2100,7 @@ open class Region: RegionProtocol {
 
 // MARK: no Region signals
 
-
+// MARK: Region has no signals
 // MARK: Region Record: RegionProtocol extension (methods and fields)
 public extension RegionProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_region_t` instance.
@@ -2365,7 +2365,7 @@ open class FontOptions: FontOptionsProtocol {
 
 // MARK: no FontOptions signals
 
-
+// MARK: FontOptions has no signals
 // MARK: FontOptions Record: FontOptionsProtocol extension (methods and fields)
 public extension FontOptionsProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_font_options_t` instance.
@@ -2630,7 +2630,7 @@ open class FontFace: FontFaceProtocol {
 
 // MARK: no FontFace signals
 
-
+// MARK: FontFace has no signals
 // MARK: FontFace Record: FontFaceProtocol extension (methods and fields)
 public extension FontFaceProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_font_face_t` instance.
@@ -2895,7 +2895,7 @@ open class ScaledFont: ScaledFontProtocol {
 
 // MARK: no ScaledFont signals
 
-
+// MARK: ScaledFont has no signals
 // MARK: ScaledFont Record: ScaledFontProtocol extension (methods and fields)
 public extension ScaledFontProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_scaled_font_t` instance.
@@ -3160,7 +3160,7 @@ open class Path: PathProtocol {
 
 // MARK: no Path signals
 
-
+// MARK: Path has no signals
 // MARK: Path Record: PathProtocol extension (methods and fields)
 public extension PathProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_path_t` instance.
@@ -3425,7 +3425,7 @@ open class Rectangle: RectangleProtocol {
 
 // MARK: no Rectangle signals
 
-
+// MARK: Rectangle has no signals
 // MARK: Rectangle Record: RectangleProtocol extension (methods and fields)
 public extension RectangleProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_rectangle_t` instance.
@@ -3729,7 +3729,7 @@ open class RectangleInt: RectangleIntProtocol {
 
 // MARK: no RectangleInt signals
 
-
+// MARK: RectangleInt has no signals
 // MARK: RectangleInt Record: RectangleIntProtocol extension (methods and fields)
 public extension RectangleIntProtocol {
     /// Return the stored, untyped pointer as a typed pointer to the `cairo_rectangle_int_t` instance.
