@@ -432,7 +432,37 @@
 
 <p>A Swift wrapper around cairo-1.x that is largely auto-generated from gobject-introspection.
 For up to date (auto-generated) reference documentation, see <a href="https://rhx.github.io/SwiftCairo/">https://rhx.github.io/SwiftCairo/</a></p>
+
+<p><img src="https://github.com/rhx/SwiftCairo/workflows/macOS%2011/badge.svg" alt="macOS 11 build">
+<img src="https://github.com/rhx/SwiftCairo/workflows/macOS%2010.15/badge.svg" alt="macOS 10.15 build">
+<img src="https://github.com/rhx/SwiftCairo/workflows/Ubuntu%2020.04/badge.svg" alt="Ubuntu 20.04 build">
+<img src="https://github.com/rhx/SwiftCairo/workflows/Ubuntu%2018.04/badge.svg" alt="Ubuntu 18.04 build"></p>
 <h2 id='what-is-new' class='heading'>What is new?</h2>
+
+<p>Version 12 of gir2swift pulls in <a href="https://github.com/rhx/gir2swift/pull/10">PR#10</a>, addressing several issues:</p>
+
+<ul>
+<li>Improvements to the Build experience and LSP <a href="https://github.com/rhx/SwiftGtk/issues/34">rhx/SwiftGtk#34</a></li>
+<li>Fix issues with LLDB <a href="https://github.com/rhx/SwiftGtk/issues/39">rhx/SwiftGtk#39</a></li>
+<li><strong>Controversial:</strong> Implicitly marks all declarations named &ldquo;priv&rdquo; as if they had attribute <code>private=1</code></li>
+<li>Prevents all &ldquo;Private&rdquo; records from generating unless generated in their instance record
+
+<ul>
+<li><code>-a</code> option generates all records</li>
+</ul></li>
+<li>Introduces CI</li>
+<li>For Class metadata types no longer generates class wrappers. Ref structs now contain static method which returnes the GType of the class and instance of the Class metatype wrapped in the Ref struct.</li>
+<li>Adds final class GWeak<T> where T could be any Ref struct of a type which supports ARC. This class is a property wrapper which contains weak reference to any instance of T. This is especially beneficial for capture lists.</li>
+<li>Adds support for weak observation.</li>
+<li>Constructors and factories of GObjectInitiallyUnowned classes now consume floating reference upon initialisation as advised by <a href="https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html">the GObject documentation</a></li>
+</ul>
+
+<p>Partially implemented:</p>
+
+<ul>
+<li>Typed signal generation. Issues shown in <a href="https://github.com/rhx/SwiftGtk/issues/35">rhx/SwiftGtk#35</a> hat remain to be addressed are listed here: <a href="https://github.com/mikolasstuchlik/gir2swift/pull/2">mikolasstuchlik/gir2swift#2</a>.</li>
+</ul>
+<h3 id='other-notable-changes' class='heading'>Other notable changes</h3>
 
 <p>Version 11 introduces a new type system into <code>gir2swift</code>,
 to ensure it has a representation of the underlying types.
@@ -441,7 +471,6 @@ As a consequence, accessors can accept and return idiomatic Swift rather than
 underlying types or pointers.
 This means that a lot of the changes will be source-breaking for code that
 was compiled against libraries built with earlier versions of <code>gir2swift</code>.</p>
-<h3 id='notable-changes' class='heading'>Notable changes</h3>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     Requires Swift 5.2 or later
@@ -493,13 +522,35 @@ sudo apt install libcairo2-dev libcairo-gobject2 gobject-introspection libgirepo
 <pre class="highlight plaintext"><code>brew update
 brew install cairo glib glib-networking gobject-introspection pkg-config
 </code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Normally, you don&rsquo;t build this package directly (but for testing you can - see &lsquo;Building&rsquo; below). Instead you need to embed SwiftCairo into your own project using the <a href="https://swift.org/package-manager/">Swift Package Manager</a>.  After installing the prerequisites (see &lsquo;Prerequisites&rsquo; below), add <code>SwiftCairo</code> as a dependency to your <code>Package.swift</code> file, e.g.:</p>
+<pre class="highlight plaintext"><code>// swift-tools-version:5.3
+
+import PackageDescription
+
+let package = Package(name: "MyPackage",
+    dependencies: [
+        .package(name: "gir2swift", url: "https://github.com/rhx/gir2swift.git", .branch("main")),
+        .package(name: "Cairo", url: "https://github.com/rhx/SwiftCairo.git", .branch("main")),
+    ],
+    targets: [.target(name: "MyPackage", dependencies: ["Cairo"])]
+)
+</code></pre>
 <h2 id='building' class='heading'>Building</h2>
 
-<p>Normally, you don&rsquo;t build this package directly, but you embed it into your own project (see &lsquo;Embedding&rsquo; below).  However, you can build and test this module separately to ensure that everything works.  Make sure you have all the prerequisites installed (see above).  After that, you can simply clone this repository and build the command line executable (be patient, this will download all the required dependencies and take a while to compile) using</p>
+<p>Normally, you don&rsquo;t build this package directly, but you embed it into your own project (see &lsquo;Usage&rsquo; above).  However, you can build and test this module separately to ensure that everything works.  Make sure you have all the prerequisites installed (see above).  After that, you can simply clone this repository and build the command line executable (be patient, this will download all the required dependencies and take a while to compile) using</p>
 <pre class="highlight plaintext"><code>git clone https://github.com/rhx/SwiftCairo.git
 cd SwiftCairo
-./build.sh
-./test.sh
+./run-gir2swift.sh
+swift build
+swift test
+</code></pre>
+
+<p>Please note that on macOS, due to a bug currently in the Swift Package Manager,
+you need to pass in the build flags manually, i.e. instead of <code>swift build</code> and <code>swift test</code> you can run</p>
+<pre class="highlight plaintext"><code>swift build `./run-gir2swift.sh flags -noUpdate`
+swift test  `./run-gir2swift.sh flags -noUpdate`
 </code></pre>
 <h3 id='xcode' class='heading'>Xcode</h3>
 
@@ -532,6 +583,15 @@ error: unable to invoke subcommand: /Applications/Xcode.app/Contents/Developer/T
 <pre class="highlight plaintext"><code>sudo xcode-select -s /Applications/Xcode.app
 xcode-select --install
 </code></pre>
+<h3 id='known-issues' class='heading'>Known Issues</h3>
+
+<ul>
+<li><p>When building, a lot of warnings appear.  This is largely an issue with automatic <code>RawRepresentable</code> conformance in the Swift Standard library.  As a workaround, you can turn this off by passing the <code>-Xswiftc -suppress-warnings</code> parameter when building.</p></li>
+<li><p>The current build system does not support directory paths with spaces (e.g. the <code>My Drive</code> directory used by Google Drive File Stream).</p></li>
+<li><p>BUILD_DIR is not supported in the current build system.</p></li>
+</ul>
+
+<p>As a workaround, you can use the old build scripts, e.g. <code>./build.sh</code> (instead of <code>run-gir2swift.sh</code> and <code>swift build</code>) to build a package.</p>
 
           </div>
         </section>
@@ -540,7 +600,7 @@ xcode-select --install
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://experts.griffith.edu.au/9237-rene-hexel" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2021-01-06)</p>
+      <p>&copy; 2021 <a class="link" href="https://experts.griffith.edu.au/9237-rene-hexel" target="_blank" rel="external">Ren&eacute;&nbsp;Hexel</a>. All rights reserved. (Last updated: 2021-01-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
