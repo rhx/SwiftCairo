@@ -537,6 +537,8 @@ public protocol ContextProtocol {
     /// Typed pointer to the underlying `cairo_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_t>! { get }
 
+    /// Required Initialiser for types conforming to `ContextProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `ContextRef` type acts as a lightweight Swift reference to an underlying `cairo_t` instance.
@@ -740,7 +742,7 @@ open class Context: ContextProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `ContextProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -802,6 +804,8 @@ public protocol DeviceProtocol {
     /// Typed pointer to the underlying `cairo_device_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_device_t>! { get }
 
+    /// Required Initialiser for types conforming to `DeviceProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `DeviceRef` type acts as a lightweight Swift reference to an underlying `cairo_device_t` instance.
@@ -1005,7 +1009,7 @@ open class Device: DeviceProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `DeviceProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -1067,6 +1071,8 @@ public protocol SurfaceProtocol {
     /// Typed pointer to the underlying `cairo_surface_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_surface_t>! { get }
 
+    /// Required Initialiser for types conforming to `SurfaceProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `SurfaceRef` type acts as a lightweight Swift reference to an underlying `cairo_surface_t` instance.
@@ -1270,7 +1276,7 @@ open class Surface: SurfaceProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `SurfaceProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -1332,6 +1338,8 @@ public protocol MatrixProtocol {
     /// Typed pointer to the underlying `cairo_matrix_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_matrix_t>! { get }
 
+    /// Required Initialiser for types conforming to `MatrixProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `MatrixRef` type acts as a lightweight Swift reference to an underlying `cairo_matrix_t` instance.
@@ -1535,7 +1543,7 @@ open class Matrix: MatrixProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `MatrixProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -1597,6 +1605,8 @@ public protocol PatternProtocol {
     /// Typed pointer to the underlying `cairo_pattern_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_pattern_t>! { get }
 
+    /// Required Initialiser for types conforming to `PatternProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `PatternRef` type acts as a lightweight Swift reference to an underlying `cairo_pattern_t` instance.
@@ -1800,7 +1810,7 @@ open class Pattern: PatternProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `PatternProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -1862,6 +1872,8 @@ public protocol RegionProtocol {
     /// Typed pointer to the underlying `cairo_region_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_region_t>! { get }
 
+    /// Required Initialiser for types conforming to `RegionProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `RegionRef` type acts as a lightweight Swift reference to an underlying `cairo_region_t` instance.
@@ -2065,7 +2077,7 @@ open class Region: RegionProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `RegionProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -2127,6 +2139,8 @@ public protocol FontOptionsProtocol {
     /// Typed pointer to the underlying `cairo_font_options_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_font_options_t>! { get }
 
+    /// Required Initialiser for types conforming to `FontOptionsProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `FontOptionsRef` type acts as a lightweight Swift reference to an underlying `cairo_font_options_t` instance.
@@ -2330,7 +2344,7 @@ open class FontOptions: FontOptionsProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `FontOptionsProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -2392,6 +2406,8 @@ public protocol FontFaceProtocol {
     /// Typed pointer to the underlying `cairo_font_face_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_font_face_t>! { get }
 
+    /// Required Initialiser for types conforming to `FontFaceProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `FontFaceRef` type acts as a lightweight Swift reference to an underlying `cairo_font_face_t` instance.
@@ -2595,7 +2611,7 @@ open class FontFace: FontFaceProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `FontFaceProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -2657,6 +2673,8 @@ public protocol ScaledFontProtocol {
     /// Typed pointer to the underlying `cairo_scaled_font_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_scaled_font_t>! { get }
 
+    /// Required Initialiser for types conforming to `ScaledFontProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `ScaledFontRef` type acts as a lightweight Swift reference to an underlying `cairo_scaled_font_t` instance.
@@ -2860,7 +2878,7 @@ open class ScaledFont: ScaledFontProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `ScaledFontProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -2922,6 +2940,8 @@ public protocol PathProtocol {
     /// Typed pointer to the underlying `cairo_path_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_path_t>! { get }
 
+    /// Required Initialiser for types conforming to `PathProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `PathRef` type acts as a lightweight Swift reference to an underlying `cairo_path_t` instance.
@@ -3125,7 +3145,7 @@ open class Path: PathProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `PathProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -3187,6 +3207,8 @@ public protocol RectangleProtocol {
     /// Typed pointer to the underlying `cairo_rectangle_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_rectangle_t>! { get }
 
+    /// Required Initialiser for types conforming to `RectangleProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `RectangleRef` type acts as a lightweight Swift reference to an underlying `cairo_rectangle_t` instance.
@@ -3390,7 +3412,7 @@ open class Rectangle: RectangleProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `RectangleProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
@@ -3491,6 +3513,8 @@ public protocol RectangleIntProtocol {
     /// Typed pointer to the underlying `cairo_rectangle_int_t` instance.
     var _ptr: UnsafeMutablePointer<cairo_rectangle_int_t>! { get }
 
+    /// Required Initialiser for types conforming to `RectangleIntProtocol`
+    init(raw: UnsafeMutableRawPointer)
 }
 
 /// The `RectangleIntRef` type acts as a lightweight Swift reference to an underlying `cairo_rectangle_int_t` instance.
@@ -3694,7 +3718,7 @@ open class RectangleInt: RectangleIntProtocol {
     /// Unsafe untyped initialiser.
     /// **Do not use unless you know the underlying data type the pointer points to conforms to `RectangleIntProtocol`.**
     /// - Parameter p: mutable raw pointer to the underlying object
-    @inlinable public init(raw p: UnsafeMutableRawPointer) {
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
         ptr = p
     }
 
