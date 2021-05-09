@@ -50,13 +50,13 @@ was compiled against libraries built with earlier versions of `gir2swift`.
 To build, you need at least Swift 5.2 (Swift 5.3+ should work fine), download from https://swift.org/download/ -- if you are using macOS, make sure you have the command line tools installed as well).  Test that your compiler works using `swift --version`, which should give you something like
 
 	$ swift --version
-	Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-    Target: x86_64-apple-darwin20.3.0
+	Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+    Target: x86_64-apple-darwin20.5.0
 
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 5.3.2 (swift-5.3.2-RELEASE)
+	Swift version 5.4 (swift-5.4-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
 ### GLib 2.46 and Cairo 1.14.10 or higher
@@ -121,8 +121,9 @@ Normally, you don't build this package directly, but you embed it into your own 
     swift build
     swift test
 
-Please note that on macOS, due to a bug currently in the Swift Package Manager,
-you need to pass in the build flags manually, i.e. instead of `swift build` and `swift test` you can run
+Please note that on macOS, due to a bug in the Swift Package Manager prior to Swift 5.4,
+if you have Xcode-12.4 or older, you need to pass in the build flags manually,
+i.e. instead of `swift build` and `swift test` you can run
 
     swift build `./run-gir2swift.sh flags -noUpdate`
     swift test  `./run-gir2swift.sh flags -noUpdate`
