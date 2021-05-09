@@ -59,24 +59,17 @@ on macOS, or on Linux you should get something like:
 	Swift version 5.4 (swift-5.4-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
-### GLib 2.46 and Cairo 1.14.10 or higher
+### GLib 2.56 and Cairo 1.14.10 or higher
 
-These Swift wrappers have been tested with glib-2.46, 2.48, 2.52, 2.56, 2.58, 2.60, 2.62, 2.64, and 2.66.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
+These Swift wrappers have been tested with glib-2.56, 2.58, 2.60, 2.62, 2.64, 2.66, and 2.68.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
 
 #### Linux
 
 ##### Ubuntu
 
-On Ubuntu 16.04 and 18.04, you can use the gtk that comes with the distribution.  Just install with the `apt` package manager:
+On Ubuntu 18.04, and 20.04 you can use the glib that comes with the distribution.  Just install with the `apt` package manager:
 
 	sudo apt update
-	sudo apt install libcairo2-dev libcairo-gobject2 gobject-introspection libgirepository1.0-dev libxml2-dev
-
-If you prefer a newer version of gtk, you can also install it from the GNOME 3 Staging PPA (see https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging), but be aware that this can be a bit dangerous (as this removes packages that can be vital, particularly if you use a GNOME-based desktop), so only do this if you know what you are doing:
-
-	sudo add-apt-repository ppa:gnome3-team/gnome3-staging
-	sudo apt update
-	sudo apt dist-upgrade
 	sudo apt install libcairo2-dev libcairo-gobject2 gobject-introspection libgirepository1.0-dev libxml2-dev
 
 ##### Fedora
