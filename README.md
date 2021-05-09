@@ -50,33 +50,26 @@ was compiled against libraries built with earlier versions of `gir2swift`.
 To build, you need at least Swift 5.2 (Swift 5.3+ should work fine), download from https://swift.org/download/ -- if you are using macOS, make sure you have the command line tools installed as well).  Test that your compiler works using `swift --version`, which should give you something like
 
 	$ swift --version
-	Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-    Target: x86_64-apple-darwin20.3.0
+	Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+    Target: x86_64-apple-darwin20.5.0
 
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 5.3.2 (swift-5.3.2-RELEASE)
+	Swift version 5.4 (swift-5.4-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
-### GLib 2.46 and Cairo 1.14.10 or higher
+### GLib 2.56 and Cairo 1.14.10 or higher
 
-These Swift wrappers have been tested with glib-2.46, 2.48, 2.52, 2.56, 2.58, 2.60, 2.62, 2.64, and 2.66.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
+These Swift wrappers have been tested with glib-2.56, 2.58, 2.60, 2.62, 2.64, 2.66, and 2.68.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
 
 #### Linux
 
 ##### Ubuntu
 
-On Ubuntu 16.04 and 18.04, you can use the gtk that comes with the distribution.  Just install with the `apt` package manager:
+On Ubuntu 18.04, and 20.04 you can use the glib that comes with the distribution.  Just install with the `apt` package manager:
 
 	sudo apt update
-	sudo apt install libcairo2-dev libcairo-gobject2 gobject-introspection libgirepository1.0-dev libxml2-dev
-
-If you prefer a newer version of gtk, you can also install it from the GNOME 3 Staging PPA (see https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging), but be aware that this can be a bit dangerous (as this removes packages that can be vital, particularly if you use a GNOME-based desktop), so only do this if you know what you are doing:
-
-	sudo add-apt-repository ppa:gnome3-team/gnome3-staging
-	sudo apt update
-	sudo apt dist-upgrade
 	sudo apt install libcairo2-dev libcairo-gobject2 gobject-introspection libgirepository1.0-dev libxml2-dev
 
 ##### Fedora
@@ -121,8 +114,9 @@ Normally, you don't build this package directly, but you embed it into your own 
     swift build
     swift test
 
-Please note that on macOS, due to a bug currently in the Swift Package Manager,
-you need to pass in the build flags manually, i.e. instead of `swift build` and `swift test` you can run
+Please note that on macOS, due to a bug in the Swift Package Manager prior to Swift 5.4,
+if you have Xcode-12.4 or older, you need to pass in the build flags manually,
+i.e. instead of `swift build` and `swift test` you can run
 
     swift build `./run-gir2swift.sh flags -noUpdate`
     swift test  `./run-gir2swift.sh flags -noUpdate`
