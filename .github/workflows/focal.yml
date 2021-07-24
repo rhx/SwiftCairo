@@ -60,5 +60,5 @@ jobs:
         with:
           name: build-artefact-20.04-5.3
           path: |
-            SwiftCairo/
+            SwiftCairo/Sources/
           retention-days: 1
