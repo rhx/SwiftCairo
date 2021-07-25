@@ -21,20 +21,4 @@ if [ ! -e "${GIR}" ] ; then
 	echo "and can be found in /usr /usr/local or by pkg-config!"
 	exit 1
 fi
-gir2swift -p ${GIR_DIR}/GLib-2.0.gir -p ${GIR_DIR}/GObject-2.0.gir "${GIR}" > Sources/${Mod}/${Module}.swift
-echo  > Sources/${Mod}/Swift${Mod}.swift "import CGLib"
-echo  > Sources/${Mod}/Swift${Mod}.swift "import CCairo"
-echo >> Sources/${Mod}/Swift${Mod}.swift "import GLib"
-echo >> Sources/${Mod}/Swift${Mod}.swift "import GLibObject"
-echo >> Sources/${Mod}/Swift${Mod}.swift ""
-grep 'public protocol' Sources/${Mod}/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/public typealias _cairo_\1 = \1/' >> Sources/${Mod}/Swift${Mod}.swift
-echo >> Sources/${Mod}/Swift${Mod}.swift ""
-grep '^open class' Sources/${Mod}/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/public typealias _cairo_\1 = \1/' >> Sources/${Mod}/Swift${Mod}.swift
-echo >> Sources/${Mod}/Swift${Mod}.swift ""
-echo >> Sources/${Mod}/Swift${Mod}.swift "public struct cairo {"
-grep 'public protocol' Sources/${Mod}/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/    public typealias \1 = _cairo_\1/' >> Sources/${Mod}/Swift${Mod}.swift
-echo >> Sources/${Mod}/Swift${Mod}.swift ""
-grep '^open class' Sources/${Mod}/${Module}.swift | cut -d' ' -f3 | cut -d: -f1 | sort -u | sed -e 's/^\(.*\)/    public typealias \1 = _cairo_\1/' >> Sources/${Mod}/Swift${Mod}.swift
-echo >> Sources/${Mod}/Swift${Mod}.swift ""
-grep '^public typealias' Sources/${Mod}/${Module}.swift | sed 's/^/    /' >> Sources/${Mod}/Swift${Mod}.swift
-echo >> Sources/${Mod}/Swift${Mod}.swift "}"
+gir2swift -n cairo -p ${GIR_DIR}/GLib-2.0.gir -p ${GIR_DIR}/GObject-2.0.gir "${GIR}" > Sources/${Mod}/${Module}.swift
