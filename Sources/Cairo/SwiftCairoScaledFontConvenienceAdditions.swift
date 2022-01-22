@@ -3,11 +3,17 @@
 //  Cairo
 //
 //  Created by Rene Hexel on 17/9/16.
-//  Copyright © 2017, 2018, 2019, 2020 Rene Hexel.  All rights reserved.
+//  Copyright © 2016, 2017, 2018, 2019, 2020, 2022 Rene Hexel.
+//  All rights reserved.
 //
 import CCairo
 import GLib
 import GLibObject
+
+extension _cairo {
+    /// Type representing a Cairo font type
+    public typealias FontType = cairo_font_type_t
+}
 
 public extension ScaledFontProtocol {
     /// Increases the reference count on @scaled_font by one. This prevents
