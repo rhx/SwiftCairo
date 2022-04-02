@@ -3,3 +3,4 @@ gir-name: cairo-1.0
 pkg-config: cairo
 output-directory: Sources/Cairo
 namespaces: ['cairo']
+alpha-names: true

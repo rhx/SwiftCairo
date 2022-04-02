@@ -49,12 +49,3 @@ class CairoTests: XCTestCase {
     }
     
 }
-extension CairoTests {
-    static var allTests : [(String, (CairoTests) -> () throws -> Void)] {
-        return [
-            ("testSurface", testSurface),
-            ("testContextAndPath", testContextAndPath),
-            ("testRectangle", testRectangle),
-        ]
-    }
-}
