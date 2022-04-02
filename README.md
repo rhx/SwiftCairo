@@ -7,6 +7,11 @@ For up to date (auto-generated) reference documentation, see https://rhx.github.
 ![Ubuntu 20.04 build](https://github.com/rhx/SwiftCairo/workflows/Ubuntu%2020.04/badge.svg)
 ![Ubuntu 18.04 build](https://github.com/rhx/SwiftCairo/workflows/Ubuntu%2018.04/badge.svg)
 
+## Swift 5.2
+
+This branch supports Swift 5.2, but is now unmaintained.
+The `main` and `development` branches will require newer versions of Swift.
+
 ## What is new?
 
 Version 12 of gir2swift pulls in [PR#10](https://github.com/rhx/gir2swift/pull/10), addressing several issues:
