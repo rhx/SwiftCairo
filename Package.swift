@@ -7,7 +7,8 @@ let package = Package(
     products: [ .library(name: "Cairo", targets: ["Cairo"]) ],
     dependencies: [
         .package(url: "https://github.com/rhx/gir2swift.git",    branch: "development"),
-        .package(url: "https://github.com/rhx/SwiftGObject.git", branch: "development")
+        .package(url: "https://github.com/rhx/SwiftGModule.git", branch: "development"),
+        .package(url: "https://github.com/rhx/SwiftGIO.git",     branch: "development")
     ],
     targets: [
 	.systemLibrary(name: "CCairo", pkgConfig: "cairo",
@@ -20,9 +21,13 @@ let package = Package(
             dependencies: [
                 "CCairo",
                 .product(name: "gir2swift", package: "gir2swift"),
-                .product(name: "GLibObject", package: "SwiftGObject")
+                .product(name: "GModule",   package: "SwiftGModule"),
+                .product(name: "GIO",       package: "SwiftGIO")
             ],
-            swiftSettings: [.unsafeFlags(["-Xfrontend", "-serialize-debugging-options"], .when(configuration: .debug))],
+            swiftSettings: [
+                .unsafeFlags(["-suppress-warnings"], .when(configuration: .release)),
+                .unsafeFlags(["-suppress-warnings", "-Xfrontend", "-serialize-debugging-options"], .when(configuration: .debug)),
+            ],
             plugins: [
                 .plugin(name: "gir2swift-plugin", package: "gir2swift")
             ]
