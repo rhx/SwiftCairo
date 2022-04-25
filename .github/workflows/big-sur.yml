@@ -7,12 +7,10 @@ env:
 on:
   push:
     branches:
-      - development
-      - main
+      - swift52
   pull_request:
     branches:
-      - development
-      - main
+      - swift52
 
 jobs:
   # macOS tasks
@@ -34,6 +32,7 @@ jobs:
       - name: Checkout SwiftCairo
         uses: actions/checkout@v2
         with:
+          ref: swift52
           path: SwiftCairo
 
       - name: Build Swift Wrappers
