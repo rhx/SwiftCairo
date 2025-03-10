@@ -21,7 +21,6 @@ let package = Package(
             name: "Cairo", 
             dependencies: [
                 "CCairo",
-                .product(name: "gir2swift", package: "gir2swift"),
                 .product(name: "GModule",   package: "SwiftGModule"),
                 .product(name: "GIO",       package: "SwiftGIO")
             ],
