@@ -6,9 +6,9 @@ let package = Package(
     name: "Cairo",
     products: [ .library(name: "Cairo", targets: ["Cairo"]) ],
     dependencies: [
-        .package(url: "https://github.com/rhx/gir2swift.git",    branch: "main"),
-        .package(url: "https://github.com/rhx/SwiftGModule.git", branch: "main"),
-        .package(url: "https://github.com/rhx/SwiftGIO.git",     branch: "main"),
+        .package(url: "https://github.com/rhx/gir2swift.git",    branch: "development"),
+        .package(url: "https://github.com/rhx/SwiftGModule.git", branch: "development"),
+        .package(url: "https://github.com/rhx/SwiftGIO.git",     branch: "development"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
